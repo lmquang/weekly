@@ -2,7 +2,7 @@
 
 Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
 
-Tạp chí này là [nguồn mở](https://github.com/ruanyf/weekly), rất hoan nghênh các bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9088), nơi đăng tải thông tin tuyển dụng lập trình viên. Để hợp tác, vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
+Tạp chí này [nguồn mở](https://github.com/ruanyf/weekly), rất hoan nghênh các bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9088), nơi đăng tải thông tin tuyển dụng lập trình viên. Để hợp tác, vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
 
 ## Ảnh bìa
 
@@ -31,11 +31,11 @@ Hiện tại, phần mềm "nóng" nhất thế giới chắc chắn là trợ l
 
 Độ nóng của nó khủng khiếp đến mức nào? Trong vòng 4 tháng, nó đã đạt được 250.000 sao trên GitHub, vượt qua cả React để trở thành [dự án phần mềm có nhiều sao nhất lịch sử](https://www.star-history.com/blog/openclaw-surpasses-react-most-starred-software).
 
-Hãy nhớ rằng React mất 13 năm để có được con số đó, còn OpenClaw chỉ cần 4 tháng.
+Hãy nhớ rằng React mất 13 năm để đạt 250.000 sao đó, còn OpenClaw chỉ cần 4 tháng.
 
 ![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030303.webp)
 
-Trong biểu đồ trên, đường màu đỏ dựng đứng chính là OpenClaw. Thật kinh ngạc.
+Trong biểu đồ trên, đường màu đỏ dựng đứng chính là OpenClaw. Quá ấn tượng.
 
 Vai trò của OpenClaw là giúp bạn điều khiển máy tính thông qua ngôn ngữ tự nhiên để hoàn thành các tác vụ tự động. Trước đây, bạn cần rất nhiều công cụ và kỹ năng chuyên môn mới làm được điều tương tự. Giờ đây, chỉ cần nhập văn bản hoặc ra lệnh bằng giọng nói. Nó không chỉ hữu ích mà còn rất thú vị.
 
@@ -105,7 +105,7 @@ Việc đi bằng nhón chân có thể giúp T-Rex tăng tốc độ, mang lạ
 
 ![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022702.webp)
 
-Khi AI không biết làm hoặc làm chưa tốt một việc gì đó, bạn hãy tìm những bài viết hướng dẫn hoặc ví dụ mã nguồn chạy được về mảng đó rồi đưa vào ngữ cảnh (context) cho mô hình tham khảo. AI sẽ học cách giải quyết vấn đề dựa trên các ví dụ đó. Vì vậy, hãy "tích trữ" những gì bạn biết cách làm để AI có thể thay bạn thực hiện chúng sau này.
+Khi AI không biết làm hoặc làm chưa tốt một việc gì đó, developer nổi tiếng Simon Willison gợi ý một cách giải quyết: bạn hãy tìm những bài viết hướng dẫn hoặc ví dụ mã nguồn chạy được về mảng đó rồi đưa vào ngữ cảnh (context) cho mô hình tham khảo. AI sẽ học cách giải quyết vấn đề dựa trên các ví dụ đó. Vậy nên, hãy "tích trữ" những gì bạn biết cách làm để AI có thể thay bạn thực hiện chúng sau này.
 
 2. [Tôi đã tạo ra một phiên bản AI của chính mình](https://luolei.org/luolei-ai) (Tiếng Trung)
 

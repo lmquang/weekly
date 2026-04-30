@@ -1,337 +1,265 @@
-# Trạng thái "Mục não"
+# Hội chứng "mục não"
 
 Bản tin này ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, phát hành vào thứ Sáu.
 
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh [đóng góp](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9454), đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
+Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9454) dành cho các lập trình viên. Nếu muốn hợp tác, bạn hãy [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com) nhé.
 
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041608.webp)
 
-Bảo tàng chủ đề Thị thực Hòa bình tại Ích Dương, Hồ Nam, nhằm kỷ niệm Tiến sĩ Hà Phượng Sơn đã cứu giúp người Do Thái trong Thế chiến II. Các lớp tấm thép ở mặt ngoài tượng trưng cho các văn bản thị thực, lối vào hẹp và góc cạnh tạo cảm giác đè nén, nhưng không gian bên trong dần mở rộng ra phía ánh sáng và tự do. ([via](https://architizer.com/projects/peace-visa-for-life-theme-museum/))
+Bảo tàng chủ đề "Thị thực Hòa bình" tại Ích Dương, Hồ Nam. Đây là nơi vinh danh Tiến sĩ Hà Phượng Sơn, người đã dũng cảm cứu giúp hàng ngàn người Do Thái trong Thế chiến II. Những lớp thép xếp tầng ở mặt ngoài tượng trưng cho các tập hồ sơ thị thực. Lối vào hẹp và góc cạnh tạo ra một cảm giác đè nén, nhưng không gian bên trong sẽ dần mở rộng, hướng về phía ánh sáng và tự do. ([via](https://architizer.com/projects/peace-visa-for-life-theme-museum/))
 
-## Trạng thái "Mục não"
+## Hội chứng "mục não"
 
-Gần đây tôi học được một thuật ngữ mới là "brain rot" (mục não).
+Gần đây tôi có biết thêm một thuật ngữ mới là "brain rot" (tạm dịch là mục não).
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041617.webp)
 
-Nghĩa của nó đúng như mặt chữ. Có những người trông thì bình thường, nhưng bộ não đã biến dị, có những phần đã bị mục ruỗng.
+Cái tên này phản ánh đúng thực trạng: nhiều người trông bên ngoài hoàn toàn bình thường, nhưng bộ não của họ thực chất đã biến dị, thậm chí có những phần đã bắt đầu "mục ruỗng".
 
-Theo [bài viết giới thiệu](https://jshamsul.com/essays/2026-04-12-brainrot-industrial-complex), **triệu chứng của "mục não" là khả năng tư duy giảm sút, khó tập trung chú ý trong thời gian dài** để tiến hành suy luận và phản tư sâu sắc.
+Theo một [bài viết phân tích](https://jshamsul.com/essays/2026-04-12-brainrot-industrial-complex), **triệu chứng điển hình của "mục não" là khả năng tư duy sụt giảm rõ rệt, khó có thể tập trung lâu** để thực hiện các suy luận logic hay phản tư sâu sắc.
 
-Cứ gặp phải vấn đề hơi khó, cần phải suy nghĩ đi suy nghĩ lại là bạn sẽ thấy bứt rứt. Không chỉ là bứt rứt về tâm lý mà còn cả về sinh lý, toàn thân bồn chồn, không muốn nghĩ nhiều, chỉ mong nhanh chóng kết thúc cho xong.
+Bạn hãy thử để ý: mỗi khi gặp một vấn đề khó, đòi hỏi phải suy nghĩ nhiều lớp, bạn có thấy bứt rứt không? Không chỉ là cảm giác khó chịu trong lòng mà còn là sự bất an về sinh lý: chân tay bồn chồn, đầu óc không muốn tiếp nhận thêm thông tin, chỉ mong nhanh chóng kết thúc cho xong chuyện.
 
-Bạn có triệu chứng này không? Nếu có thì bạn đang có nguy cơ bị "mục não" rồi. Tôi cảm thấy não mình cũng có một chút. Gặp những khái niệm phần mềm và thuật toán phức tạp, trước đây tôi sẽ nghiên cứu kỹ cho đến khi hiểu rõ mới thôi, còn bây giờ dễ là chỉ liếc qua rồi bỏ qua luôn, không hiểu thì thôi, chỉ cần biết cái tên là được.
+Nếu có những dấu hiệu này, rất có thể bạn đang đứng trước nguy cơ bị "mục não". Thú thực, tôi cảm thấy não mình cũng có chút "mục" rồi. Trước đây, khi gặp những khái niệm phần mềm hay thuật toán phức tạp, tôi thường đào sâu cho đến khi hiểu tận gốc rễ. Còn bây giờ, tôi dễ dàng tặc lưỡi bỏ qua sau một cái liếc mắt. Kiểu như "không hiểu cũng chẳng sao, biết cái tên là được rồi".
 
-**Nguyên nhân chính của "mục não" là những bài viết "giật tít" và video ngắn đầy rẫy trên các nền tảng mạng**. Mục tiêu của chúng là thu hút lưu lượng, gây hứng thú và thỏa mãn người xem trong thời gian ngắn nhất. Khi bạn xem những nội dung này lâu ngày, **não bộ sẽ bị kích thích dồn dập, thời gian duy trì trạng thái hưng phấn tư duy ngày càng ngắn lại**, dẫn đến mất đi năng lực suy nghĩ sâu trong thời gian dài.
+**Thủ phạm chính gây ra tình trạng này chính là những bài viết "giật tít" và video ngắn tràn lan trên mạng**. Mục tiêu duy nhất của chúng là câu view, tạo ra sự thỏa mãn tức thì cho người xem. Khi tiếp xúc với những nội dung này quá lâu, **não bộ liên tục bị kích thích dồn dập, khiến thời gian duy trì trạng thái hưng phấn khi suy nghĩ ngắn lại**. Hệ quả là chúng ta dần đánh mất khả năng tư duy sâu trong thời gian dài.
 
-Đó là lý do tại sao một người khi đã quen xem video ngắn thì không thể rời xa việc nén nội dung. Một bài viết vài nghìn chữ họ cũng yêu cầu mô hình lớn tóm tắt lại. Một bộ phim 90 phút họ cũng thà xem vài phút video giải thích phim cho xong.
+Đó là lý do tại sao những ai đã nghiện video ngắn thường rất sợ các nội dung dài. Một bài viết vài ngàn chữ họ cũng phải nhờ AI tóm tắt. Một bộ phim 90 phút họ cũng thà xem bản giải thích dài vài phút cho nhanh.
 
-Một khi đã bị "mục não", khó tập trung suy nghĩ lâu thì cũng khó mà học tập và xử lý những vấn đề có độ khó cao. Hiện nay có vẻ như không có cách giải quyết nào tốt, vì thời gian của con người hiện đại ngày càng vụn vặt, nội dung phân mảnh là xu thế lớn.
+Một khi đã bị "mục não", việc học tập hay giải quyết các vấn đề phức tạp sẽ trở nên vô cùng khó khăn. Đáng buồn là hiện nay chưa có liều thuốc nào đặc trị, vì nhịp sống hiện đại vốn đã quá vụn vặt, và nội dung phân mảnh đang là xu thế không thể đảo ngược.
 
-Cách đối phó có lẽ là làm ngược lại, chia nhỏ việc học tập và suy nghĩ thành một chuỗi các câu hỏi ngắn. Ví dụ, việc học sau này không còn là một cuốn giáo trình dày cộp nữa mà là hàng chục video ngắn, mỗi video chỉ mất hai ba phút để giải thích một điểm kiến thức. Chỉ với độ dài thời gian này, tư duy của học sinh mới có thể giữ được sự tập trung.
+Có lẽ cách duy nhất để đối phó là làm ngược lại: hãy chia nhỏ việc học và suy nghĩ thành một chuỗi các câu hỏi ngắn. Thay vì một cuốn giáo trình dày cộp, chúng ta nên học qua hàng chục video ngắn, mỗi clip chỉ tập trung giải thích một điểm kiến thức trong vài phút. Có lẽ chỉ với khoảng thời gian ngắn ngủi như vậy, tư duy của con người hiện đại mới có thể duy trì được sự tập trung.
 
-## Trọng số có bản quyền không?
+## Trọng số AI có bản quyền không?
 
-Các mô hình lớn trong nước thường là mã nguồn mở, nhưng gần đây đã có sự thay đổi.
+Lâu nay các mô hình lớn trong nước thường đi theo hướng mã nguồn mở, nhưng gần đây mọi chuyện bắt đầu thay đổi.
 
-Có mô hình phát hành theo kiểu đóng nguồn. Có loại chỉ mở mã nguồn phiên bản tham số nhỏ mà không mở phiên bản tham số lớn. Có loại không cho phép thương mại hóa trừ khi được cấp phép. Tôi sẽ không nêu đích danh ở đây.
+Có mô hình chuyển hẳn sang đóng nguồn. Có loại chỉ mở bản tham số nhỏ, giữ lại bản tham số lớn. Lại có loại cấm thương mại hóa nếu không xin phép. Tôi sẽ không nêu tên cụ thể ở đây.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041615.webp)
 
-Một độc giả trên "Hacker News" đã đưa ra [nghi vấn](https://news.ycombinator.com/item?id=47738685) về việc các mô hình lớn mã nguồn mở sửa đổi giấy phép: **Các mô hình lớn mã nguồn mở có lẽ không có quyền thiết lập giấy phép.**
+Một độc giả trên Hacker News đã đặt ra một [nghi vấn](https://news.ycombinator.com/item?id=47738685) khá thú vị: **Phải chăng các đơn vị phát triển mô hình lớn vốn dĩ không có quyền thiết lập giấy phép (license)?**
 
-Ý anh ấy là, các mô hình lớn mã nguồn mở hiện nay chủ yếu mở các tệp trọng số (weight files) và mã nguồn vận hành đi kèm. Cái gọi là "tệp trọng số" thực chất là một ma trận khổng lồ biểu thị khả năng xuất hiện của các Token trong kết quả tạo ra.
+Lập luận của anh ta thế này: các mô hình mã nguồn mở thực chất là mở tệp trọng số (weight files) và mã nguồn để chạy chúng. "Tệp trọng số" về cơ bản là một ma trận khổng lồ, thể hiện xác suất xuất hiện của các Token trong kết quả đầu ra.
 
-Trọng số là cốt lõi của mô hình lớn, và nó đến từ việc tính toán trên khối lượng dữ liệu khổng lồ. Điều đó có nghĩa là **trọng số chẳng qua chỉ là kết quả tính toán, và anh ấy cho rằng kết quả tính toán thì không có bản quyền**.
+Trọng số là linh hồn của mô hình, được tạo ra từ quá trình tính toán trên lượng dữ liệu khổng lồ. Vì vậy, **trọng số suy cho cùng cũng chỉ là kết quả của các phép toán. Mà đã là kết quả tính toán thì không thể có bản quyền**.
 
-Ví dụ, bạn viết một chương trình thực hiện thuật toán tính căn bậc hai của 2 hiệu quả hơn. Vậy thì chương trình đó có bản quyền, nhưng kết quả tính toán căn bậc hai của 2 (1.414) thì không có bản quyền. Bởi vì kết quả tính toán chỉ là sản phẩm của một quá trình cơ học, không liên quan đến sự sáng tạo của con người.
+Hãy lấy một ví dụ: bạn viết một phần mềm để tính căn bậc hai của 2 cực nhanh. Phần mềm đó của bạn có bản quyền, nhưng kết quả phép tính (1.414) thì chắc chắn là không. Bởi vì kết quả đó là sản phẩm của một quy trình cơ học, không chứa đựng sự sáng tạo của con người.
 
-Theo cách nói này, trọng số hoàn toàn không có bản quyền, và đương nhiên cũng không thể nói đến việc thiết lập hay sửa đổi giấy phép.
+Nếu logic này đúng, trọng số AI hoàn toàn không có bản quyền. Và đương nhiên, việc thiết lập hay sửa đổi giấy phép sử dụng cho chúng là vô nghĩa.
 
-Tôi không phải chuyên gia bản quyền nên không chắc cách nói này có đúng không, nhưng nghe qua thì thấy có lý. Mọi người có thể tự mình hỏi mô hình lớn xem "kết quả tính toán có bản quyền không?" để xem chúng trả lời thế nào.
+Tôi không phải chuyên gia luật nhưng thấy lập luận này khá sắc bén. Bạn có thể thử hỏi chính các chatbot rằng "kết quả tính toán có bản quyền không" để xem chúng phản biện thế nào nhé.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041614.webp)
 
 ## Tin công nghệ
 
-1、[Tai nghe kèm camera](https://www.washington.edu/news/2026/04/14/cameras-in-wireless-earbuds-vuebuds/?user_id=66c4c9305d78644b3ac5df9c)
+1. [Tai nghe tích hợp camera](https://www.washington.edu/news/2026/04/14/cameras-in-wireless-earbuds-vuebuds/?user_id=66c4c9305d78644b3ac5df9c)
 
-Nhóm nghiên cứu tại Đại học Washington đã phát triển chiếc tai nghe không dây đầu tiên trên thế giới tích hợp camera siêu nhỏ.
+Nhóm nghiên cứu tại Đại học Washington vừa ra mắt mẫu tai nghe không dây đầu tiên tích hợp camera siêu nhỏ.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041610.webp)
 
-Trong hình, phần nhô ra nhỏ ở đáy tai nghe chính là camera siêu nhỏ.
+Cái mấu nhỏ ở đáy tai nghe chính là chiếc camera đó.
 
-Công dụng lớn nhất của nó là tương tác với AI. Bạn có thể hỏi trực tiếp: "Tiêu đề trang bìa của tạp chí tiếng Anh trên tay tôi có nghĩa là gì", tai nghe sẽ gửi hình ảnh camera qua Bluetooth đến điện thoại, và mô hình lớn trên điện thoại sẽ trả lời.
+Công dụng lớn nhất của nó là để tương tác với AI. Bạn có thể hỏi: "Tiêu đề cuốn tạp chí tôi đang cầm nghĩa là gì?". Tai nghe sẽ chụp ảnh, gửi qua Bluetooth tới điện thoại để AI xử lý và trả lời trực tiếp vào tai bạn.
 
-Do giới hạn băng thông, nó chỉ có thể chụp ảnh đen trắng độ phân giải thấp. Về lâu dài, nếu không cần mô-đun hiển thị, loại tai nghe camera này sẽ phù hợp để đeo hơn kính AI vì nhiều người không thích đeo kính trong thời gian dài.
+Vì giới hạn băng thông, hiện nó mới chỉ chụp được ảnh đen trắng độ phân giải thấp. Tuy nhiên về lâu dài, loại tai nghe này có vẻ thực dụng hơn kính AI vì nhiều người vốn không thích đeo kính liên tục cả ngày.
 
-2、[Ca sĩ AI trên bảng xếp hạng](https://www.showbiz411.com/2026/04/05/itunes-takeover-by-fake-ai-singer-eddie-dalton-now-occupies-eleven-spots-on-chart-despite-not-being-human-or-real-exclusive)
+2. [Ca sĩ AI thống trị bảng xếp hạng](https://www.showbiz411.com/2026/04/05/itunes-takeover-by-fake-ai-singer-eddie-dalton-now-occupies-eleven-spots-on-chart-despite-not-being-human-or-real-exclusive)
 
-Gần đây, có người đã tải các bài hát của Eddie Dalton lên cửa hàng nhạc số iTunes của Apple.
+Mới đây, một "ca sĩ" tên Eddie Dalton đã gây bão trên iTunes của Apple.
 
-Ca sĩ này thực tế không hề tồn tại. Hình ảnh, giọng nói, video đều do AI tạo ra, nhưng người tải lên không hề tiết lộ điều này.
+Điều đáng nói là Eddie không có thật. Từ ngoại hình, giọng hát cho đến video đều là sản phẩm của AI, nhưng người đăng tải lại không hề tiết lộ điều này.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026040702.webp)
 
-Kết quả là những bài hát AI này cực kỳ được yêu thích. Trong top 100 đĩa đơn của iTunes, anh ta chiếm tới 11 vị trí, với hai bài lọt vào top 10.
+Trớ trêu thay, những ca khúc này lại cực kỳ ăn khách. Trong top 100 đĩa đơn của iTunes, "anh chàng" này chiếm tới 11 vị trí, trong đó có 2 bài lọt top 10. Thậm chí album của Eddie còn chễm chệ ở vị trí thứ 3.
 
-Album của anh ta cũng xếp thứ ba trên iTunes.
+Trước đây chúng ta hay bảo AI và robot sẽ làm thay các công việc chân tay, để con người rảnh rang làm nghệ thuật. Nhưng giờ xem ra AI cũng đang nhảy vào tranh giành nốt cả những công việc sáng tạo cuối cùng của chúng ta.
 
-Trước đây có người nói rằng sau khi AI và robot đảm nhận công việc hàng ngày, con người có thể làm sáng tạo nghệ thuật như ca hát, nhảy múa, vẽ tranh, viết lách, quay video... Bây giờ xem ra AI cũng sẽ cạnh tranh công việc nghệ thuật với con người.
+3. [Ghế kinh tế có thể nằm ngủ](https://www.usatoday.com/story/travel/airline-news/2026/03/24/united-couch-style-economy-seats/89306783007/)
 
-3、[Ghế hạng phổ thông](https://www.usatoday.com/story/travel/airline-news/2026/03/24/united-couch-style-economy-seats/89306783007/)
+United Airlines vừa đưa ra một cải tiến cho những chuyến bay dài vốn cực kỳ mệt mỏi ở hạng phổ thông.
 
-Ghế hạng phổ thông trên các chuyến bay đường dài thường rất không thoải mái. United Airlines đã nghĩ ra một cách cải tiến.
-
-Nếu là một gia đình ba người, họ có thể tháo đệm ghế ra để cả nhà nằm xuống sàn ngủ.
+Với những gia đình ba người, họ có thể tháo đệm ghế để cả nhà nằm ngủ ngay trên sàn máy bay.
 
 ![](https://cdn.beekka.com/blogimg/asset/202603/bg2026032803.webp)
 
-Hãng hàng không sẽ cung cấp gối và chăn, thậm chí cả nệm.
-
-Nếu là khách đi một mình, bạn sẽ cần mua cùng lúc ba ghế liền nhau, may mà như vậy vẫn rẻ hơn hạng nhất.
+Hãng sẽ cung cấp đầy đủ gối, chăn và cả nệm mỏng. Nếu đi một mình, bạn có thể mua trọn bộ ba ghế liền nhau để có được "chiếc giường" này với giá vẫn rẻ hơn hạng nhất.
 
 ![](https://cdn.beekka.com/blogimg/asset/202603/bg2026032804.webp)
 
-Tôi nghĩ đường sắt cao tốc Trung Quốc có thể cân nhắc cách làm này. Một số tuyến đường dài không có giường nằm có thể cho phép tháo vài hàng ghế để hành khách nằm xuống sàn nghỉ ngơi.
+Tôi nghĩ đường sắt cao tốc ở ta cũng nên tham khảo cách làm này. Với những tuyến đường dài không có giường nằm, việc cho phép hành khách tháo ghế để nằm nghỉ sẽ là một điểm cộng rất lớn.
 
-## Bài viết
+## Bài viết hay
 
-1、[Sự thật về mã nguồn của Claude Code](https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude) (tiếng Anh)
+1. [Sự thật về mã nguồn Claude Code](https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041611.webp)
 
-Cách đây không lâu mã nguồn Claude Code bị rò rỉ. Sau khi nghiên cứu kỹ, người ta phát hiện toàn bộ mã nguồn này đều do AI tạo ra và chất lượng không cao. Một hàm dài tới 3.167 dòng, chứa 486 nhánh rẽ và 12 lớp lồng nhau. Tệp đầu vào main.tsx có kích thước 785 KB.
+Sau khi mã nguồn của Claude Code bị rò rỉ, giới công nghệ mới ngã ngửa khi thấy toàn bộ code đều do AI tự viết với chất lượng khá tệ. Có những hàm dài tới hơn 3.000 dòng với hàng trăm nhánh rẽ rắc rối. Tác giả bài viết cho rằng đây sẽ là "bình thường mới" khi AI lập trình lên ngôi: code rác và các lỗ hổng bảo mật sẽ xuất hiện ở khắp mọi nơi.
 
-Tác giả kết luận rằng sau khi lập trình AI trở nên phổ biến, rò rỉ mã nguồn, tấn công chuỗi cung ứng và những đoạn mã sản xuất lộn xộn sẽ trở thành trạng thái bình thường mới.
-
-2、[Trình duyệt Chrome hỗ trợ Skill nguyên bản](https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/) (tiếng Anh)
+2. [Chrome hỗ trợ Skill cho Gemini](https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041604.webp)
 
-Chrome chính thức thông báo hỗ trợ sử dụng "kỹ năng" (skill) bên trong tiện ích Gemini. Đó là một đoạn lời nhắc (prompt) được thiết lập sẵn để hoàn thành nhiệm vụ chỉ qua một cú nhấp chuột. Đây có lẽ là hướng phát triển sau này của trình duyệt.
+Google vừa thông báo Chrome sẽ hỗ trợ sử dụng Skill trong plugin Gemini. Về cơ bản, đây là những Prompt được thiết lập sẵn để thực hiện nhanh các tác vụ cụ thể. Đây có lẽ là hướng đi chung của các trình duyệt trong tương lai.
 
-3、[Android sẽ tước bỏ thông tin vị trí của ảnh](https://shkspr.mobi/blog/2026/04/android-now-stops-you-sharing-your-location-in-photos/) (tiếng Anh)
+3. [Android tự động lọc thông tin vị trí trong ảnh](https://shkspr.mobi/blog/2026/04/android-now-stops-you-sharing-your-location-in-photos/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041606.webp)
 
-Bài viết này chỉ ra một điểm dễ bị bỏ qua, đó là khi tải ảnh lên trang web, Android sẽ tự động tước bỏ thông tin vị trí của ảnh. Chia sẻ ảnh qua Bluetooth hoặc QuickShare cũng không được, trừ khi bạn tự phát triển ứng dụng ảnh hoặc truyền ảnh qua USB.
+Một chi tiết nhỏ nhưng ít người để ý: khi bạn upload ảnh qua trình duyệt, Android sẽ tự động xóa bỏ thông tin vị trí GPS đính kèm trong ảnh. Ngay cả khi chia sẻ qua Bluetooth hay QuickShare cũng vậy, trừ khi bạn dùng cáp USB để chép ảnh thủ công.
 
-4、[Bộ công cụ công nghệ 20 USD mỗi tháng của tôi](https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack) (tiếng Anh)
+4. [Vận hành công ty 10.000 USD/tháng với chi phí 20 USD](https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041613.webp)
 
-Trang web của tác giả tạo ra doanh thu 10.000 USD mỗi tháng nhưng chi phí vận hành chỉ 20 USD. Tác giả giới thiệu bộ công cụ công nghệ mà anh ấy sử dụng.
+Tác giả chia sẻ về bộ tech stack tối giản giúp anh vận hành hệ thống website đem lại doanh thu khủng nhưng chi phí vận hành lại rẻ đến mức khó tin.
 
-5、[Bạn có thực sự cần cơ sở dữ liệu không?](https://www.dbpro.app/blog/do-you-even-need-a-database) (tiếng Anh)
+5. [Bạn có thực sự cần đến database?](https://www.dbpro.app/blog/do-you-even-need-a-database) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041602.webp)
 
-Bài viết này cho rằng nếu lượng dữ liệu không lớn, các trang web nhỏ hoàn toàn có thể không cần cơ sở dữ liệu mà lưu trực tiếp vào tệp. Cho dù là đọc tệp trực tiếp, truy vấn từ bộ nhớ hay dùng thuật toán tìm kiếm nhị phân thì tốc độ cũng không hề chậm.
+Nếu dữ liệu không quá lớn, đôi khi chúng ta chẳng cần đến database phức tạp. Lưu trữ trực tiếp vào file và đọc lên bộ nhớ để truy vấn bằng các thuật toán cơ bản đôi khi lại mang lại hiệu quả bất ngờ.
 
-6、[Tự làm nước ngọt](https://blinry.org/diy-soft-drinks/) (tiếng Anh)
+6. [Tự làm nước ngọt tại gia](https://blinry.org/diy-soft-drinks/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041612.webp)
 
-Tác giả ghi lại quá trình tự làm Coca tại nhà, hóa ra nó chứa nhiều hóa chất đến vậy.
+Một trải nghiệm thú vị khi tự tay làm Coca-Cola tại nhà, giúp chúng ta hiểu rõ hơn về những thành phần hóa học đằng sau những món đồ uống quen thuộc.
 
-7、[Những điều bạn chưa biết về Index](https://jon.chrt.dev/2026/04/15/things-you-didnt-know-about-indexes.html) (tiếng Anh)
+7. [Những điều có thể bạn chưa biết về Index](https://jon.chrt.dev/2026/04/15/things-you-didnt-know-about-indexes.html) (Tiếng Anh)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041603.webp)
-
-Một bài viết phổ biến kiến thức về cơ sở dữ liệu, giới thiệu cách sử dụng cơ bản của chỉ mục (index) qua các ví dụ thực tế.
+Một bài viết vỡ lòng cực hay về cách thức hoạt động và những ứng dụng thực tế của Index trong database.
 
 ## Công cụ
 
-1、[DAVINCI RESOLVE 21](https://www.blackmagicdesign.com/products/davinciresolve/photo)
+1. [DaVinci Resolve 21](https://www.blackmagicdesign.com/products/davinciresolve/photo)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041501.webp)
+Phần mềm dựng phim chuyên nghiệp giờ đây đã tích hợp thêm các công cụ chỉnh sửa ảnh mạnh mẽ, không thua kém gì các phần mềm đồ họa chuyên dụng.
 
-Phiên bản mới của phần mềm chỉnh sửa video nổi tiếng "DaVinci" đã thêm tính năng chỉnh sửa hình ảnh, có thể dùng như một phần mềm chỉnh sửa ảnh thực thụ.
+2. [Phyphox](https://phyphox.org/)
 
-2、[Phyphox](https://phyphox.org/)
+Một ứng dụng lâu đời của Đại học RWTH Aachen (Đức), cho phép bạn khai thác tối đa các cảm biến trên điện thoại cho các mục đích khoa học.
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041616.webp)
+3. [Material You NewTab](https://github.com/prem-k-r/materialYouNewTab)
 
-Một ứng dụng điện thoại lâu đời nổi tiếng (hỗ trợ cả iPhone và Android), cung cấp giao diện ứng dụng cho các cảm biến khác nhau của điện thoại, do Đại học RWTH Aachen của Đức phát triển.
+Extension tùy biến trang chủ tab mới theo phong cách Material You của Google.
 
-3、[Material You NewTab](https://github.com/prem-k-r/materialYouNewTab)
+4. [ClipCascade](https://github.com/Sathvik-Rao/ClipCascade)
 
-![](https://cdn.beekka.com/blogimg/asset/202410/bg2024100501.webp)
+Công cụ đồng bộ clipboard giữa các máy tính với nhau một cách tự động, hỗ trợ cả Windows, Linux và Android.
 
-Một tiện ích Chrome dùng để tùy chỉnh trang chủ của tab mới.
+5. [Gridea Pro](https://github.com/Gridea-Pro/gridea-pro)
 
-4、[ClipCascade](https://github.com/Sathvik-Rao/ClipCascade)
+Công cụ viết blog tĩnh ngay trên máy tính mà không cần phải biết cấu hình server phức tạp. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9565) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202410/bg2024100503.webp)
+6. [Recordly](https://github.com/webadderall/Recordly)
 
-Một công cụ đồng bộ clipboard. Nó có thể tự động đồng bộ clipboard từ máy tính này sang máy tính khác, nhưng cần cài đặt cả phía máy chủ và máy khách (hỗ trợ Windows, Linux, Android).
+Ứng dụng quay và chỉnh sửa video giới thiệu sản phẩm cực nhanh, hỗ trợ quay cả màn hình hoặc từng cửa sổ riêng biệt. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9571) đóng góp)
 
-5、[Gridea Pro](https://github.com/Gridea-Pro/gridea-pro)
+7. [wt.65536.dev](https://wt.65536.dev/)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041201.webp)
+Website giúp chèn watermark vào ảnh và video theo các template có sẵn. ([@FurryR](https://github.com/ruanyf/weekly/issues/9579) đóng góp)
 
-Trình viết blog tĩnh trên máy tính. Không cần thiết lập máy chủ, giúp bạn lập trang blog tĩnh của riêng mình mà không cần kiến thức kỹ thuật phức tạp. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9565) đóng góp)
+8. [Input 0](https://github.com/10xChengTu/input0)
 
-6、[Recordly](https://github.com/webadderall/Recordly)
+Công cụ nhập liệu bằng giọng nói cho macOS, chạy hoàn toàn nội bộ và có khả năng tự động nhuận sắc văn bản sau khi nhận dạng. ([@Justin3go](https://github.com/ruanyf/weekly/issues/9607) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041202.webp)
+9. [OpenToggl](https://github.com/CorrectRoadH/OpenToggl)
 
-Công cụ quay phim màn hình và chỉnh sửa mã nguồn mở, phù hợp để làm demo, trình diễn sản phẩm, hướng dẫn, video giải thích... Có thể quay toàn bộ màn hình hoặc từng cửa sổ và vào thẳng trình chỉnh sửa. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9571) đóng góp)
+Giải pháp mã nguồn mở thay thế cho công cụ quản lý thời gian nổi tiếng Toggl. ([@CorrectRoadH](https://github.com/ruanyf/weekly/issues/9615) đóng góp)
 
-7、[Thủy ấn (Watermark)](https://wt.65536.dev/)
+## AI liên quan
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041301.webp)
+1. [OmniVoice Studio](https://github.com/debpalash/OmniVoice-Studio)
 
-Trang web thêm dấu chìm (watermark) cho hình ảnh và video, hỗ trợ tùy chỉnh mẫu template. ([@FurryR](https://github.com/ruanyf/weekly/issues/9579) đóng góp)
+Ứng dụng lồng tiếng bằng AI chạy cục bộ, không cần API key hay internet, hỗ trợ cả dịch thuật và nhân bản giọng nói. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9633) đóng góp)
 
-8、[Input 0](https://github.com/10xChengTu/input0)
+2. [EVA](https://github.com/usepr/eva)
 
-Công cụ nhập liệu bằng giọng nói mã nguồn mở miễn phí cho macOS, chạy cục bộ, hỗ trợ mô hình lớn để nhận diện văn bản giọng nói và trau chuốt văn bản. ([@Justin3go](https://github.com/ruanyf/weekly/issues/9607) đóng góp)
+Một AI Agent lập trình tối giản chỉ với một script Python duy nhất, rất đáng để tham khảo cách triển khai. ([@usepr](https://github.com/ruanyf/weekly/issues/9560) đóng góp)
 
-9、[OpenToggl](https://github.com/CorrectRoadH/OpenToggl)
+3. [claude-msync](https://github.com/debugtheworldbot/msync)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041401.webp)
+Công cụ dòng lệnh giúp xuất bộ nhớ (memory) của Claude Code để dùng cho các chatbot khác. ([@debugtheworldbot](https://github.com/ruanyf/weekly/issues/9589) đóng góp)
 
-Công cụ theo dõi thời gian mã nguồn mở, giải pháp thay thế cho phần mềm thương mại [Toggl](https://toggl.com/). ([@CorrectRoadH](https://github.com/ruanyf/weekly/issues/9615) đóng góp)
+4. [TokenTracker](https://github.com/mm7894215/TokenTracker)
 
-## AI
-
-1、[OmniVoice Studio](https://github.com/debpalash/OmniVoice-Studio)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041609.webp)
-
-Ứng dụng AI trên máy tính để lồng tiếng cho video, hỗ trợ dịch và nhân bản giọng nói, không cần mã khóa API và dịch vụ đám mây, tạo hoàn toàn cục bộ. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9633) đóng góp)
-
-2、[EVA](https://github.com/usepr/eva)
-
-Một AI Agent lập trình cực tối giản, chỉ cần một tập lệnh Python duy nhất, được định vị là phiên bản "cấu hình thấp" của Claude Code, có thể dùng để tham khảo cách triển khai. ([@usepr](https://github.com/ruanyf/weekly/issues/9560) đóng góp)
-
-3、[claude-msync](https://github.com/debugtheworldbot/msync)
-
-Một công cụ dòng lệnh để xuất bộ nhớ (memory) của Claude Code, sau đó nhập vào ứng dụng Claude hoặc các AI Agent khác. ([@debugtheworldbot](https://github.com/ruanyf/weekly/issues/9589) đóng góp)
-
-4、[TokenTracker](https://github.com/mm7894215/TokenTracker)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041402.webp)
-
-Tạo báo cáo thống kê tiêu thụ Token cục bộ, hỗ trợ nhiều Agent (Claude Code, Codex, Cursor, Gemini, Kiro, OpenCode, OpenClaw và Every Code). ([@mm7894215](https://github.com/ruanyf/weekly/issues/9627) đóng góp)
+Báo cáo thống kê lượng Token tiêu thụ của các AI Agent phổ biến như Claude Code hay Cursor ngay trên máy bạn. ([@mm7894215](https://github.com/ruanyf/weekly/issues/9627) đóng góp)
 
 ## Tài nguyên
 
-1、[Bảo tàng Thuốc lá Trung Quốc](https://www.ciggies.app/)
+1. [Bảo tàng thuốc lá Trung Quốc](https://www.ciggies.app/)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041601.webp)
+Một bộ sưu tập kỳ lạ về các nhãn hiệu thuốc lá nội địa Trung Quốc.
 
-Một trang web cá nhân thu thập các nhãn hiệu thuốc lá nội địa khác nhau.
+2. [Giải thưởng Ảnh Báo chí Thế giới 2026](https://petapixel.com/2026/04/09/over-70-powerful-winners-from-the-2026-world-press-photo-contest/?user_id=66c4c9305d78644b3ac5df9c)
 
-2、[Các tác phẩm đoạt giải Cuộc thi Ảnh Báo chí Thế giới 2026](https://petapixel.com/2026/04/09/over-70-powerful-winners-from-the-2026-world-press-photo-contest/?user_id=66c4c9305d78644b3ac5df9c)
+Tổng hợp 70 bức ảnh báo chí xuất sắc nhất năm qua. Trong đó có bức ảnh tuyệt đẹp về gấu trúc hoang dã tại Tứ Xuyên được chụp bằng camera hồng ngoại.
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041302.webp)
+3. [guide.world](https://guide.world/)
 
-Trang này liệt kê tổng cộng 70 bức ảnh đoạt giải Ảnh Báo chí Thế giới năm nay, ghi lại nhiều sự kiện tin tức của năm ngoái.
-
-Hình trên là gấu trúc trong tự nhiên được chụp bằng camera cảm biến hồng ngoại tại Khu bảo tồn Vương Lãng, Công viên Gấu trúc Lớn ở Miên Dương, Tứ Xuyên.
-
-3、[guide.world](https://guide.world/)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041605.webp)
-
-Trang web này thu thập những bài ký sự du lịch xuất sắc trên khắp thế giới, tuy nhiên số lượng bài viết chưa nhiều.
+Trang web tổng hợp những bài ký sự du lịch chất lượng trên khắp thế giới.
 
 ## Hình ảnh
 
-1、[Bộ phản xạ laser trên mặt trăng](https://www.smithsonianmag.com/smithsonian-institution/apollo-astronauts-left-american-flags-boots-and-even-poop-on-the-moon-heres-why-these-artifacts-matter-180984736/)
+1. [Gương phản xạ trên mặt trăng](https://www.smithsonianmag.com/smithsonian-institution/apollo-astronauts-left-american-flags-boots-and-even-poop-on-the-moon-heres-why-these-artifacts-matter-180984736/)
 
-Năm 1971, sau khi tàu Apollo 14 của Mỹ hạ cánh xuống mặt trăng, các phi hành gia đã đặt một thiết bị màu trắng kích thước bằng một chiếc vali lên bề mặt mặt trăng.
+Năm 1971, các phi hành gia tàu Apollo 14 đã để lại một thiết bị nhỏ trên bề mặt mặt trăng. Đó thực chất là một tấm gương phản xạ tia laser. Bằng cách bắn laser từ trái đất lên tấm gương này và đo thời gian nhận tín hiệu phản hồi, chúng ta có thể biết chính xác khoảng cách Trái đất - Mặt trăng đến từng milimet. Thú vị là qua đó, người ta phát hiện mặt trăng đang âm thầm rời xa chúng ta khoảng 3,8 cm mỗi năm.
 
-![](https://cdn.beekka.com/blogimg/asset/202407/bg2024072212.webp)
+## Văn trích
 
-Đây là một bộ phản xạ laser, hơi giống một chiếc gương, có thể phản xạ các tia laser bắn tới quay trở lại.
+1. [Nỗi khổ của kiếp làm code dạo hợp đồng](https://smustafa.blog/2025/04/30/the-abysmal-state-of-contract-software-development/)
 
-![](https://cdn.beekka.com/blogimg/asset/202407/bg2024072213.jpg)
+Nhiều lập trình viên chọn làm Freelancer/Contractor vì muốn tự do và thu nhập cao. Nhưng thực tế thường phũ phàng hơn nhiều. Bạn không có bảo hiểm, không có ngày nghỉ phép có lương, hễ ốm đau là mất thu nhập. Thậm chí trong nhiều công ty, những nhân sự hợp đồng này chỉ được coi là "công dân hạng hai".
 
-Nó được dùng để đo khoảng cách chính xác giữa Trái đất và Mặt trăng. Trái đất bắn laser lên Mặt trăng, bị chiếc gương này phản xạ lại, Trái đất nhận tín hiệu phản xạ và thông qua chênh lệch thời gian sẽ biết được khoảng cách chính xác.
-
-![](https://cdn.beekka.com/blogimg/asset/202407/bg2024072214.webp)
-
-Độ chính xác đo đạc hiện nay đã đạt đến mức milimet. Các nhà khoa học phát hiện ra rằng Mặt trăng đang rời xa Trái đất với tốc độ 3,8 cm mỗi năm.
-
-## Điểm tin
-
-1、[Thực trạng tồi tệ của việc phát triển phần mềm theo hợp đồng](https://smustafa.blog/2025/04/30/the-abysmal-state-of-contract-software-development/)
-
-Có những lập trình viên là nhân viên hợp đồng theo dự án chứ không phải nhân viên chính thức.
-
-Những lập trình viên này chọn làm hợp đồng thay vì công việc toàn thời gian ổn định là vì muốn có sự linh hoạt và lợi ích kinh tế ngắn hạn. Sự linh hoạt có nghĩa là thời gian làm việc có thể tự sắp xếp, và bạn có thể ký cùng lúc nhiều hợp đồng.
-
-Đáng tiếc là thực tế các công ty thuê lượng lớn nhân viên hợp đồng không có phúc lợi, việc sa thải cũng dễ dàng hơn nhiều và lương thấp hơn nhân viên toàn thời gian.
-
-Tôi biết những điều này vì tôi đã từng làm nhân viên hợp đồng vài lần.
-
-Ngoài tiền lương và phúc lợi không bằng nhân viên toàn thời gian, bạn còn hoàn toàn không có nghỉ phép có lương. Nếu bị ốm hoặc cần nghỉ một ngày thì bạn sẽ không nhận được lương ngày hôm đó.
-
-Nhân viên hợp đồng còn một vấn đề nữa là công việc được thông báo và công việc thực tế được giao cuối cùng thường có sự khác biệt lớn.
-
-Tôi từng phỏng vấn cho một vị trí backend Java, nhưng thực tế là tôi hầu như không viết hay bảo trì bất kỳ mã Java nào mà bị yêu cầu đi viết mã React, sửa các bộ test Jest có vấn đề kế thừa từ một nhóm khác, và các cấu hình Webpack cực kỳ chậm chạp.
-
-Hai tháng sau tôi bị sa thải với lý do vô căn cứ là "lý do hiệu suất". Tôi biết đó chỉ là cái cớ, tôi đã gặp quá nhiều vấn đề mà mình hoàn toàn không thể kiểm soát được.
-
-Một trải nghiệm làm hợp đồng khác của tôi cũng vậy. Tôi trực luân phiên trong nhóm, sáng thứ Bảy phải trực mà không có lương. Bảng chấm công tôi nộp bị từ chối thẳng thừng, sếp gọi điện hỏi tôi tại sao lại làm thêm giờ.
-
-Sau đó tôi phát hiện ra chủ thuê của mình không muốn trả lương làm thêm cho tôi, và sau đó tôi bị chấm dứt hợp đồng, họ bảo tôi qua điện thoại rằng tôi không đủ năng lực làm công việc này.
-
-Tóm lại, nhân viên hợp đồng phần mềm hiện nay có đủ mọi bất cập nhưng lại không nhận được bất kỳ lợi ích nào. Nếu ai đó có thể từ nhân viên hợp đồng trở thành nhân viên toàn thời gian thì tất nhiên là rất tốt, nhưng ở mọi công ty tôi từng làm việc, nhân viên hợp đồng đều là công dân hạng hai.
+Đáng sợ nhất là sự sai lệch giữa kỳ vọng và thực tế. Bạn ứng tuyển vào vị trí Java backend nhưng cuối cùng lại bị bắt đi sửa lỗi React và những bộ test lỗi thời của một team khác để lại. Để rồi sau vài tháng, họ có thể đuổi bạn bất cứ lúc nào với những lý do mơ hồ như "hiệu quả công việc kém".
 
 ## Trích dẫn
 
-1、
+1.
 
-Tại Đại học Harvard năm học 2024-2025, tỷ lệ bài tập đạt điểm A là khoảng 60%, cao hơn nhiều so với mức khoảng 25% của năm học 2005-2006. Có thể thấy tình trạng lạm phát điểm số nghiêm trọng đến mức nào.
+Tại Harvard, tỷ lệ sinh viên đạt điểm A đã vọt lên 60% so với mức 25% của 20 năm trước. Một minh chứng rõ ràng cho tình trạng lạm phát điểm số ngày nay.
 
--- [《The Wall Street Journal》](https://www.wsj.com/us-news/education/harvard-grade-cap-a-proposal-gpa-7c921630?st=aF9vkr&mod=1440&user_id=66c4c9305d78644b3ac5df9c)
+-- [The Wall Street Journal](https://www.wsj.com/us-news/education/harvard-grade-cap-a-proposal-gpa-7c921630?st=aF9vkr&mod=1440&user_id=66c4c9305d78644b3ac5df9c)
 
-2、
+2.
 
-Mô hình Claude Mythos có thể phát hiện và lợi dụng các lỗ hổng hệ thống, các đánh giá bên ngoài đã xác nhận điều này. Nhưng người đánh giá cũng phát hiện ra một sự thật nghiệt ngã: Bạn càng chi nhiều phí Token thì nó càng phát hiện ra nhiều lỗ hổng, và hệ thống càng an toàn hơn.
+Để hệ thống được an toàn trước AI, bạn buộc phải chi nhiều tiền cho Token hơn cả kẻ tấn công. Ngành bảo mật giờ đây chẳng khác gì một cuộc chạy đua vũ trang bằng Token.
 
-Điều này có nghĩa là nếu bạn muốn hệ thống an toàn, bạn phải chi nhiều Token hơn kẻ tấn công. Vì vậy, ngành bảo mật trở nên giống như Proof-of-Work trong khai thác tiền ảo, ai đầu tư nhiều hơn thì thắng.
+-- [Simon Willison](https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks)
 
--- [Simon Willison](https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks), nhà phát triển nổi tiếng.
+3.
 
-3、
+Năm ngoái, tôi thường nghi ngờ AI khi thấy những pull request chất lượng thấp. Năm nay thì ngược lại, nếu thấy code đầy lỗi ngớ ngẩn, tôi lại tự hỏi sao người ta không dùng AI để viết code đi cho nhanh và chuẩn.
 
-Một năm trước, tôi thường xuyên nhận được những pull request có chất lượng mã nguồn kém, thậm chí hoàn toàn không hiểu nổi, điều này khiến tôi nghi ngờ liệu người gửi có dùng AI không mà mã nguồn lại tệ đến thế.
+-- [ClickHouse blog](https://clickhouse.com/blog/agentic-coding)
 
-Năm nay đã khác rồi. Khi nhận được pull request chất lượng thấp có lỗi chính tả, lỗi ngữ pháp, tôi lại nghi ngờ liệu người đóng góp có quên sử dụng AI để viết mã không, vì AI sẽ nâng cao đáng kể mức sàn chất lượng mã nguồn.
+4.
 
--- [《Thực tiễn lập trình AI của ClickHouse》](https://clickhouse.com/blog/agentic-coding)
+Trong thời đại mạng xã hội, chiến tranh cũng được đóng gói thành những nội dung giải trí để dễ dàng lan truyền hơn. Ai có nội dung thu hút hơn, người đó thắng trên mặt trận thông tin.
 
-4、
+-- [Time.com](https://time.com/article/2026/04/02/when-virality-is-the-message-the-new-age-of-ai-propaganda/)
 
-Khi chiến tranh đương đại diễn ra, chính phủ tuyên truyền thông qua các meme và hoạt hình búp bê. Điều này nghe có vẻ khó tin nhưng đó chính là biểu hiện của thời đại nền tảng.
+5.
 
-Việc đóng gói chiến tranh thành ngôn ngữ hình ảnh mang tính giải trí sẽ giúp việc tuyên truyền dễ dàng lan truyền hơn. Mạng xã hội là một đấu trường mở, nội dung có sức hút nhất sẽ có phạm vi lan truyền lớn nhất.
+Với các mô hình lớn, Markdown giờ đây giống như một file thực thi. Một file Markdown bị chỉnh sửa hoàn toàn có thể trở thành một cuộc tấn công tiêm mã (injection attack) nhắm trực tiếp vào hệ thống của bạn.
 
--- [《Khi sự lan truyền trở thành thông tin》](https://time.com/article/2026/04/02/when-virality-is-the-message-the-new-age-of-ai-propaganda/)
+-- [Cal Paterson](https://calpaterson.com/deps.html)
 
-5、
+## Nhìn lại năm xưa
 
-Các mô hình lớn có nghĩa là Markdown hiện giờ là một định dạng tệp có thể thực thi. Bạn tải xuống một tệp Markdown, mô hình lớn của bạn sẽ có thêm một phụ thuộc bên thứ ba mới, và bất kỳ sửa đổi nào của nó cũng có thể là một cuộc tấn công tiêm mã (injection attack).
+[Tương lai là sự biến mất của cảm giác vĩnh hằng](https://www.ruanyifeng.com/blog/2025/04/weekly-issue-346.html) (#346)
 
--- [《Thời gian hạ nhiệt của các phụ thuộc bên thứ ba》](https://calpaterson.com/deps.html)
+[Tác giả mã độc xz - Jia Tan là ai?](http://www.ruanyifeng.com/blog/2024/04/weekly-issue-296.html) (#296)
 
-## Nhìn lại các năm trước
+[Danh tính số không bao giờ mất](http://www.ruanyifeng.com/blog/2023/03/weekly-issue-246.html) (#246)
 
-[Tương lai chính là sự mất đi cảm giác vĩnh cửu](https://www.ruanyifeng.com/blog/2025/04/weekly-issue-346.html)（#346）
-
-[Jia Tan, tác giả của hậu độc xz là ai?](http://www.ruanyifeng.com/blog/2024/04/weekly-issue-296.html)（#296）
-
-[Danh tính mạng không bao giờ mất](http://www.ruanyifeng.com/blog/2023/03/weekly-issue-246.html)（#246）
-
-[Tương lai của máy chơi game cầm tay](http://www.ruanyifeng.com/blog/2022/02/weekly-issue-196.html)（#196）
+[Tương lai của máy chơi game cầm tay](http://www.ruanyifeng.com/blog/2022/02/weekly-issue-196.html) (#196)
 
 (Hết)

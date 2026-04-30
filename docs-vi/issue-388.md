@@ -1,318 +1,192 @@
-# Kiểm thử là "hào bảo vệ" mới
+# Kiểm thử chính là pháo đài mới
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
+Bản tin này ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, phát hành vào thứ Sáu.
 
-Tạp chí này là [nguồn mở](https://github.com/ruanyf/weekly), rất hoan nghênh các bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9088), nơi đăng tải thông tin tuyển dụng lập trình viên. Để hợp tác, vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
+Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9088) dành cho các lập trình viên. Nếu muốn hợp tác, bạn hãy [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com) nhé.
 
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030804.webp)
 
-Tại một khu danh lam thắng cảnh ở Phù Lăng, Trùng Khánh, người ta đã dựng nên "Cầu treo cự thạch" đầu tiên trên thế giới. Mặt cầu được ghép từ những khối đá khổng lồ, chỉ cần sẩy chân một chút là có thể bước hụt xuống dưới. ([via](https://www.cbg.cn/a/77561/20260214/7b37135efeb74f0fbbaf272a9b7f6ae0.html))
+Tại một khu thắng cảnh ở Phù Lăng, Trùng Khánh, người ta vừa khánh thành chiếc "cầu treo cự thạch" đầu tiên trên thế giới. Mặt cầu được ghép từ những tảng đá khổng lồ, chỉ cần một phút lơ là bạn có thể bước hụt bất cứ lúc nào. ([via](https://www.cbg.cn/a/77561/20260214/7b37135efeb74f0fbbaf272a9b7f6ae0.html))
 
-## Kiểm thử là "hào bảo vệ" mới
+## Kiểm thử chính là pháo đài mới
 
-[Next.js](https://nextjs.org) hiện là khung làm việc (framework) JS hàng đầu thế giới. Tôi ước tính có đến một nửa số ứng dụng JS full-stack mà chúng ta gặp hiện nay được phát triển bằng nó.
+[Next.js](https://nextjs.org) hiện đang là "ông vua" không thể chối cãi trong làng framework JS. Tôi đồ rằng phải đến một nửa số ứng dụng JS full-stack hiện nay được xây dựng dựa trên nền tảng này.
 
-![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022808.webp)
+Thế nhưng, chỉ cách đây hai tuần, một tin tức chấn động đã làm lung lay vị thế của gã khổng lồ này.
 
-Nhưng cách đây hai tuần, một tin tức đã làm lung lay vị thế của framework này.
+Một kỹ sư tại Cloudflare vừa [tuyên bố](https://blog.cloudflare.com/vinext/) rằng anh ta đã **tái hiện thành công toàn bộ Next.js chỉ trong đúng một tuần bằng AI**, và đặt tên cho nó là [vinext](https://vinext.io/).
 
-Một kỹ sư từ Cloudflare đã [tuyên bố](https://blog.cloudflare.com/vinext/) rằng **anh chỉ mất đúng một tuần để dùng AI tái hiện lại Next.js**, đặt tên là [vinext](https://vinext.io/).
+Thực tế, bản mẫu sản phẩm đã ra đời ngay trong ngày đầu tiên, những ngày sau đó chỉ là để tinh chỉnh thêm.
 
-![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022809.webp)
+> "Tôi thực sự bắt tay vào làm từ ngày 13 tháng 2. Ngay tối hôm đó, các tính năng cơ bản đã xong xuôi. Chiều hôm sau, 10 trên tổng số 11 bộ định tuyến (router) đã sẵn sàng. Đến ngày thứ ba, nó đã được deploy lên server của chúng tôi với khả năng hydrate hoàn chỉnh ở phía client. Những ngày kế tiếp, tôi tập trung gia cố bảo mật: xử lý các trường hợp biên, mở rộng bộ kiểm thử, đưa tỷ lệ bao phủ API lên tới 94%."
 
-Thực tế, anh chỉ mất một ngày để tạo ra bản mẫu đầu tiên, những ngày còn lại là để hoàn thiện.
+Đáng kinh ngạc hơn, bản tái hiện này còn có hiệu năng vượt trội so với bản gốc.
 
-> "Tôi bắt tay vào làm từ ngày 13/2. Ngay đêm hôm đó, các tính năng cơ bản đã xong. Chiều hôm sau, 10 trên 11 bộ định tuyến (router) đã hoàn thành. Đến ngày thứ ba, nó đã được triển khai lên máy chủ của chúng tôi và chạy mượt mà cơ chế hydrat hóa phía máy khách. Những ngày tiếp theo tôi tập trung vào bảo mật, xử lý các trường hợp biên và mở rộng bộ kiểm thử để đạt tỷ lệ bao phủ API lên tới 94%."
+> "Các bài kiểm tra benchmark sớm cho thấy tốc độ build nhanh gấp 4 lần, dung lượng gói bundle cho client giảm tới 57%. Thậm chí, một số ứng dụng Next.js thực tế đã có thể chạy trực tiếp trên nền tảng mới này."
 
-Điều đáng nói là bản tái hiện mới này còn có hiệu năng tốt hơn bản gốc.
+Hiện mã nguồn của vinext đã được [công khai](https://github.com/cloudflare/vinext).
 
-> "Kết quả thử nghiệm sớm cho thấy tốc độ xây dựng (build) nhanh gấp 4 lần, dung lượng gói tin phía máy khách giảm 57%. Các ứng dụng Next.js thực tế đã có thể chạy trực tiếp trên nền tảng này."
+Tôi cho rằng đây là một cú giáng cực mạnh vào Next.js. Next.js là sản phẩm chủ lực của Vercel với đội ngũ phát triển hùng hậu và nguồn vốn đầu tư khổng lồ suốt 10 năm qua. Dù là mã nguồn mở, nhưng họ thu lợi từ bản Enterprise, các dịch vụ đám mây, plugin và giao diện, mang về doanh thu tới 200 triệu USD vào năm ngoái.
 
-Mã nguồn của vinext đã được [công khai trên GitHub](https://github.com/cloudflare/vinext).
+**Cái gọi là "pháo đài công nghệ" tưởng chừng bất khả xâm phạm đó giờ đây bỗng trở nên mỏng manh trước AI**. Một kỹ sư đơn độc chỉ mất một tuần để sao chép thành quả của cả một tập đoàn trong một thập kỷ. Các ứng dụng hiện tại thậm chí chẳng cần sửa một dòng code nào vẫn có thể chạy ngon lành trên bản tái hiện.
 
-![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022810.webp)
+Bạn có biết chi phí cho việc này là bao nhiêu không? Chỉ vỏn vẹn 1.100 USD tiền Token AI!
 
-Theo tôi, **đây là một đòn giáng cực mạnh vào Next.js**. Next.js là sản phẩm của công ty Vercel, với một đội ngũ lập trình viên hùng hậu, tiêu tốn hàng núi tiền và đã phát triển suốt 10 năm qua. Dù là nguồn mở, nhưng họ thu phí từ các dịch vụ đám mây, plugin và giao diện, với doanh thu năm ngoái đạt 200 triệu USD.
+Điều này khiến Vercel lâm vào thế khó: làm sao để tiếp tục đổ tiền vào phát triển Next.js khi khách hàng giờ đây chẳng còn mặn mà trả phí cao cho những tính năng có thể dễ dàng bị sao chép.
 
-**Cái gọi là "hào bảo vệ" (moat) tưởng chừng bất khả xâm phạm đó đã sụp đổ trước AI**. Một kỹ sư đơn độc trong một tuần đã làm được việc của cả một đội ngũ trong mười năm. Các ứng dụng web hiện tại thậm chí chẳng cần sửa một dòng code nào, cứ thế bê sang là chạy.
+Nhìn rộng ra, mọi phần mềm thương mại đều đang đứng trước nguy cơ bị đe dọa. **Rào cản về mã nguồn đã không còn tồn tại. Chỉ với một khoản đầu tư nhỏ, AI có thể tái hiện bất kỳ phần mềm phức tạp nào.**
 
-Bạn có biết chi phí là bao nhiêu không? Tiền Token AI chỉ tốn vỏn vẹn 1.100 USD!
+Vậy để tự bảo vệ mình, các công ty phần mềm sẽ làm gì? **Câu trả lời nằm ở các bộ kiểm thử (test cases).**
 
-Vậy thì Vercel làm sao có thể tiếp tục rót tiền vào phát triển Next.js nữa, và khách hàng liệu còn muốn trả phí cao cho những tính năng mà AI có thể tái tạo trong nháy mắt? Mở rộng ra, mọi phần mềm thương mại đều đang bị đe dọa. "Hào bảo vệ" bằng mã nguồn không còn nữa.
+Lý do chính giúp kỹ sư Cloudflare tái hiện thành công Next.js là vì dự án này có hệ thống tài liệu quá tốt và bộ test cases cực kỳ đầy đủ. AI chỉ cần mô phỏng từng API và chạy thử với bộ test gốc, nếu vượt qua thì coi như đã tương thích 100%.
 
-Vậy các công ty phần mềm phải làm gì để bảo vệ mình? **Chìa khóa nằm ở các kịch bản kiểm thử (test cases)**.
+Nếu không có bộ test cases đó, chẳng ai dám chắc code AI viết ra có chạy đúng như kỳ bản gốc hay không, và đương nhiên không ai dám đưa nó vào môi trường thực tế.
 
-Sở dĩ kỹ sư Cloudflare thành công là vì Next.js có tài liệu quá đầy đủ và hệ thống test case hoàn chỉnh. AI chỉ cần mô phỏng từng API sao cho vượt qua được các bài kiểm tra cũ là có thể đảm bảo tương thích 100%. Nếu không có test case, chẳng ai biết mã nguồn mới có hoạt động đúng như cũ hay không, và chẳng ai dám đưa nó vào sản xuất.
+Chúng ta có thể dự đoán rằng sắp tới, các dự án phần mềm lớn sẽ bảo mật bộ test cases của mình như một tài sản vô giá. **Kiểm thử mới chính là pháo đài thực sự.**
 
-Trong tương lai, để tránh bị AI "copy-paste", các dự án phần mềm lớn chắc chắn sẽ bảo mật hệ thống kiểm thử của mình. **Kiểm thử chính là hào bảo vệ mới.**
+Hãy nhìn vào [SQLite](https://sqlite.org), cơ sở dữ liệu phổ biến nhất thế giới. Mã nguồn của nó chỉ có 156.000 dòng, nhưng bộ test cases lên tới [92,05 triệu dòng](https://sqlite.org/testing.html) - gấp 590 lần! Trong đó, bộ kiểm thử cốt lõi [TH3](https://sqlite.org/th3.html) hoàn toàn đóng nguồn. Nó dùng để kiểm tra các tình huống cực đoan trong ngành hàng không, y tế... Chính những bộ test bảo mật này đã khiến SQLite gần như không thể bị sao chép hoàn hảo.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030601.webp)
+Gần đây, dự án mã nguồn mở [tldraw](https://github.com/tldraw/tldraw/issues/8082) cũng đã có động thái tương tự khi chuẩn bị đóng mã nguồn các bộ kiểm thử.
 
-SQLite – hệ quản trị cơ sở dữ liệu phổ biến nhất thế giới – là một ví dụ điển hình. Mã nguồn của nó chỉ có 156.000 dòng, nhưng các kịch bản kiểm thử lên tới [92,05 triệu dòng](https://sqlite.org/testing.html), gấp 590 lần! Trong đó, bộ test quan trọng nhất là TH3 vẫn được giữ kín. Chính những bài kiểm tra bí mật này đã khiến SQLite gần như không thể bị sao chép hoàn hảo.
-
-Gần đây, một dự án nguồn mở khác là [tldraw](https://github.com/tldraw/tldraw/issues/8082) cũng đang rục rịch chuyển hệ thống test case sang dạng đóng.
-
-![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022811.webp)
-
-Dù việc đóng kín test case có thể không tốt cho sự phát triển của nguồn mở, nhưng các nhà phát triển cần bảo vệ lợi ích của mình. Trước sự bành trướng của AI, đây có lẽ là lựa chọn tất yếu.
+Thú thực, việc bảo mật test cases không có lợi cho sự phát triển chung của cộng đồng mã nguồn mở, nhưng các nhà phát triển buộc phải làm vậy để bảo vệ thành quả của mình trước sức mạnh ngày càng đáng sợ của AI.
 
 ## Vấn đề bản quyền khi AI tái hiện phần mềm
 
-Việc AI tái hiện lại phần mềm cũng đang gây ra nhiều [tranh cãi về pháp lý](https://tuananh.net/2026/03/05/relicensing-with-ai-assisted-rewrite/).
+Việc AI "xào" lại phần mềm cũng đang gây ra [nhiều tranh cãi](https://tuananh.net/2026/03/05/relicensing-with-ai-assisted-rewrite/) về mặt pháp lý.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030602.webp)
+Next.js sử dụng giấy phép MIT rất thông thoáng nên việc tái hiện không gặp vấn đề bản quyền. Tuy nhiên, một dự án khác mang tên [chardet](https://github.com/chardet/chardet) bị tái hiện và đổi từ giấy phép LGPL sang MIT đã khiến tác giả gốc vô cùng phẫn nộ.
 
-Next.js sử dụng giấy phép MIT cực kỳ cởi mở nên không sao. Nhưng với dự án [chardet](https://github.com/chardet/chardet), mọi chuyện lại khác. chardet vốn dùng giấy phép LGPL với nhiều hạn chế, nhưng sau khi được AI viết lại, nó đã bị đổi sang giấy phép MIT, khiến tác giả gốc phản ứng dữ dội.
+Cộng đồng mạng hiện đang chia làm hai phe:
+- Phe ủng hộ cho rằng AI chỉ tái hiện chức năng và giao diện API, còn mã nguồn bên trong hoàn toàn khác biệt, nên việc đổi giấy phép là hợp lệ.
+- Phe phản đối lập luận rằng theo quy định của GPL, mọi sản phẩm phái sinh đều không được phép đổi giấy phép, và bản tái hiện AI rõ ràng là một sản phẩm phái sinh.
 
-Dư luận đang chia làm hai phe. Một bên cho rằng AI chỉ tái hiện chức năng và giao diện, còn mã nguồn hoàn toàn khác nên có thể đổi giấy phép. Bên kia lại lập luận theo quy định của GPL: mọi tác phẩm phái sinh đều không được đổi giấy phép, mà AI tái hiện chính là một dạng phái sinh.
+Mọi chuyện còn rắc rối hơn khi luật pháp Mỹ hiện quy định các sản phẩm do AI tạo ra không có bản quyền và thuộc về cộng đồng. Điều này đồng nghĩa với việc **các phần mềm do AI tái hiện sẽ không thể áp dụng bất kỳ giấy phép nào, vì chúng vốn dĩ không có bản quyền ngay từ đầu.**
 
-Rắc rối hơn nữa là luật pháp Mỹ quy định sản phẩm do AI tạo ra không có bản quyền. Nghĩa là phần mềm do AI viết lại có thể rơi vào phạm vi công cộng, mọi giấy phép đi kèm đều vô hiệu. Nếu vậy, các loại giấy phép phần mềm từ nay về sau có lẽ chẳng còn mấy ý nghĩa.
+Nếu tiền lệ này được thiết lập, các loại giấy phép phần mềm sẽ trở nên vô nghĩa. Bất kể bạn dùng giấy phép gì, người khác chỉ cần dùng AI tái hiện lại là có thể lách luật một cách hợp pháp.
 
 ## Tin công nghệ
 
-1. [AI sửa lời lăng mạ](https://decrypt.co/360183/roblox-using-ai-rewrite-chat-swears-slurs-real-time)
+1. [AI chỉnh sửa lời lẽ thô tục](https://decrypt.co/360183/roblox-using-ai-rewrite-chat-swears-slurs-real-time)
 
-Nền tảng trò chơi Roblox [thông báo](https://ir.roblox.com/news/news-details/2026/Roblox-Launches-Real-Time-Chat-Rephrasing-to-Maintain-Civility-and-Gameplay-Flow/default.aspx) sẽ dùng AI để chỉnh sửa trực tiếp các đoạn chat của người chơi sao cho lịch sự hơn.
+Nền tảng game Roblox vừa [thông báo](https://ir.roblox.com/news/news-details/2026/Roblox-Launches-Real-Time-Chat-Rephrasing-to-Maintain-Civility-and-Gameplay-Flow/default.aspx) sẽ dùng AI để chỉnh sửa trực tiếp các cuộc đối thoại của game thủ nhằm hướng tới một môi trường văn minh hơn. Thay vì chỉ che đi bằng các ký hiệu `####`, AI sẽ viết lại cả câu nói sao cho lịch sự mà vẫn giữ được ý nghĩa, khiến người nghe thậm chí không nhận ra đối phương đang định văng tục. Dù có phần hơi "giả trân", nhưng đây là một nỗ lực cần thiết để bảo vệ bầu không khí trên các diễn đàn mạng.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030701.webp)
+2. [Internet bằng laser trên máy bay](https://www.esa.int/Applications/Connectivity_and_Secure_Communications/World-first_gigabit-per-second_laser_link_between_aircraft_and_geostationary_satellite)
 
-Trước đây, khi người chơi chửi thề, hệ thống sẽ lọc thành chuỗi `####`. Giờ đây, AI sẽ viết lại cả câu để ý tứ trở nên nhã nhặn hơn, khiến đối phương thậm chí không nhận ra mình đang bị mắng. Dù có vẻ hơi "giả trân", nhưng điều này thực sự cần thiết để giữ gìn môi trường giao tiếp lành mạnh.
+Cơ quan Vũ trụ Châu Âu (ESA) vừa thử nghiệm thành công việc kết nối internet tốc độ cao cho máy bay thông qua laser. Thay vì dùng sóng vô tuyến như Starlink, laser mang lại băng thông cực lớn và không bị hạn chế bởi tần số vô tuyến. Tốc độ đạt được lên tới 2,6Gbps, nhanh gấp 8 đến 10 lần so với hiện nay. Điểm yếu duy nhất là laser yêu cầu một đường truyền thẳng tắp, không bị mây che khuất, nên có lẽ chỉ phát huy tác dụng tốt nhất khi máy bay đã lên tới độ cao nhất định.
 
-2. [Internet bằng tia laser trên máy bay](https://www.esa.int/Applications/Connectivity_and_Secure_Communications/World-first_gigabit-per-second_laser_link_between_aircraft_and_geostationary_satellite)
+3. [Bản sao kỹ thuật số của các chuyên gia trên Grammarly](https://www.theverge.com/ai-artificial-intelligence/890921/grammarly-ai-expert-reviews)
 
-Cơ quan Vũ trụ Châu Âu đã thử nghiệm thành công việc kết nối internet cho máy bay thông qua tia laser trỏ thẳng đến vệ tinh.
+Tính năng "Ý kiến chuyên gia" của Grammarly vừa gây sốc khi một người dùng phát hiện ra sếp cũ của mình (đã qua đời) lại xuất hiện trong danh sách chuyên gia tư vấn. Hóa ra, Grammarly đã dùng AI để tạo ra các "phân thân kỹ thuật số" dựa trên bài viết của các chuyên gia thật để nhận xét bài viết cho người dùng. Điều này đặt ra một dấu hỏi lớn về đạo đức: chúng ta có quyền "hồi sinh" ai đó dưới dạng kỹ thuật số để phục vụ mục đích thương mại hay không?
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030704.webp)
+4. [Hòm thư năng lượng mặt trời](https://www.bbc.com/news/articles/cgln72rgrero)
 
-Hiện nay internet trên máy bay chủ yếu dùng sóng vô tuyến (như Starlink). Ưu điểm của laser là băng thông cực lớn và không bị hạn chế bởi phổ tần vô tuyến.
+Khi thư tay dần biến mất, Bưu điện Hoàng gia Anh đã có một bước đi sáng tạo: biến 3.500 hòm thư truyền thống thành "hòm thư năng lượng mặt trời". Phần mái được lắp tấm pin quang điện, và chức năng cũng chuyển từ nhận thư sang nhận gửi các bưu kiện nhỏ. Cách làm này vừa bảo tồn được nét văn hóa đặc trưng của những hòm thư đỏ, vừa đáp ứng nhu cầu thực tế của thời đại thương mại điện tử.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030705.webp)
+## Bài viết hay
 
-Tốc độ trong thử nghiệm đạt tới 2,6Gbps, nhanh gấp 8 - 10 lần so với Starlink. Tuy nhiên, nhược điểm là laser yêu cầu đường truyền thẳng tắp, không được có mây hay chướng ngại vật khí quyển, nên có lẽ chỉ dùng được khi máy bay đã lên độ cao ổn định.
+1. [Cuộc tấn công "tiêm Prompt" qua tiêu đề Issue trên GitHub](https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another) (Tiếng Anh)
 
-3. [Ý kiến chuyên gia của Grammarly](https://www.theverge.com/ai-artificial-intelligence/890921/grammarly-ai-expert-reviews)
+Một lỗ hổng bảo mật thú vị khi hacker chèn mã độc vào tiêu đề Issue để đánh lừa các công cụ AI đang thực hiện phân loại, từ đó chiếm đoạt token và phát hành các phiên bản phần mềm độc hại.
 
-Grammarly có tính năng trả phí cho phép các chuyên gia nhận xét bài viết của bạn.
+2. [Đánh giá lại giá trị của file AGENTS.md](https://www.infoq.com/news/2026/03/agents-context-file-value-review/) (Tiếng Anh)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031002.webp)
-
-Một người dùng đã vô cùng kinh ngạc khi thấy tên sếp cũ của mình trong danh sách chuyên gia, trong khi ông ấy đã qua đời.
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031003.webp)
-
-Hóa ra đó không phải người thật, mà là AI đã tạo ra các "phiên bản kỹ thuật số" của các chuyên gia dựa trên các bài viết cũ của họ để đưa ra nhận xét. Điều này dấy lên tranh cãi về quyền được tạo ra các bản sao AI của người khác mà không có sự cho phép.
-
-4. [Thùng thư năng lượng mặt trời](https://www.bbc.com/news/articles/cgln72rgrero)
-
-Royal Mail (Bưu điện Hoàng gia Anh) đang biến 3.500 thùng thư truyền thống thành các "thùng thư năng lượng mặt trời".
-
-![](https://cdn.beekka.com/blogimg/asset/202511/bg2025110505.webp)
-
-Phần mái của chúng được lắp các tấm pin quang điện, giúp chuyển đổi công năng từ nhận thư sang nhận và gửi các bưu kiện nhỏ.
-
-![](https://cdn.beekka.com/blogimg/asset/202511/bg2025110506.webp)
-
-Cách làm này vừa giữ lại được hình ảnh biểu tượng của những thùng thư đỏ trên đường phố, vừa đáp ứng được nhu cầu thực tế của người dân.
-
-![](https://cdn.beekka.com/blogimg/asset/202511/bg2025110507.webp)
-
-## Bài viết
-
-1. [Tấn công tiêm nhiễm vào tiêu đề Issue trên GitHub](https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another) (Tiếng Anh)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030703.webp)
-
-Một vụ tấn công thực tế đầu tiên vào mô hình AI. Kẻ tấn công đã chèn mã độc vào tiêu đề Issue để lừa AI của dự án Cline, từ đó chiếm được quyền phát hành phiên bản độc hại lên npm.
-
-2. [Đánh giá lại tệp AGENTS.md](https://www.infoq.com/news/2026/03/agents-context-file-value-review/) (Tiếng Anh)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030901.webp)
-
-Một nghiên cứu mới cho thấy tệp `AGENTS.md` đôi khi lại gây cản trở thay vì hỗ trợ AI lập trình. Nó khiến mô hình "suy nghĩ" nhiều hơn làm tăng chi phí nhưng kết quả lại không thực sự tốt hơn.
+Nghiên cứu mới chỉ ra rằng file AGENTS.md đôi khi lại gây tác dụng ngược khi khiến mô hình AI phải "suy nghĩ" quá nhiều, làm tăng chi phí nhưng lại làm giảm chất lượng mã nguồn tạo ra.
 
 3. [Hành trình 9 năm của Temporal API](https://bloomberg.github.io/js-blog/post/temporal/) (Tiếng Anh)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031205.webp)
+Temporal API cuối cùng đã chính thức trở thành một phần của tiêu chuẩn ES2026. Bài viết nhìn lại chặng đường gian nan để đưa một cú pháp mới vào JavaScript.
 
-Temporal API cuối cùng đã được đưa vào chuẩn ES2026. Đây là hồi ức của người soạn thảo tiêu chuẩn này về hành trình gian nan kéo dài gần một thập kỷ.
+4. [Bài test khả năng "nói phét" của AI](https://decrypt.co/360596/benchmark-test-measures-ai-bullshit-most-models-fail) (Tiếng Anh)
 
-4. [Bài kiểm tra mức độ "nói nhảm" của AI](https://decrypt.co/360596/benchmark-test-measures-ai-bullshit-most-models-fail) (Tiếng Anh)
+BullshitBench là một bộ câu hỏi đặc biệt để kiểm tra xem liệu AI có đủ thông minh để nhận ra những câu hỏi vô nghĩa, hay vẫn cố gắng trả lời một cách cực kỳ nghiêm túc.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031206.webp)
+5. [CSS thuần là đủ rồi](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need) (Tiếng Anh)
 
-[BuillshitBench](https://petergpt.github.io/bullshit-benchmark/viewer/index.v2.html) chuyên đưa ra những câu hỏi vô nghĩa để xem liệu AI có đủ thông minh để nhận ra hay vẫn trả lời một cách nghiêm túc.
+37Signals chứng minh rằng bạn hoàn toàn có thể xây dựng những hệ thống lớn mà không cần đến Tailwind hay Sass, chỉ với sức mạnh của CSS nguyên bản.
 
-5. [Chỉ cần CSS thuần là đủ](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need) (Tiếng Anh)
+6. [Vật lý học về... việc đi ngoài](https://theconversation.com/physics-of-poo-why-it-takes-you-and-an-elephant-the-same-amount-of-time-76696) (Tiếng Anh)
 
-![](https://cdn.beekka.com/blogimg/asset/202512/bg2025120704.webp)
-
-Bài viết chứng minh rằng không cần các framework như Tailwind hay công cụ như Sass, chỉ với CSS thuần túy bạn vẫn có thể xây dựng nên những sản phẩm tuyệt vời.
-
-6. [Vật lý học của việc... đi vệ sinh](https://theconversation.com/physics-of-poo-why-it-takes-you-and-an-elephant-the-same-amount-of-time-76696) (Tiếng Anh)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030802.webp)
-
-Một bài viết khoa học vui giải thích tại sao mọi loài động vật từ chuột đến voi đều có thời gian đi vệ sinh trung bình khoảng 12 giây.
+Một bài viết khoa học có phần kỳ quặc giải thích tại sao hầu hết các loài động vật có vú, từ chuột đến voi, đều có thời gian đi vệ sinh trung bình khoảng 12 giây.
 
 ## Công cụ
 
 1. [KULA](https://github.com/c0m4r/kula)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030706.webp)
+Công cụ giám sát server Linux siêu nhẹ chỉ với một file thực thi duy nhất.
 
-Công cụ giám sát máy chủ Linux siêu nhẹ, chỉ gồm một tệp tin thực thi duy nhất.
+2. [WSL Distro Manager](https://github.com/bostrot/wsl2-distro-manager)
 
-2. [AnsiSaver](https://github.com/lardissone/ansi-saver)
+Giao diện đồ họa giúp bạn quản lý các bản phân phối Linux trên Windows (WSL) một cách dễ dàng hơn.
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030803.webp)
+3. [Mole](https://github.com/tw93/Mole)
 
-Trình bảo vệ màn hình (screensaver) cho máy Mac sử dụng các ký tự Ansi đầy màu sắc.
+Dọn dẹp và tối ưu hóa hệ điều hành macOS với bộ công cụ mã nguồn mở.
 
-3. [upiano](https://github.com/eliasdorneles/upiano)
+4. [Sentinel](https://github.com/suzuran0y/CCTV-Smartphone-AI-Monitoring)
 
-![](https://cdn.beekka.com/blogimg/asset/202308/bg2023081012.webp)
+Tận dụng những chiếc điện thoại Android cũ để làm camera an ninh tích hợp AI. ([@suzuran0](https://github.com/ruanyf/weekly/issues/9201) đóng góp)
 
-Chơi đàn piano ngay trên giao diện dòng lệnh.
+5. [Flux Monitor](https://github.com/chentao1006/FluxMonitor)
 
-4. [WSL Distro Manager](https://github.com/bostrot/wsl2-distro-manager)
+Bảng theo dõi trạng thái hệ thống cho người dùng Mac. ([@chentao1006](https://github.com/ruanyf/weekly/issues/9207) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031207.webp)
-
-Ứng dụng nguồn mở giúp quản lý các bản phân phối WSL trên Windows qua giao diện đồ họa.
-
-5. [Mole](https://github.com/tw93/Mole)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031213.webp)
-
-Công cụ dọn dẹp và tối ưu hóa hệ thống cho máy Mac.
-
-6. [PipeGate](https://github.com/janbjorge/pipegate)
-
-Công cụ tạo đường hầm ánh xạ dịch vụ nội mạng ra ngoài internet bằng các đoạn mã Python đơn giản.
-
-7. [HookListener](https://www.hooklistener.com)
-
-![](https://cdn.beekka.com/blogimg/asset/202412/bg2024121804.webp)
-
-Công cụ trực tuyến để quản lý và kiểm thử Webhook.
-
-8. [Sentinel](https://github.com/suzuran0y/CCTV-Smartphone-AI-Monitoring)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031201.webp)
-
-Biến điện thoại Android cũ thành camera giám sát tích hợp AI.
-
-9. [Flux Monitor](https://github.com/chentao1006/FluxMonitor)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031203.webp)
-
-Bảng điều khiển theo dõi hệ thống cho người dùng Mac.
-
-## AI
+## AI liên quan
 
 1. [Agentic Metric](https://github.com/MrQianjinsi/agentic-metric)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030603.webp)
-
-Công cụ dòng lệnh theo dõi mức độ sử dụng của các trợ lý lập trình như Claude Code, Codex.
+Theo dõi lượng Token và chi phí sử dụng của các công cụ lập trình AI Agent trên máy bạn. ([@MrQianjinsi](https://github.com/ruanyf/weekly/issues/9165) đóng góp)
 
 2. [cc-connect](https://github.com/chenhg5/cc-connect)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031202.webp)
-
-Kết nối các công cụ lập trình AI với các ứng dụng trò chuyện trên điện thoại.
+Cầu nối giúp bạn điều khiển các công cụ lập trình AI trực tiếp qua các ứng dụng nhắn tin trên điện thoại. ([@chenhg5](https://github.com/ruanyf/weekly/issues/9202) đóng góp)
 
 3. [Page Agent](https://github.com/alibaba/page-agent)
 
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030702.webp)
+Thư viện JS cho phép bạn điều khiển trang web bằng ngôn ngữ tự nhiên: "Hãy tóm tắt nội dung tài liệu trong menu điều hướng cho tôi".
 
-Chỉ cần nhúng thư viện JS này vào trang web, bạn có thể điều khiển trang web đó bằng ngôn ngữ tự nhiên.
+4. [Repo Tokens](https://github.com/qwibitai/nanoclaw/tree/main/repo-tokens)
 
-4. [Agent Safehouse](https://github.com/eugene1g/agent-safehouse)
+GitHub Action giúp hiển thị quy mô của một kho lưu trữ dưới dạng số lượng Token mà một mô hình AI cần để xử lý.
 
-Công cụ sandbox cho macOS để chạy các trình lập trình AI một cách an toàn.
+## Văn trích
 
-5. [Repo Tokens](https://github.com/qwibitai/nanoclaw/tree/main/repo-tokens)
+1. [Sự sụp đổ của những xã hội phức tạp](https://news.ycombinator.com/item?id=31670526)
 
-![](https://cdn.beekka.com/blogimg/asset/202602/bg2026022801.webp)
+Tương tự như một phần mềm khi trở nên quá phức tạp sẽ không thể bảo trì, các xã hội loài người cũng có thể sụp đổ nếu độ phức tạp vượt quá giới hạn chịu đựng. Nhà sử học Joseph Tainter trong cuốn sách cùng tên đã chỉ ra rằng: ban đầu sự phức tạp (các tầng lớp xã hội, cơ quan công quyền) giúp tăng năng suất, nhưng đến một ngưỡng nào đó, cái giá phải trả để duy trì sự phức tạp đó sẽ lớn hơn cả lợi ích nó mang lại. Kết quả là xã hội trở nên bất bình đẳng, kém hiệu quả và cuối cùng là tan rã.
 
-GitHub Action giúp hiển thị số lượng Token của toàn bộ kho mã nguồn dưới dạng một chiếc nhãn (badge) trực quan.
-
-## Tài nguyên
-
-1. [World Monitor (Giám sát thế giới)](https://www.worldmonitor.app)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026030801.webp)
-
-Bảng tin thời gian thực về tình hình thế giới, tổng hợp từ nhiều nguồn tin khác nhau.
-
-2. [Khám phá nhà máy lọc dầu](https://fuelingcuriosity.com/game.html)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031204.webp)
-
-Trang web tương tác sinh động giải thích quy trình biến dầu thô thành xăng dầu.
-
-3. [Mechanical Pencil](https://mechanical-pencil.com)
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031001.webp)
-
-Hoạt ảnh giải thích cơ chế hoạt động của các vật dụng nhỏ như bút chì bấm, bật lửa.
-
-## Hình ảnh
-
-1. [Phương pháp thay thế mật khẩu](https://tesseral.com/blog/i-designed-some-more-user-friendly-methods-for-multi-factor-authentication)
-
-Một lập trình viên đã nảy ra ý tưởng dùng bộ bài Tây làm mật khẩu. Bạn chọn ra 5 quân bài theo thứ tự, và lần sau đăng nhập phải chọn đúng y hệt như vậy. Thú vị đấy chứ?
-
-![](https://cdn.beekka.com/blogimg/asset/202507/bg2025073110.webp)
-
-## Điểm tin
-
-1. [Sự sụp đổ của xã hội phức tạp](https://news.ycombinator.com/item?id=31670526)
-
-Lịch sử cho thấy khi độ phức tạp của một xã hội vượt quá ngưỡng chịu đựng, nó sẽ sụp đổ. Các đế chế như La Mã hay Maya đều từng đối mặt với kẻ thù mang tên "sự phức tạp": quá nhiều tầng lớp quan liêu, quá nhiều luật lệ khiến chi phí vận hành xã hội trở nên khổng lồ nhưng hiệu quả mang lại ngày càng thấp.
-
-![](https://cdn.beekka.com/blogimg/asset/202603/bg2026031214.webp)
-
-## Phát ngôn
+## Trích dẫn
 
 1.
 
-Năm 2021, tôi cảm thấy thật tuyệt vời khi là một kỹ sư phần mềm. Nhưng đến năm 2026, tôi không còn chắc ngành này sẽ ra sao trong mười năm tới. Có lẽ công việc mà tôi yêu thích sắp sửa biến mất.
+Năm 2021, tôi cảm thấy thật tuyệt vời khi làm một kỹ sư phần mềm. Năm 2026, tôi chẳng còn chắc 10 năm nữa cái nghề này sẽ ra sao. Dù thế nào đi nữa, cái công việc lập trình mà tôi hằng yêu quý sắp sửa biến mất rồi.
 
--- [《Tôi không biết liệu mười năm nữa công việc của mình còn tồn tại không》](https://www.seangoedecke.com/will-my-job-still-exist/)
+-- Trích "Tôi không biết liệu 10 năm nữa công việc của mình còn tồn tại"
 
 2.
 
-Đối đầu với một AI mạnh mẽ sẽ có cảm giác thế nào? Bạn sẽ thấy mình bỗng nhiên yếu đi một cách khó hiểu, vì mọi bước đi của AI đều vượt xa dự tính của bạn.
+Đối đầu với một AI mạnh mẽ mang lại cảm giác rất lạ: bạn thấy mình yếu đi một cách vô lý, còn AI thì làm gì cũng vượt ngoài mong đợi, hệt như bạn đang đấu với một tay chơi luôn có vận may mỉm cười trong mọi ván bài vậy.
 
 -- probablydance.com
 
 3.
 
-Đọc sách về kinh doanh là lãng phí thời gian. Chúng biến những câu chuyện đơn giản thành lời khuyên sáo rỗng và dùng những khẩu hiệu truyền cảm hứng để che lấp đi sự phức tạp của thị trường.
+Đọc sách kinh doanh đôi khi chỉ là lãng phí thời gian. Chúng biến những câu chuyện thành công ngẫu nhiên thành những công thức vạn năng và thay thế sự phức tạp của thị trường bằng những khẩu hiệu sáo rỗng.
 
--- [《Đọc sách kinh doanh là lãng phí thời gian》](https://antemedian.substack.com/p/why-reading-business-books-is-a-waste)
+-- Đọc sách kinh doanh là lãng phí thời gian
 
 4.
 
-Tôi thường yêu cầu AI đọc tài liệu hướng dẫn của một công cụ mới bằng cách ra lệnh "chạy `xxx-tool --help`", và thế là nó học được cách dùng ngay lập tức.
+Thời gian là tài nguyên duy nhất không thể tái tạo. Với tôi, các gói thuê bao mô hình AI hiện nay là cách rẻ nhất để mua thêm thời gian cho chính mình.
 
--- Simon Willison.
+-- Đừng quá khắt khe với phí thuê bao AI
 
-5.
+## Nhìn lại năm xưa
 
-Thời gian là tài nguyên duy nhất không thể tái tạo. Các mô hình AI lớn là cách rẻ nhất mà tôi biết để mua thêm thời gian cho chính mình.
+[Lập trình Low-code có lẽ sẽ khó thành công](https://www.ruanyifeng.com/blog/2025/03/weekly-issue-341.html) (#341)
 
--- [《Đừng quá lăn tăn về phí thuê bao AI》](https://steipete.me/posts/2025/stop-overthinking-ai-subscriptions)
-
-## Nhìn lại các năm trước
-
-[Lập trình low-code có lẽ khó thành công](https://www.ruanyifeng.com/blog/2025/03/weekly-issue-341.html) (#341)
-
-[AI không có hào bảo vệ](http://www.ruanyifeng.com/blog/2024/03/weekly-issue-291.html) (#291)
+[AI không có pháo đài ngăn cách](http://www.ruanyifeng.com/blog/2024/03/weekly-issue-291.html) (#291)
 
 [Động lực tăng trưởng của Trung Quốc nằm ở vùng nội địa](http://www.ruanyifeng.com/blog/2023/02/weekly-issue-241.html) (#241)
 

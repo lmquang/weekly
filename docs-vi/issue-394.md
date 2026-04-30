@@ -1,375 +1,303 @@
 # Làn sóng mở API lần thứ hai
 
-Bản tin này ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, phát hành vào thứ Sáu. (**[Thông báo] Nghỉ lễ Quốc tế Lao động vào thứ Sáu tuần tới, bản tin tạm nghỉ.**)
+Bản tin này ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, phát hành vào thứ Sáu. (**[Thông báo] Tuần tới nghỉ lễ Quốc tế Lao động, bản tin tạm nghỉ.**)
 
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh [đóng góp](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9454), đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
+Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp](https://github.com/ruanyf/weekly/issues). Ngoài ra, mình còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/9454) dành cho các lập trình viên. Nếu muốn hợp tác, bạn hãy [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com) nhé.
 
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042008.webp)
 
-Biển quảng cáo ngầu nhất mà tôi từng thấy, chỉ có một dòng lệnh để quảng bá một bộ công cụ AI. Người bình thường không hiểu cũng chẳng sao, đằng nào nó cũng không dành cho họ. ([via](https://x.com/steventey/status/1689986179746197504))
+Đây là tấm biển quảng cáo ngầu nhất mà tôi từng thấy. Chỉ vỏn vẹn một dòng lệnh để quảng bá một bộ công cụ AI. Người bình thường không hiểu cũng chẳng sao, vốn dĩ nó cũng không dành cho họ. ([via](https://x.com/steventey/status/1689986179746197504))
 
 ## Làn sóng mở API lần thứ hai
 
-Nếu bạn làm trong ngành Internet đủ lâu, chắc hẳn bạn sẽ nhớ rằng trước đây từng có một làn sóng mở API.
+Nếu bạn làm trong ngành Internet đủ lâu, chắc hẳn bạn vẫn còn nhớ về làn sóng mở API thuở trước.
 
-Đó là năm 2011, cách đây 15 năm, khi dịch vụ đám mây vừa mới trỗi dậy, các nền tảng đua nhau mở API của mình.
+Đó là năm 2011, cách đây đúng 15 năm. Khi đó dịch vụ đám mây mới chớm nở, các nền tảng đua nhau mở API.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042102.webp)
 
-Hồi đó, cả Facebook và Twitter đều phát hành API của mình và mở dữ liệu nền tảng. Thiết kế API của GitHub thậm chí còn là một tác phẩm nghệ thuật, gần như có thể lấy được bất kỳ tính năng nào bạn muốn.
+Hồi ấy, cả Facebook lẫn Twitter đều tung ra API và mở toang dữ liệu nền tảng. Thiết kế API của GitHub khi đó thực sự là một tác phẩm nghệ thuật, bạn gần như có thể lấy bất kỳ tính năng nào mình muốn.
 
-Ý tưởng của các nền tảng lúc bấy giờ là việc mở API sẽ giúp người dùng và bên thứ ba tham gia phát triển các loại plugin và tiện ích mở rộng, từ đó thúc đẩy tăng trưởng cho nền tảng, tăng tỷ lệ giữ chân và sự hài lòng của người dùng.
+Ý tưởng của các ông lớn lúc bấy giờ rất rõ ràng: mở API để lôi kéo người dùng và bên thứ ba cùng phát triển plugin, tiện ích. Từ đó thúc đẩy tăng trưởng, giữ chân người dùng và khiến họ hài lòng hơn.
 
-Lúc đó còn có một trang web tên là [ProgrammableWeb](https://en.wikipedia.org/wiki/ProgrammableWeb) (hiện đã đóng cửa). Cái tên của nó đại diện cho niềm tin của mọi người thời bấy giờ: Internet có thể được lập trình thông qua API để kết nối dữ liệu của các nền tảng khác nhau lại với nhau.
+Ngày đó còn có một trang web tên là [ProgrammableWeb](https://en.wikipedia.org/wiki/ProgrammableWeb) (giờ đã đóng cửa). Cái tên này đại diện cho niềm tin mãnh liệt của giới công nghệ thời bấy giờ: Chúng ta có thể lập trình Internet thông qua API để kết nối dữ liệu giữa các nền tảng khác nhau.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042103.webp)
 
-Thế nhưng, mọi chuyện đã diễn biến hoàn toàn ngược lại với dự đoán.
+Thế nhưng, thực tế lại đi ngược hoàn toàn với kỳ vọng.
 
-Các nền tảng nhận ra rằng API rất khó kiếm ra tiền vì không thể chèn quảng cáo, hơn nữa dữ liệu của chính mình lại giúp ích cho việc kinh doanh của công ty khác, gây thất thoát người dùng.
+Các nền tảng nhận ra rằng API rất khó kiếm ra tiền vì không thể chèn quảng cáo. Chưa kể, dữ liệu của chính mình lại đang làm giàu cho công ty khác và khiến người dùng rời bỏ hệ sinh thái.
 
-Thế là họ đua nhau thay đổi cách làm, hạn chế và đóng cửa API, không còn chia sẻ dữ liệu nữa, giữ người dùng trong "vườn rau có tường bao" của chính mình.
+Vậy là họ đồng loạt quay xe. Họ hạn chế, đóng cửa API, ngừng chia sẻ dữ liệu và nhốt người dùng trong những "vườn rau có tường bao" của riêng mình.
 
-Ngày nay, API của Facebook và Twitter gần như chỉ để trưng cho đẹp, các ứng dụng bên thứ ba bị cấm triệt để. GitHub tuy vẫn giữ API mở nhưng cũng đã áp dụng kiểm soát, tăng cường xác thực danh tính và giới hạn tốc độ, khiến việc xây dựng các ứng dụng bên thứ ba đầy đủ tính năng trở nên rất khó khăn.
+Đến nay, API của Facebook và Twitter gần như chỉ để làm cảnh. Các ứng dụng bên thứ ba bị khai tử không thương tiếc. GitHub tuy vẫn giữ API mở nhưng cũng siết chặt quản lý, tăng cường xác thực và giới hạn tốc độ. Việc xây dựng một ứng dụng bên thứ ba đầy đủ tính năng giờ đây khó như lên trời.
 
-Đúng lúc mọi người nghĩ rằng đây sẽ là trạng thái bình thường thì một [sự thay đổi](https://brandur.org/second-wave-api-first) đã xuất hiện.
+Đúng lúc mọi người nghĩ rằng đây sẽ là trạng thái bình thường mới thì một [sự thay đổi](https://brandur.org/second-wave-api-first) đã xuất hiện.
 
-Vào nửa cuối năm 2025, các mô hình lớn đã đạt đến điểm tới hạn, trở nên thực sự mạnh mẽ và có thể sử dụng được cho môi trường sản xuất.
+Vào nửa cuối năm 2025, các mô hình lớn đã đạt đến điểm tới hạn. Chúng trở nên thực sự mạnh mẽ và sẵn sàng cho môi trường thực tế.
 
-Mọi người nhanh chóng nhận ra rằng nếu mô hình lớn chỉ biết suy nghĩ mà không thể thực thi mã thì tác dụng sẽ không lớn. **Giá trị lớn nhất của AI không phải là tạo nội dung mà là tạo nội dung + tự động hóa**, như vậy mới có thể giải phóng sức lao động và tạo ra giá trị tối đa. Đại diện tiêu biểu cho tự động hóa AI tự thực thi mã chính là "Tôm hùm" (OpenClaw).
+Chúng ta nhanh chóng nhận ra một điều: nếu mô hình lớn chỉ biết suy nghĩ mà không thể thực thi mã, giá trị của nó sẽ cực kỳ hạn chế. **Giá trị lớn nhất của AI không nằm ở việc tạo nội dung, mà là tạo nội dung cộng với tự động hóa**. Chỉ có như vậy mới thực sự giải phóng sức lao động và tạo ra giá trị tối đa. Đại diện tiêu biểu cho xu hướng AI tự chạy code chính là "Tôm hùm" (OpenClaw).
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042104.webp)
 
-Tự động hóa có nghĩa là AI phải có khả năng gọi các nền tảng khác, và điều đó lại có nghĩa là các nền tảng khác trước tiên phải mở API của mình.
+Tự động hóa đồng nghĩa với việc AI phải có khả năng gọi các nền tảng khác. Và để làm được điều đó, các nền tảng bắt buộc phải mở API của mình.
 
-Bỗng chốc, API không còn là gánh nặng mà là điều kiện bắt buộc để kết nối với AI. Không có API, nền tảng của bạn sẽ không thể bước vào quy trình làm việc của AI, và các Agent khác nhau cũng không thể thay mặt người dùng làm việc trên nền tảng của bạn.
+Bỗng chốc, API không còn là gánh nặng mà trở thành điều kiện tiên quyết để kết nối với thế giới AI. Thiếu API, nền tảng của bạn sẽ bị gạt ra khỏi quy trình làm việc của AI. Các Agent sẽ không thể thay mặt người dùng làm việc trên hệ thống của bạn.
 
-Cùng là hai nền tảng, một bên có API, bên kia không, thì bên không có API rất có thể sẽ bị thị trường bỏ rơi vì mô hình lớn không thể kết nối với nó, cũng không thể tự động hóa nó, và người dùng AI chỉ còn cách chuyển sang dùng đối thủ cạnh tranh của nó.
+Hãy tưởng tượng hai nền tảng cạnh tranh, một bên có API, bên kia không. Bên không có API rất dễ bị thị trường đào thải vì các mô hình lớn không thể kết nối hay tự động hóa nó. Người dùng AI đương nhiên sẽ chọn đối thủ của bạn.
 
-Các nền tảng đã nhận ra điều đó, ai mở API sớm thì người đó giành được tiên cơ. Cho nên, ngay cả một "ông lớn" như Tencent cũng mở giao diện WeChat với tốc độ nhanh nhất sau khi OpenClaw bùng nổ, để OpenClaw có thể gửi tin nhắn đến WeChat.
+Các ông lớn đã nhận ra điều này. Ai mở API sớm, người đó chiếm ưu thế. Ngay cả một đế chế như Tencent cũng phải vội vã mở giao diện WeChat sau khi OpenClaw bùng nổ, để Tôm hùm có thể gửi tin nhắn trực tiếp qua WeChat.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042315.webp)
 
-Tencent cũng sợ rằng trong thế giới của OpenClaw sẽ không có chỗ cho mình. Các nền tảng khác lại càng không cần phải nói, tranh nhau mở giao diện thao tác của chính mình thông qua MCP và Skill.
+Tencent cũng sợ rằng trong thế giới của OpenClaw sẽ không có chỗ cho mình. Các nền tảng khác lại càng sốt sắng hơn, tranh nhau mở giao diện thao tác thông qua MCP và Skill.
 
-Điều này cho thấy **làn sóng mở API lần thứ hai đang đến**. Lần này sẽ mở triệt để hơn và dễ sử dụng hơn lần trước.
+Tất cả những điều này cho thấy **làn sóng mở API lần thứ hai đang ập đến**. Lần này sẽ triệt để hơn và dễ dùng hơn nhiều.
 
-(1) Lần này không chỉ mở các dịch vụ đám mây mà còn rất nhiều dịch vụ đời sống: giao đồ ăn, thương mại điện tử, ngân hàng... thậm chí còn có nhiều dịch vụ vốn dĩ không bao giờ có API như đặt chỗ nhà hàng và sân vận động.
-
-(2) API lần này không cần lập trình thủ công, bạn chỉ cần sử dụng ngôn ngữ tự nhiên, được mô hình lớn dịch sang rồi gọi.
-
-(3) API lần này là do người tiêu dùng gọi thông qua AI với mục đích là thay mặt người dùng thực hiện công việc. Trước đây API là do các ứng dụng gọi với mục đích lấy dữ liệu.
+1. Phạm vi mở rộng không chỉ ở các dịch vụ đám mây mà còn len lỏi vào mọi ngóc ngách đời sống: giao đồ ăn, thương mại điện tử, ngân hàng... Thậm chí cả những nơi vốn chẳng bao giờ nghĩ đến API như đặt chỗ nhà hàng hay sân bóng.
+2. API giờ đây không cần lập trình thủ công phức tạp. Bạn chỉ cần dùng ngôn ngữ tự nhiên, mô hình lớn sẽ tự dịch và thực hiện lệnh gọi.
+3. API lần này do người tiêu dùng gọi thông qua AI, với mục đích thay mặt họ thực thi công việc. Khác hẳn với trước đây, khi API chủ yếu để các ứng dụng lấy dữ liệu.
 
 ## Marathon robot
 
-Cuối tuần trước, tại Diệc Trang, Bắc Kinh đã diễn ra [cuộc thi chạy bán marathon của robot hình người](https://news.sina.com.cn/zx/gj/2026-04-19/doc-inhvackq0239220.shtml) lần thứ hai.
+Cuối tuần trước tại Diệc Trang, Bắc Kinh, [cuộc thi chạy bán marathon dành cho robot hình người](https://news.sina.com.cn/zx/gj/2026-04-19/doc-inhvackq0239220.shtml) lần thứ hai đã diễn ra.
 
-Hơn 100 robot hình người đã tham gia cuộc thi để xem ai chạy hết quãng đường 21,0975 km nhanh nhất. Cuối cùng, thành tích của nhà vô địch là 50 phút 26 giây, vượt qua cả vận động viên con người nhanh nhất (kỷ lục thế giới bán marathon của con người là 1 giờ 02 phút 52 giây).
+Hơn 100 robot đã cùng so tài trên quãng đường 21,0975 km. Kết quả thật kinh ngạc: nhà vô địch cán đích với thời gian 50 phút 26 giây, vượt xa kỷ lục thế giới của con người (1 giờ 02 phút 52 giây).
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042005.webp)
 
-Theo [video hiện trường](https://x.com/xiaohu/status/2045786816213815411) do cư dân mạng quay lại, robot chạy được một khoảng cách nhất định phải vào trạm tiếp tế để nhân viên thay pin và thêm đá lạnh (hoặc đá khô) để tránh bị quá nhiệt.
+Theo [video tại hiện trường](https://x.com/xiaohu/status/2045786816213815411), robot chạy được một quãng là phải vào trạm tiếp tế để nhân viên thay pin và thêm đá lạnh (hoặc đá khô) để hạ nhiệt.
 
-Điều này có nghĩa là pin tích hợp của robot không duy trì nổi một giờ chạy.
+Điều này cho thấy pin tích hợp của robot chưa trụ nổi một giờ chạy cường độ cao.
 
-Robot hình người [Unitree H2](https://www.unitree.com/cn/H2) được bán công khai có thời gian duy trì là 3 giờ. Khi vận động mạnh như chạy đường dài, thời gian duy trì chắc chắn sẽ bị giảm đi đáng kể. Hơn nữa, khi công suất như nhau, robot có trọng lượng nhẹ hơn sẽ có lợi thế trong cuộc đua, nghĩa là không thể mang theo quá nhiều pin.
+Dòng robot hình người [Unitree H2](https://www.unitree.com/cn/H2) thương mại vốn có thời lượng pin 3 giờ. Tuy nhiên khi vận động mạnh như chạy đường dài, con số này sụt giảm nghiêm trọng. Hơn nữa, để chạy nhanh thì robot cần nhẹ, nghĩa là không thể nhồi nhét quá nhiều pin.
 
-Như vậy có thể thấy tính thực dụng của robot hình người hiện nay vẫn còn rất hạn chế. Khi không cắm điện, cứ sau một đến hai giờ là phải sạc, như thế thì rất nhiều việc sẽ không phù hợp để làm.
+Có thể thấy tính thực dụng của robot hình người hiện nay vẫn còn rất sơ khai. Nếu không cắm điện mà cứ chạy một hai giờ lại phải sạc thì rõ ràng chúng chưa thể đảm đương được nhiều công việc thực tế.
 
 ## GPT Images 2.0
 
-Tuần này, OpenAI đã phát hành [mô hình GPT Image 2.0](https://openai.com/zh-Hans-CN/index/introducing-chatgpt-images-2-0/), được cho là mô hình hình ảnh mạnh nhất hiện nay, vượt qua cả Nano Banana 2 Pro của Google.
+Tuần này, OpenAI đã tung ra [mô hình GPT Image 2.0](https://openai.com/zh-Hans-CN/index/introducing-chatgpt-images-2-0/). Đây được coi là mô hình hình ảnh mạnh nhất hiện nay, vượt mặt cả Nano Banana 2 Pro của Google.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042304.webp)
 
-Theo giới thiệu của OpenAI, việc hiển thị văn bản của nó có bước tiến lớn, hỗ trợ rất tốt chữ Hán và có thể tạo ra các hình ảnh giải thích phức tạp.
+Theo OpenAI, khả năng render văn bản của nó đã tiến bộ vượt bậc, hỗ trợ chữ Hán cực tốt và có thể tạo ra các hình ảnh giải thích phức tạp.
 
-Mọi người có thể vào [ChatGPT.com](https://chatgpt.com/images) để dùng thử miễn phí.
+Bạn có thể trải nghiệm miễn phí tại [ChatGPT.com](https://chatgpt.com/images).
 
-Tôi đã làm một phép so sánh, tạo một bức ảnh chú chó nhỏ đang ngủ trưa dưới mái hiên của một trấn cổ. Đây là kết quả của GPT Images 1.
+Tôi đã thử làm một phép so sánh nhỏ: yêu cầu tạo hình một chú chó đang ngủ trưa dưới mái hiên của một trấn cổ. Đây là kết quả từ GPT Images 1.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042306.webp)
 
-Đây là kết quả của GPT Images 2.0.
+Và đây là GPT Images 2.0.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042305.webp)
 
-Tôi còn thấy một dự án thú vị là [Flipbook](https://flipbook.page/). Nó là một trình duyệt hình ảnh giải thích, người dùng nhập một chủ đề và nó sẽ tự động tạo ra hình ảnh giải thích chi tiết.
+Tôi còn tìm thấy một dự án khá hay là [Flipbook](https://flipbook.page/). Đây là một trình duyệt hình ảnh giải thích. Người dùng chỉ cần nhập chủ đề, hệ thống sẽ tự động tạo ra các hình ảnh minh họa chi tiết.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042307.webp)
 
-Hình trên là hình ảnh giải thích được tạo ra khi nhập từ "nước ngọt", nhấp vào từng phần còn có thể tạo ra các lời giải thích sâu hơn.
+Hình trên là kết quả khi tôi nhập từ khóa "nước ngọt". Bạn có thể click vào từng phần để xem giải thích sâu hơn.
 
-Trên mạng đã có [kho lưu trữ Awesome](https://github.com/YouMind-OpenLab/awesome-gpt-image-2) tập hợp các lời nhắc (prompt) ([@DophinL](https://github.com/ruanyf/weekly/issues/9728) đóng góp), mọi người có thể xem các ví dụ hay của người khác.
+Cộng đồng cũng đã nhanh tay tổng hợp các Prompt xịn tại [kho lưu trữ Awesome](https://github.com/YouMind-OpenLab/awesome-gpt-image-2) (do bạn [@DophinL](https://github.com/ruanyf/weekly/issues/9728) gửi về).
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042308.webp)
 
-Ngoài ra còn có một [kho lưu trữ lời nhắc](https://github.com/ZeroLu/awesome-gpt-image) tương tự ([@ZeroLu](https://github.com/ruanyf/weekly/issues/9727) đóng góp).
+Ngoài ra còn một [kho lưu trữ Prompt khác](https://github.com/ZeroLu/awesome-gpt-image) tương tự (do bạn [@ZeroLu](https://github.com/ruanyf/weekly/issues/9727) đóng góp).
 
-## AI là công cụ mở rộng thần kỳ
+## AI là cỗ máy khuếch đại
 
-**AI có một đặc điểm là không chỉ có thể nén thông tin mà còn cực kỳ giỏi trong việc mở rộng thông tin**. Nó sẽ suy luận ra những phần mơ hồ và tạo ra những phần còn thiếu, lấp đầy các chi tiết có vẻ hợp lý.
+**AI có một đặc điểm thú vị: nó không chỉ biết nén thông tin mà còn cực kỳ giỏi trong việc mở rộng chúng**. Nó có thể tự suy luận ra những phần mơ hồ, thậm chí tạo ra những mẩu thông tin còn thiếu để lấp đầy các chi tiết một cách hợp lý.
 
-Điều này có nghĩa là AI là công cụ mở rộng thần kỳ. [Có người](https://mattstromawn.com/writing/expansion-artifacts/) đã hình dung ra kịch bản thế này:
+Điều này biến AI thành một công cụ khuếch đại quyền năng. [Có người](https://mattstromawn.com/writing/expansion-artifacts/) đã hình dung ra kịch bản thế này:
 
-- CEO công ty khi họp đã nói miệng về một ý tưởng.
-- AI mở rộng nó thành một tài liệu chiến lược.
-- AI chuyển tài liệu chiến lược thành các thông số sản phẩm.
-- AI sử dụng lập trình theo ngữ cảnh để tạo ra mã nguồn mẫu.
-- AI dựa trên mã nguồn mẫu để viết thông cáo báo chí và bài PR.
+- CEO chỉ cần nói ra một ý tưởng trong cuộc họp.
+- AI sẽ triển khai nó thành một bản kế hoạch chiến lược.
+- Từ đó, AI tiếp tục cụ thể hóa thành các thông số kỹ thuật sản phẩm.
+- Rồi AI tự chạy code để tạo ra bản mẫu (prototype).
+- Cuối cùng, AI soạn luôn thông cáo báo chí và bài đăng PR cho sản phẩm đó.
 
-Bạn thấy chưa, AI có thể biến một ý tưởng trong đầu thành tài liệu, mã nguồn, sản phẩm, buổi ra mắt, việc làm... liên tục được mở rộng ra.
+Bạn thấy đấy, AI có thể biến một ý tưởng sơ khai trong đầu thành tài liệu, code, sản phẩm, và cả một chiến dịch truyền thông.
 
-Mọi người luôn nói rằng thế giới tương lai là một thế giới cực kỳ phong phú về sản phẩm vật chất, và AI có vẻ chính là loại công cụ đó: **Bất cứ thứ gì nó có thể tạo ra thì thứ đó sẽ trở nên cực kỳ phong phú**.
+Chúng ta thường nói về một tương lai vật chất dư thừa. AI chính là công cụ đưa chúng ta đến đó: **Bất cứ thứ gì nó có thể tạo ra, thứ đó sẽ trở nên cực kỳ phong phú**.
 
-## Nhà vệ sinh trên xe hơi
+## Toilet trên xe hơi
 
-Seres đã nộp đơn xin bằng sáng chế cho một chiếc "[nhà vệ sinh trên xe](https://chejiahao.autohome.com.cn/info/25229950)" dành cho xe hơi con.
+Hãng xe Seres vừa đăng ký bằng sáng chế cho một chiếc "[toilet trên xe hơi](https://chejiahao.autohome.com.cn/info/25229950)".
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042003.webp)
 
-Ghế ngồi được lắp trên một đường ray, khi trượt về phía sau sẽ để lộ bồn cầu bên dưới.
+Phần ghế ngồi được đặt trên một đường ray. Khi trượt ghế ra phía sau, chiếc bồn cầu bên dưới sẽ lộ ra.
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042004.webp)
 
-Bồn cầu này được trang bị bộ phận làm nóng dùng để làm bay hơi nước tiểu và sấy khô các chất bẩn khác, nhưng vẫn cần phải đổ thủ công định kỳ. Đồng thời xe cũng được trang bị quạt và ống xả dùng để thông gió.
+Hệ thống này có bộ phận gia nhiệt để làm bay hơi nước tiểu và sấy khô chất thải, dù thỉnh thoảng bạn vẫn phải đi đổ thủ công. Xe cũng được trang bị quạt và ống xả riêng để thông gió.
 
-Thiết bị này đối với xe hơi con thì bối cảnh sử dụng khá hạn chế, chỉ phù hợp khi gặp tắc đường kinh hoàng trên cao tốc. Thế nhưng đối với xe tải chạy đường dài thì nó lại rất thực dụng.
+Thực tế thì tiện ích này trên xe con hơi thừa thãi, có lẽ chỉ phát huy tác dụng khi tắc đường nghiêm trọng trên cao tốc. Nhưng với những bác tài chạy xe tải đường dài, đây chắc chắn là một cứu cánh tuyệt vời.
 
-## Bài viết
+## Bài viết hay
 
-1、[Đừng sử dụng Ollama](https://sleepingrobots.com/dreams/stop-using-ollama/) (tiếng Anh)
+1. [Đừng dùng Ollama nữa](https://sleepingrobots.com/dreams/stop-using-ollama/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041801.webp)
 
-Ollama là một công cụ để chạy các mô hình lớn cục bộ. Bài viết này nêu ra rất nhiều vấn đề của nó và khuyên mọi người nên chuyển sang dùng [llama.cpp](https://github.com/ggml-org/llama.cpp) và [LM Studio](https://lmstudio.ai/).
+Ollama là một công cụ chạy mô hình lớn tại chỗ rất phổ biến. Tuy nhiên, tác giả bài viết này chỉ ra khá nhiều vấn đề của nó và khuyên chúng ta nên chuyển sang dùng [llama.cpp](https://github.com/ggml-org/llama.cpp) hoặc [LM Studio](https://lmstudio.ai/).
 
-2、[Các tính năng của npmx](https://nesbitt.io/2026/04/16/features-everyone-should-steal-from-npmx.html) (tiếng Anh)
+2. [Những tính năng đáng học hỏi từ npmx](https://nesbitt.io/2026/04/16/features-everyone-should-steal-from-npmx.html) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042202.webp)
 
-Có người đã tạo ra một giao diện mới cho npmjs.com là [npmx.dev](https://npmx.dev/package/egg), giải quyết được rất nhiều tính năng mà các nhà phát triển yêu cầu bấy lâu nay.
+Có người đã xây dựng một giao diện mới cho npmjs.com mang tên [npmx.dev](https://npmx.dev/package/egg). Nó giải quyết được rất nhiều vấn đề mà giới lập trình hằng mong mỏi bấy lâu.
 
-3、[Đừng gọi chuỗi (method chaining) quá dài](https://allthingssmitty.com/2026/04/20/why-i-dont-chain-everything-in-javascript-anymore/) (tiếng Anh)
+3. [Đừng lạm dụng Chain Call quá dài](https://allthingssmitty.com/2026/04/20/why-i-dont-chain-everything-in-javascript-anymore/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042313.webp)
 
-Ngôn ngữ JavaScript có thể viết được những chuỗi gọi phương thức rất dài (hình trên), một số lập trình viên rất thích dùng. Bài viết này chỉ ra một số nhược điểm của việc gọi chuỗi và khuyên không nên dùng quá dài.
+JavaScript cho phép viết những chuỗi gọi hàm (chaining) rất dài, và nhiều người cực kỳ thích phong cách này. Nhưng bài viết này cảnh báo về những mặt trái của nó khi chuỗi lệnh trở nên quá rắc rối.
 
-4、[Sự tiến hóa của kỹ thuật lập trình bất đồng bộ và thành quả thực tế](https://causality.blog/essays/what-async-promised/) (tiếng Anh)
+4. [Sự tiến hóa của lập trình bất đồng bộ](https://causality.blog/essays/what-async-promised/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042314.webp)
 
-Một bài tổng quan giới thiệu nguồn gốc của lập trình bất đồng bộ, cách nó phát triển ra giải pháp async/await được chấp nhận rộng rãi hiện nay và những vấn đề tồn tại, được viết khá sâu sắc.
+Một bài tổng hợp sâu sắc về nguồn gốc của lập trình bất đồng bộ, cách mà async/await trở thành chuẩn mực, và cả những vấn đề còn tồn tại.
 
-5、[Nguyên lý hoạt động của radar thụ động](https://www.passiveradar.com/how-passive-radar-works/) (tiếng Anh)
+5. [Radar thụ động hoạt động thế nào?](https://www.passiveradar.com/how-passive-radar-works/) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041806.webp)
 
-Radar có thể chủ động phát sóng điện từ để phát hiện vật thể bay, cũng có thể không phát sóng mà chỉ lắng nghe sự thay đổi của sóng điện từ, đó gọi là radar thụ động.
+Thông thường radar sẽ chủ động phát sóng điện từ để dò tìm vật thể. Nhưng radar thụ động thì không phát gì cả, nó chỉ lặng lẽ "nghe" sự thay đổi của các sóng điện từ xung quanh.
 
 ## Công cụ
 
-1、[Little Snitch cho Linux](https://obdev.at/products/littlesnitch-linux/index.html)
+1. [Little Snitch cho Linux](https://obdev.at/products/littlesnitch-linux/index.html)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041812.webp)
 
-Phần mềm giám sát truyền thông mạng nổi tiếng [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html) cuối cùng cũng đã ra mắt phiên bản Linux. Bạn có thể dùng nó để xem mỗi ứng dụng đang kết nối với địa chỉ web nào.
+Phần mềm giám sát mạng nổi tiếng trên Mac cuối cùng cũng đã có phiên bản cho Linux. Bạn có thể theo dõi xem từng ứng dụng đang kết nối đi đâu.
 
-2、[quien](https://github.com/retlehs/quien/)
+2. [quien](https://github.com/retlehs/quien/)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041807.webp)
+Công cụ dòng lệnh để tra cứu thông tin tên miền với giao diện cực kỳ trực quan.
 
-Công cụ terminal để tra cứu thông tin tên miền với giao diện rõ ràng và dễ sử dụng.
+3. [ggsql](https://ggsql.org/)
 
-3、[ggsql](https://ggsql.org/)
+Một công cụ truy vấn SQL có khả năng vẽ biểu đồ. Nó cho phép bạn truy vấn trực tiếp từ database và hiển thị kết quả dưới dạng biểu đồ trực quan.
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042101.webp)
+4. [Himi Recorder](https://github.com/jrainlau/himi-recorder)
 
-Công cụ truy vấn SQL có thể tạo biểu đồ. Nó truy vấn trực tiếp vào cơ sở dữ liệu và biểu diễn kết quả dưới dạng biểu đồ trực quan, xem thêm [bài giới thiệu](https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/).
+Ứng dụng quay màn hình mã nguồn mở cho Mac. Điểm đặc biệt là nó có thể lách qua các cơ chế phát hiện quay màn hình của các ứng dụng khác. ([@jrainlau](https://github.com/ruanyf/weekly/issues/9663) đóng góp)
 
-4、[Himi Recorder](https://github.com/jrainlau/himi-recorder)
-
-Ứng dụng quay màn hình cho Mac mã nguồn mở có thể vượt qua cơ chế phát hiện quay màn hình, khiến các ứng dụng bị quay không nhận biết được là đang bị quay màn hình. ([@jrainlau](https://github.com/ruanyf/weekly/issues/9663) đóng góp)
-
-5、[Tab Harbor](https://github.com/V-IOLE-T/tab-harbor)
+5. [Tab Harbor](https://github.com/V-IOLE-T/tab-harbor)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041804.webp)
 
-Tiện ích Chrome mã nguồn mở biến trang chủ của các tab mới mở thành trình quản lý tab. ([@V-IOLE-T](https://github.com/ruanyf/weekly/issues/9665) đóng góp)
+Extension mã nguồn mở cho Chrome, giúp biến trang tab mới thành một trình quản lý tab xịn xò. ([@V-IOLE-T](https://github.com/ruanyf/weekly/issues/9665) đóng góp)
 
-Ngoài ra còn một tiện ích tương tự là [Tab Out](https://github.com/zarazhangrui/tab-out). ([@Acorn2](https://github.com/ruanyf/weekly/issues/9687) đóng góp)
+Ngoài ra còn có một công cụ tương tự là [Tab Out](https://github.com/zarazhangrui/tab-out). ([@Acorn2](https://github.com/ruanyf/weekly/issues/9687) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042001.webp)
-
-6、[animal-island-ui](https://github.com/guokaigdg/animal-island-ui)
+6. [animal-island-ui](https://github.com/guokaigdg/animal-island-ui)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041805.webp)
 
-Bộ thư viện thành phần React UI theo phong cách game "Animal Crossing". ([@guokaigdg](https://github.com/ruanyf/weekly/issues/9668) đóng góp)
+Bộ UI component cho React mang phong cách của tựa game *Animal Crossing*. ([@guokaigdg](https://github.com/ruanyf/weekly/issues/9668) đóng góp)
 
-7、[CUPS Web](https://github.com/hanxi/cups-web)
+7. [CUPS Web](https://github.com/hanxi/cups-web)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041901.webp)
+Công cụ quản lý máy in qua giao diện web, cho phép điều khiển từ xa, theo dõi lịch sử in ấn và hỗ trợ nhiều người dùng. ([@hanxi](https://github.com/ruanyf/weekly/issues/8587) đóng góp)
 
-Công cụ quản lý máy in phiên bản web giúp điều khiển máy in từ xa qua trình duyệt, hỗ trợ nhiều người dùng và theo dõi lịch sử in ấn... ([@hanxi](https://github.com/ruanyf/weekly/issues/8587) đóng góp)
+8. [Blog Helper](https://github.com/thinkycx/blog-helper)
 
-8、[Blog Helper](https://github.com/thinkycx/blog-helper)
+Dịch vụ thống kê lượt truy cập mã nguồn mở, cung cấp các chỉ số PV/UV, bài viết hot và biểu đồ xu hướng. ([@thinkycx](https://github.com/ruanyf/weekly/issues/9677) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041902.webp)
+9. [HiKid](https://github.com/xiaochong/hi-kid)
 
-Dịch vụ thống kê khách truy cập mã nguồn mở cung cấp thống kê PV/UV, bài viết hot, biểu đồ xu hướng... một phiên bản hỗ trợ được cho nhiều trang web. ([@thinkycx](https://github.com/ruanyf/weekly/issues/9677) đóng góp)
+Ứng dụng desktop giúp trẻ em luyện nghe nói tiếng Anh hoàn toàn miễn phí, hiện mới chỉ có phiên bản cho macOS. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9689) đóng góp)
 
-9、[HiKid](https://github.com/xiaochong/hi-kid)
+10. [Kite Desktop](https://github.com/eryajf/kite-desktop)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042002.webp)
+Công cụ quản lý đa cluster K8S ngay trên desktop. ([@eryajf](https://github.com/ruanyf/weekly/issues/9719) đóng góp)
 
-Ứng dụng desktop giúp trẻ em luyện nói và nghe tiếng Anh hoàn toàn miễn phí, hiện chỉ hỗ trợ macOS. ([@Hao4Wang](https://github.com/ruanyf/weekly/issues/9689) đóng góp)
+11. [Project River](https://github.com/Lionad-Morotar/project-river)
 
-10、[Kite Desktop](https://github.com/eryajf/kite-desktop)
+Hình ảnh hóa lịch sử commit của kho lưu trữ Git dưới dạng dòng sông. Bạn có thể so sánh nhiều dự án và xem thông tin đóng góp rất trực quan. ([@Lionad-Morotar](https://github.com/ruanyf/weekly/issues/9722) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042302.webp)
+## AI liên quan
 
-Công cụ quản lý đa cụm K8S phiên bản desktop. ([@eryajf](https://github.com/ruanyf/weekly/issues/9719) đóng góp)
+1. [OpenAI Privacy Filter](https://github.com/openai/privacy-filter)
 
-11、[Project River](https://github.com/Lionad-Morotar/project-river)
+Làm sao để không bị lộ thông tin nhạy cảm (như tên tuổi, địa chỉ, mật khẩu) khi gửi Prompt cho AI? OpenAI vừa tung ra giải pháp: Privacy Filter. Đây là một mô hình chạy cục bộ để lọc dữ liệu trước khi gửi lên mây.
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042303.webp)
+2. [LinkAI Gateway](https://github.com/ruanyf/weekly/issues/9657)
 
-Biểu đồ hình con sông trực quan hóa lịch sử gửi mã của kho Git, hỗ trợ so sánh đa dự án, thông tin người đóng góp... [trải nghiệm trực tuyến](https://lionad-morotar.github.io/project-river). ([@Lionad-Morotar](https://github.com/ruanyf/weekly/issues/9722) đóng góp)
+AI Gateway mã nguồn mở, cho phép kết nối với nhiều mô hình lớn khác nhau và cung cấp một API thống nhất (tương thích OpenAI) kèm trang quản trị. ([@star7th](https://github.com/ruanyf/weekly/issues/9657) đóng góp)
 
-## AI
+3. [Nezha](https://github.com/hanshuaikang/nezha) (哪吒)
 
-1、[OpenAI Privacy Filter](https://github.com/openai/privacy-filter)
+Trình quản lý nhiệm vụ lập trình bằng AI, giúp chuyển đổi nhanh chóng giữa các task. Nó tích hợp sẵn terminal, trình soạn thảo mã và Git trong một gói dung lượng chưa đầy 10MB. ([@hanshuaikang](https://github.com/ruanyf/weekly/issues/9714) đóng góp)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042312.webp)
+4. [WatermarkZero](https://watermarkzero.org/)
 
-Làm sao để tránh gửi các thông tin nhạy cảm (như tên tuổi, địa chỉ, số điện thoại, mật khẩu) cho mô hình lớn?
+Công cụ xóa hình mờ (watermark) trên ảnh do Gemini tạo ra. Mọi thao tác đều xử lý trực tiếp trên trình duyệt, không cần upload ảnh lên server. ([@liuyan-wjy](https://github.com/ruanyf/weekly/issues/9664) đóng góp)
 
-OpenAI đã đưa ra câu trả lời: Privacy Filter. Đây là một mô hình lớn chạy cục bộ, nó sẽ xử lý trước rồi mới gửi cho mô hình lớn trực tuyến.
+5. [mini-cc](https://github.com/you-want/mini-cc)
 
-Ví dụ, văn bản gốc là "Ngày phát hành sản phẩm là 18/09/2026", sau khi xử lý sẽ thành "Ngày phát hành sản phẩm là [PRIVATE_DATE]", xem thêm tại [bài giới thiệu](https://openai.com/index/introducing-openai-privacy-filter/).
-
-2、[LinkAI Gateway](https://github.com/ruanyf/weekly/issues/9657)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041802.webp)
-
-Cổng AI mã nguồn mở có thể kết nối với các mô hình lớn phổ biến, sau đó cung cấp API thống nhất (tương thích OpenAI) và bảng quản trị. ([@star7th](https://github.com/ruanyf/weekly/issues/9657) đóng góp)
-
-3、[Nezha](https://github.com/hanshuaikang/nezha) (Na Tra)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042301.webp)
-
-Trình quản lý nhiệm vụ lập trình AI mã nguồn mở giúp chuyển đổi nhanh chóng quản lý đa nhiệm, tích hợp các tính năng như terminal gốc, quản lý phiên làm việc, chỉnh sửa mã nguồn, Git... kích thước chưa đầy 10MB. ([@hanshuaikang](https://github.com/ruanyf/weekly/issues/9714) đóng góp)
-
-4、[WatermarkZero](https://watermarkzero.org/)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026041803.webp)
-
-Công cụ gỡ bỏ dấu chìm (watermark) nhìn thấy được của các hình ảnh do Gemini tạo ra. Hình ảnh không cần tải lên máy chủ mà được xử lý trực tiếp trên trình duyệt cục bộ. ([@liuyan-wjy](https://github.com/ruanyf/weekly/issues/9664) đóng góp)
-
-5、[mini-cc](https://github.com/you-want/mini-cc)
-
-AI Agent lập trình mã nguồn mở với tác dụng tương tự Claude Code, áp dụng kiến trúc đa ngôn ngữ, hiện đã hoàn thành triển khai phiên bản TypeScript. ([@RainyNight9](https://github.com/ruanyf/weekly/issues/9681) đóng góp)
+Một AI Agent hỗ trợ lập trình tương tự như Claude Code, hiện đã có phiên bản triển khai bằng TypeScript. ([@RainyNight9](https://github.com/ruanyf/weekly/issues/9681) đóng góp)
 
 ## Tài nguyên
 
-1、[The Listening Museum](https://sheets.works/data-viz/keyboard-sounds)
+1. [The Listening Museum](https://sheets.works/data-viz/keyboard-sounds)
 
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042006.webp)
+Một trang web thú vị chuyên sưu tầm âm thanh gõ phím. Bạn có thể vào đây nghe thử tiếng của từng loại bàn phím trước khi quyết định xuống tiền.
 
-Một trang web thú vị thu thập âm thanh gõ bàn phím. Bạn có thể nghe thử tiếng gõ của một loại bàn phím nào đó trước khi quyết định mua nó.
+2. [Các định luật kỹ nghệ phần mềm](https://lawsofsoftwareengineering.com/)
 
-2、[Các định luật công nghệ phần mềm](https://lawsofsoftwareengineering.com/)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042201.webp)
-
-Trang web này thu thập các định luật liên quan đến phần mềm, hiện có 56 điều.
-
-Ví dụ, "[Định luật Parkinson](https://lawsofsoftwareengineering.com/laws/parkinsons-law/)" (Parkinson's Law): Khối lượng công việc luôn tăng lên cho đến khi lấp đầy mọi khoảng thời gian trống khả dụng. Hệ quả là dù bạn thiết lập thời gian phát triển dài bao nhiêu thì dự án cũng sẽ luôn làm đến tận phút cuối cùng.
+Nơi tổng hợp các quy luật bất thành văn trong ngành phần mềm. Ví dụ như "Định luật Parkinson": Công việc luôn tự phình to ra để lấp đầy khoảng thời gian mà bạn dành cho nó. Nghĩa là dù bạn có cho bao nhiêu thời gian đi nữa, dự án vẫn thường chỉ xong vào đúng phút chót.
 
 ## Hình ảnh
 
-1、[Font chữ tiếng Anh 5x5 pixel](https://maurycyz.com/projects/mcufont/)
+1. [Font chữ 5x5 pixel](https://maurycyz.com/projects/mcufont/)
 
-Font chữ tiếng Anh nhỏ nhất là bao nhiêu?
+Kích thước tối thiểu của một font chữ tiếng Anh là bao nhiêu? Câu trả lời là 5x5 pixel. Nhỏ hơn mức này, chúng ta hầu như không thể phân biệt được các chữ cái phức tạp như E, M hay W. Font chữ này cực nhẹ, chỉ chiếm 350 byte bộ nhớ, cực kỳ phù hợp cho các thiết bị đời cũ hoặc vi điều khiển cấp thấp.
 
-1x1 pixel (rộng 1, cao 1) chỉ là một dấu chấm, tất nhiên là không thể. 2x2 pixel cũng không thể. 3x3 pixel về lý thuyết là được nhưng thực tế không thể đọc được. 4x4 pixel thì khó vẽ được một số ký tự nhiều nét như E, M, W.
+2. [Thành phố dầu khí trên biển Caspi](https://www.cnn.com/2024/11/06/climate/oil-rocks-neft-daslari-caspian-sea-city/index.html)
 
-Vì vậy, font chữ tiếng Anh nhỏ nhất chính là 5x5 pixel, kết quả như dưới đây.
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042309.webp)
-
-Trong font chữ trên, hầu hết các chữ thường nhỏ hơn chữ hoa một pixel để có thể phân biệt được bằng mắt thường.
-
-Toàn bộ font chữ chỉ chiếm 350 byte bộ nhớ, vì vậy nó rất phù hợp cho các thiết bị cũ hoặc thiết bị cấu hình thấp, ngay cả bộ vi điều khiển 8-bit chỉ có 16kB bộ nhớ cũng có thể hoàn thành việc nạp font.
-
-Ngoài ra mỗi ký tự của nó chỉ cần 25 pixel để hiển thị, mà ngay cả màn hình 384x288 cũng đã có 110.000 pixel.
-
-Ngoài font 5x5 còn có font 3x5 (rộng 3, cao 5) và font 4x5 (rộng 4, cao 5) nhưng hiệu quả nhận diện của chúng đều không tốt (hình dưới).
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042310.webp)
-
-![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042311.webp)
-
-2、[Thành phố dầu khí trên biển Caspi](https://www.cnn.com/2024/11/06/climate/oil-rocks-neft-daslari-caspian-sea-city/index.html)
-
-Biển Caspi là hồ nước lớn nhất thế giới với diện tích tương đương tỉnh Vân Nam.
-
-Vào giữa thế kỷ trước, Caspi phát hiện ra dầu mỏ. Khi đó Liên Xô đã bắt đầu xây dựng các giàn khoan trên mặt hồ, cách bờ biển 60 dặm, phải mất 6 tiếng đi phà mới tới nơi.
-
-Lúc cao điểm nhất có tổng cộng khoảng 320 cơ sở sản xuất bao gồm 2.000 giếng dầu được kết nối với nhau bởi hơn 100 dặm cầu dẫn.
-
-![](https://cdn.beekka.com/blogimg/asset/202411/bg2024111007.webp)
-
-Thời đó có hơn 5.000 người sinh sống trên các giàn khoan này, tạo thành một thành phố trên mặt nước khó tin với tất cả các tòa nhà chung cư đều được xây trên mặt nước.
-
-![](https://cdn.beekka.com/blogimg/asset/202411/bg2024111008.webp)
-
-Cùng với sự cạn kiệt của các mỏ dầu và sự biến động của giá dầu, sản lượng của thành phố dầu khí này đã sụt giảm mạnh, mọi người hầu như đã rời đi, toàn bộ các giàn khoan đều trong tình trạng xuống cấp và việc sụp đổ chỉ là vấn đề thời gian.
-
-![](https://cdn.beekka.com/blogimg/asset/202411/bg2024111009.webp)
+Vào giữa thế kỷ trước, Liên Xô đã xây dựng một hệ thống giàn khoan khổng lồ trên mặt hồ Caspi, cách đất liền tới 6 giờ đi tàu. Tại đây từng có 5000 người sinh sống với đầy đủ nhà ở, tạo nên một thành phố trên nước thực thụ. Giờ đây khi dầu cạn, thành phố này đang dần hoang phế và xuống cấp trầm trọng.
 
 ## Trích dẫn
 
-1、
+1.
 
-Nhà sản xuất giày Allbirds của Mỹ tuyên bố chuyển đổi thành công ty AI, giá cổ phiếu đã tăng vọt 5 lần trong một ngày.
-
-Điều này làm gợi nhớ đến năm 2017, một doanh nghiệp nước giải khát của Mỹ tên là "Trà đá Long Island" đã tuyên bố chuyển đổi thành công ty blockchain, vừa bán trà chanh vừa tìm kiếm cơ hội đầu tư blockchain, giá cổ phiếu cũng tăng vọt. Sau đó mảng kinh doanh blockchain chưa kịp thiết lập thì nó đã phá sản.
+Hãng giày Allbirds vừa tuyên bố chuyển mình thành công ty AI, lập tức cổ phiếu tăng vọt gấp 5 lần chỉ trong một ngày. Nó làm tôi nhớ đến câu chuyện tương tự năm 2017 của một hãng trà đá, chỉ cần gắn mác "blockchain" là giá trị công ty tăng chóng mặt, dù sau đó phá sản trước khi kịp làm gì.
 
 -- [Yahoo](https://gemini.google.com/app/1833a525ff94d60a)
 
-2、
+2.
 
-Figma sở hữu gần 2.000 nhân viên (tất nhiên không phải tất cả đều làm phát triển sản phẩm), trong khi tôi nghi ngờ liệu đội ngũ phát triển Claude Design mới ra mắt của Anthropic có vượt quá 10 người hay không.
+Figma có gần 2000 nhân viên, còn đội ngũ phát triển Claude Design của Anthropic có lẽ chẳng quá 10 người. Trước tốc độ và chi phí của AI, các phần mềm truyền thống bỗng trở nên thật mỏng manh.
 
--- [《Thế bí của Figma》](https://finance.yahoo.com/quote/FIG/), bài viết này nhận định Claude Design sẽ giáng một đòn mạnh vào Figma, trước tốc độ và chi phí phát triển của AI thì các phần mềm truyền thống trở nên yếu thế.
+-- [Nhận định về Figma và Claude Design](https://finance.yahoo.com/quote/FIG/)
 
-3、
+3.
 
-Viễn cảnh về thế giới tương lai trong tôi là nó có lẽ không tràn đầy cảm giác tương lai đến thế, mà ngược lại giống như một bài thơ đồng quê. Chúng ta có thể quay lại hình thái sinh hoạt truyền thống mà vẫn không từ bỏ sự tiện lợi do công nghệ mới mang lại, hầu như không cần phải nhìn hay chạm vào màn hình nữa.
+Tôi mơ về một tương lai không quá xa lạ, mà giống như một bản điền viên hiện đại. Ở đó, chúng ta quay lại lối sống truyền thống nhưng vẫn tận hưởng sự tiện lợi của công nghệ mới mà chẳng cần phải dán mắt vào màn hình suốt ngày.
 
 -- [jsomers.net](https://jsomers.net/blog/the-paper-computer)
 
-4、
+4.
 
-Mỗi một nền văn hóa đều sẽ tạo ra những anh hùng phản ánh nỗi lo âu sâu sắc nhất của họ.
+Mỗi nền văn hóa đều tạo ra những người hùng phản chiếu nỗi lo sợ sâu thẳm nhất của mình. Thung lũng Silicon sợ nhất là tăng trưởng chững lại, nên họ tôn vinh những "siêu lập trình viên" có thể code thâu đêm để biến một ý tưởng sơ sài thành kỳ lân tỷ đô.
 
-Điều mà Thung lũng Silicon lo lắng nhất chính là sự đình trệ tăng trưởng, không thể tạo ra những sản phẩm mới được thị trường đón nhận nồng nhiệt. Thế nên họ ra sức quảng bá về những "anh hùng lập trình": những người có thể phát hành tính năng mới vào lúc nửa đêm, dựa vào ý chí mạnh mẽ do caffeine mang lại để biến những nét vẽ trên bảng trắng thành những doanh nghiệp kỳ lân trị giá hàng chục tỷ USD.
+-- [Khúc bi tráng của những người bảo trì cổ điển](https://www.joanwestenberg.com/the-rime-of-the-ancient-maintainer/)
 
--- [《Bài ca của những người duy trì cổ điển》](https://www.joanwestenberg.com/the-rime-of-the-ancient-maintainer/)
+## Nhìn lại năm xưa
 
-## Nhìn lại các năm trước
+[Phá giải bài toán khởi đầu nan](https://www.ruanyifeng.com/blog/2025/05/weekly-issue-347.html) (#347)
 
-[Cách phá giải khởi động lạnh](https://www.ruanyifeng.com/blog/2025/05/weekly-issue-347.html)（#347）
+[Món đồ chơi chim uống nước](https://www.ruanyifeng.com/blog/2024/04/weekly-issue-297.html) (#297)
 
-[Đồ chơi chim uống nước](https://www.ruanyifeng.com/blog/2024/04/weekly-issue-297.html)（#297）
+[Bức thư sa thải của Zuckerberg](https://www.ruanyifeng.com/blog/2023/03/weekly-issue-247.html) (#247)
 
-[Thư sa thải của Zuckerberg](https://www.ruanyifeng.com/blog/2023/03/weekly-issue-247.html)（#247）
-
-[Nếu thế giới này có chiếc máy hạnh phúc](https://www.ruanyifeng.com/blog/2022/03/weekly-issue-197.html)（#197）
+[Nếu thế giới này có cỗ máy hạnh phúc](https://www.ruanyifeng.com/blog/2022/03/weekly-issue-197.html) (#197)
 
 (Hết)
