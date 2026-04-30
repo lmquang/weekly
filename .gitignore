@@ -24,3 +24,4 @@ pnpm-debug.log*
 .idea/
 .locus/
 .gemini/
+.wrangler/
