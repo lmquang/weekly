@@ -1,0 +1,171 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getIssueImage, getIssueNumber, getIssueSummary, getIssueTitle } from '../../lib/issues';
+
+export async function getStaticPaths() {
+  const issues = await getCollection('issues');
+  return issues.map(issue => ({
+    params: { slug: issue.id },
+    props: { issue },
+  }));
+}
+
+const { issue } = Astro.props;
+const { Content } = await render(issue);
+const issueNumber = getIssueNumber(issue);
+const displayTitle = getIssueTitle(issue);
+const description = getIssueSummary(issue);
+const image = getIssueImage(issue);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: displayTitle,
+  description,
+  url: canonicalUrl,
+  mainEntityOfPage: canonicalUrl,
+  inLanguage: 'vi-VN',
+  isPartOf: {
+    '@type': 'Blog',
+    name: 'Weekly',
+    url: new URL('/', Astro.site).toString(),
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Ruan Yifeng',
+    url: 'https://github.com/ruanyf',
+  },
+  translator: {
+    '@type': 'Person',
+    name: 'Quang',
+    url: 'https://github.com/lmquang',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Weekly',
+    url: new URL('/', Astro.site).toString(),
+  },
+  ...(image ? { image: new URL(image, Astro.site).toString() } : {}),
+};
+
+// Get all issues to find next/previous
+const allIssues = await getCollection('issues');
+const sortedIssues = allIssues.sort((a, b) => {
+    const numA = parseInt(getIssueNumber(a) || '0');
+    const numB = parseInt(getIssueNumber(b) || '0');
+    return numA - numB; // Sort ascending for easier indexing
+});
+
+const currentIndex = sortedIssues.findIndex(i => i.id === issue.id);
+const prevIssue = currentIndex > 0 ? sortedIssues[currentIndex - 1] : null;
+const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentIndex + 1] : null;
+---
+
+<Layout title={`Issue #${issueNumber} - ${displayTitle}`} description={description} canonical={canonicalUrl} image={image} type="article" jsonLd={jsonLd}>
+  <article class="max-w-3xl mx-auto text-black dark:text-white">
+    <header class="mb-10 border-b border-black/5 dark:border-white/5 pb-8">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+          Issue
+        </span>
+        <span class="text-gray-400 dark:text-gray-600">•</span>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+          Số {issueNumber}
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-0 text-black dark:text-white">
+        {displayTitle}
+      </h1>
+      <p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+        {description}
+      </p>
+    </header>
+
+    <div class="prose-content">
+      <Content />
+    </div>
+
+    <footer class="mt-24 pt-12 border-t border-black/5 dark:border-white/5">
+      <div class="flex flex-col sm:flex-row justify-between gap-8">
+        {prevIssue ? (
+          <a href={`/issues/${prevIssue.id}`} class="flex flex-col gap-2 group max-w-[280px]">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">Previous Issue</span>
+            <span class="text-lg font-medium text-gray-600 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+              Số {getIssueNumber(prevIssue)} — {getIssueTitle(prevIssue)}
+            </span>
+          </a>
+        ) : <div />}
+
+        {nextIssue ? (
+          <a href={`/issues/${nextIssue.id}`} class="flex flex-col gap-2 items-end group text-right max-w-[280px]">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">Next Issue</span>
+            <span class="text-lg font-medium text-gray-600 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+              Số {getIssueNumber(nextIssue)} — {getIssueTitle(nextIssue)}
+            </span>
+          </a>
+        ) : <div />}
+      </div>
+    </footer>
+  </article>
+</Layout>
+
+<style is:global>
+  @reference "../../styles/global.css";
+
+  /* Hide the H1 from markdown body as we show it in the header */
+  .prose-content h1:first-child,
+  .prose-content h1:first-of-type {
+    display: none !important;
+  }
+
+  /* Base prose styling using CSS but leveraging Tailwind theme values */
+  .prose-content {
+    @apply text-gray-700 dark:text-gray-400 text-lg leading-relaxed;
+  }
+  
+  .prose-content h2 {
+    @apply text-black dark:text-white text-3xl font-medium tracking-tight mt-16 mb-6 pb-4 border-b border-black/5 dark:border-white/5;
+  }
+  
+  .prose-content h3 {
+    @apply text-black dark:text-white text-2xl font-medium tracking-tight mt-12 mb-4;
+  }
+  
+  .prose-content p {
+    @apply mb-8;
+  }
+  
+  .prose-content ul, .prose-content ol {
+    @apply mb-8 pl-6 list-disc;
+  }
+  
+  .prose-content li {
+    @apply mb-3;
+  }
+  
+  .prose-content blockquote {
+    @apply my-12 py-2 px-8 border-l-2 border-black/20 dark:border-white/20 bg-black/[0.02] dark:bg-white/[0.02] italic text-gray-600 dark:text-gray-300;
+  }
+  
+  .prose-content img {
+    @apply my-16 mx-auto block rounded-2xl border border-black/5 dark:border-white/5 shadow-xl dark:shadow-2xl;
+  }
+  
+  .prose-content code {
+    @apply bg-black/[0.05] dark:bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono text-gray-700 dark:text-gray-300 border border-black/5 dark:border-white/10;
+  }
+  
+  .prose-content pre {
+    @apply my-12 p-6 rounded-2xl bg-gray-50 dark:bg-black border border-black/5 dark:border-white/5 overflow-x-auto text-sm;
+  }
+
+  .prose-content a {
+    @apply text-black dark:text-white underline decoration-black/20 dark:decoration-white/20 underline-offset-4 hover:decoration-black dark:hover:decoration-white transition-all;
+  }
+
+  @media (max-width: 640px) {
+    .prose-content { @apply text-base; }
+    .prose-content h2 { @apply text-2xl; }
+  }
+</style>

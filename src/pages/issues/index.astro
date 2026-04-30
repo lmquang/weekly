@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getIssueNumber, getIssueSummary, getIssueTitle } from '../../lib/issues';
+
+const pageDescription = 'Danh sách đầy đủ các số Weekly đã dịch sang tiếng Việt, gồm các chủ đề AI, lập trình, sản phẩm và xu hướng công nghệ.';
+const allIssues = await getCollection('issues');
+const sortedIssues = allIssues.sort((a, b) => {
+	const numA = parseInt(getIssueNumber(a) || '0');
+	const numB = parseInt(getIssueNumber(b) || '0');
+	return numB - numA;
+});
+---
+
+<Layout title="Tất cả số Weekly" description={pageDescription} canonical={new URL('/issues/', Astro.site).toString()}>
+	<header class="mb-16 max-w-3xl">
+		<p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">Archive</p>
+		<h1 class="text-4xl md:text-6xl font-medium tracking-tight text-black dark:text-white">Tất cả số Weekly</h1>
+		<p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400">{pageDescription}</p>
+	</header>
+
+	<section class="grid gap-8">
+		{sortedIssues.map((issue) => {
+			const issueNumber = getIssueNumber(issue);
+			return (
+				<article class="border-b border-black/5 dark:border-white/5 pb-8 last:border-b-0">
+					<p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-3">Issue #{issueNumber}</p>
+					<h2 class="text-2xl md:text-3xl font-medium tracking-tight text-black dark:text-white mb-4">
+						<a href={`/issues/${issue.id}`} class="hover:opacity-70 transition-opacity">{getIssueTitle(issue)}</a>
+					</h2>
+					<p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">{getIssueSummary(issue)}</p>
+				</article>
+			);
+		})}
+	</section>
+</Layout>

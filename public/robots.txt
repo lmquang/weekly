@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://weekly.locus.run/sitemap.xml
