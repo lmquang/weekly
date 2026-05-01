@@ -4,8 +4,14 @@
 install:
 	npm install
 
+validate:
+	python3 scripts/check_translation.py
+
+fix:
+	python3 scripts/fix_translation.py --fix
+
 # Build the project (output will be in ./dist)
-build:
+build: validate
 	npm run build
 
 # Deploy to Cloudflare Pages

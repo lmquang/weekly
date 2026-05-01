@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import { getCollection } from 'astro:content';
-import { getIssueNumber, getIssueSearchText, getIssueSummary, getIssueTitle } from '../lib/issues';
 
 interface Props {
 	title: string;
@@ -24,17 +22,6 @@ const pageTitle = `${title} | Weekly`;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 const imageUrl = image ? new URL(image, Astro.site).toString() : undefined;
 const googleAnalyticsId = 'G-17ESC9MW85';
-const allIssues = await getCollection('issues');
-const searchIssues = allIssues
-	.sort((a, b) => parseInt(getIssueNumber(b) || '0') - parseInt(getIssueNumber(a) || '0'))
-	.map((issue) => ({
-		number: getIssueNumber(issue),
-		title: getIssueTitle(issue),
-		summary: getIssueSummary(issue),
-		tags: issue.data.tags ?? [],
-		searchText: getIssueSearchText(issue),
-		url: `/issues/${issue.id}`,
-	}));
 ---
 
 <!doctype html>
@@ -61,15 +48,28 @@ const searchIssues = allIssues
 		{imageUrl && <meta name="twitter:image" content={imageUrl} />}
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 		{googleAnalyticsId && (
-			<>
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}></script>
-				<script define:vars={{ googleAnalyticsId }}>
-					window.dataLayer = window.dataLayer || [];
-					function gtag() { window.dataLayer.push(arguments); }
+			<script define:vars={{ googleAnalyticsId }}>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { window.dataLayer.push(arguments); }
+
+				const loadAnalytics = () => {
+					if (document.querySelector(`script[src*="${googleAnalyticsId}"]`)) return;
+
+					const script = document.createElement('script');
+					script.async = true;
+					script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
+					document.head.append(script);
+
 					gtag('js', new Date());
 					gtag('config', googleAnalyticsId);
-				</script>
-			</>
+				};
+
+				if ('requestIdleCallback' in window) {
+					requestIdleCallback(loadAnalytics, { timeout: 3000 });
+				} else {
+					window.addEventListener('load', () => setTimeout(loadAnalytics, 1500), { once: true });
+				}
+			</script>
 		)}
 		<title>{pageTitle}</title>
 		<script is:inline>
@@ -151,13 +151,15 @@ const searchIssues = allIssues
 			</div>
 		</footer>
 
-		<script define:vars={{ searchIssues }}>
+		<script>
 			const searchTrigger = document.getElementById('issue-search-trigger');
 			const searchOverlay = document.getElementById('issue-search-overlay');
 			const searchPanel = document.getElementById('issue-search-panel');
 			const searchInput = document.getElementById('issue-search-input');
 			const searchResults = document.getElementById('issue-search-results');
-			let currentResults = searchIssues.slice(0, 8);
+			let searchIssues = [];
+			let searchIndexPromise;
+			let currentResults = [];
 
 			const createResult = (issue, index) => {
 				const link = document.createElement('a');
@@ -198,6 +200,14 @@ const searchIssues = allIssues
 			const renderResults = () => {
 				if (!searchResults) return;
 				searchResults.replaceChildren();
+
+				if (searchIssues.length === 0) {
+					const loadingState = document.createElement('p');
+					loadingState.className = 'px-4 py-10 text-center text-sm text-gray-500';
+					loadingState.textContent = 'Đang tải dữ liệu tìm kiếm...';
+					searchResults.append(loadingState);
+					return;
+				}
 
 				if (currentResults.length === 0) {
 					const emptyState = document.createElement('p');
@@ -250,13 +260,40 @@ const searchIssues = allIssues
 				renderResults();
 			};
 
-			const openSearch = () => {
+			const loadSearchIndex = async () => {
+				if (searchIssues.length > 0) return searchIssues;
+				searchIndexPromise ??= fetch('/search-index.json')
+					.then((response) => {
+						if (!response.ok) throw new Error('Failed to load search index');
+						return response.json();
+					})
+					.then((issues) => {
+						searchIssues = issues;
+						currentResults = searchIssues.slice(0, 8);
+						return searchIssues;
+					});
+
+				return searchIndexPromise;
+			};
+
+			const openSearch = async () => {
 				if (!searchOverlay || !searchInput) return;
 				searchOverlay.classList.remove('hidden');
 				searchOverlay.classList.add('flex');
 				document.body.style.overflow = 'hidden';
-				filterResults();
 				requestAnimationFrame(() => searchInput.focus());
+				renderResults();
+
+				try {
+					await loadSearchIndex();
+					filterResults();
+				} catch {
+					if (!searchResults) return;
+					const errorState = document.createElement('p');
+					errorState.className = 'px-4 py-10 text-center text-sm text-gray-500';
+					errorState.textContent = 'Không tải được dữ liệu tìm kiếm';
+					searchResults.replaceChildren(errorState);
+				}
 			};
 
 			const closeSearch = () => {
