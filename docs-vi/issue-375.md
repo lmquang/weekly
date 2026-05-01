@@ -354,31 +354,26 @@ Vì thế, nếu bạn hỏi tôi có thể trò chuyện hay gặp gỡ không,
 
 ## Ý kiến
 
-1、
 
 Lập trình là liều thuốc tốt nhất tôi từng gặp để kiềm chế sự ngạo mạn. Nếu ai đó quá ngạo mạn, hãy cứ để họ đi lập trình.
 
 -- [tratt.net](https://tratt.net/laurie/blog/2020/automatic_syntax_error_recovery.html)
 
-2、
 
 Huấn luyện một mô hình có quan điểm khác biệt sẽ ngày càng khó khăn. Bởi vì nếu quan điểm của bạn không khớp với dữ liệu thực tế và thế giới thực, bạn không thể đơn giản dùng các tài liệu bên ngoài để dạy mô hình nữa.
 
 -- [Độc giả Hacker News](https://news.ycombinator.com/item?id=46050177)
 
-3、
 
 Bây giờ là năm 2025, AI đang lan rộng như virus. Ngay cả khi bạn vẫn kiên trì làm ra những sản phẩm thủ công tinh xảo, mọi người vẫn dễ dàng nhầm lẫn công sức lao động của bạn với đống rác máy móc vô hồn và thiếu cảm hứng.
 
 -- [tonsky.me](https://tonsky.me/blog/hiring-ai/)
 
-4、
 
 Đời người ngắn ngủi, cái chết đến thật nhẹ nhàng. Nếu tôi cứ để mình trôi theo dòng đời, chẳng mấy chốc tôi sẽ trở thành một lão già.
 
 -- [Goro Obata](https://kottke.org/25/11/my-pace), một Youtuber Nhật Bản
 
-5、
 
 Nếu một vật dụng hữu dụng 100%, nó chắc chắn sẽ đẹp. Chẳng hạn không có chiếc đinh hay chiếc búa nào xấu xí cả. Tuy nhiên, có rất nhiều chiếc xe hơi xấu xí vì không phải mọi bộ phận của xe hơi đều hữu dụng.
 

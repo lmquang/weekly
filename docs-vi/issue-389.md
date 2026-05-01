@@ -287,25 +287,25 @@ Kinh nghiệm của tôi là: hãy tránh xa các framework tùy chỉnh này. C
 
 ## Trích dẫn
 
-1、
+1\.
 
 Tôi mong muốn một thế giới web nơi mọi thứ đều có thể nhào nặn được, khiến bạn không thể cưỡng lại ý muốn trở thành một người sáng tạo.
 
 -- David Miranda
 
-2、
+2\.
 
 AI khiến chi phí phần mềm chuyển dịch từ việc viết code sang việc kiểm thử và viết tài liệu. Một bộ test xịn giờ đây có giá trị cao hơn cả chính mã nguồn đó.
 
 -- lucumr.pocoo.org
 
-3、
+3\.
 
 Cốt lõi của lập trình nằm ở sự trừu tượng, tức là khả năng tư duy về mã nguồn bằng một lối suy nghĩ cấp cao, tách rời khỏi các chi tiết kỹ thuật tầng thấp.
 
 -- Trích "Những lập trình viên sống trong thế giới phẳng"
 
-4、
+4\.
 
 Lãnh đạo đơn giản là khiến người khác làm điều bạn muốn, và họ làm điều đó một cách hoàn toàn tự nguyện.
 

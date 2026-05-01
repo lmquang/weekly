@@ -308,25 +308,25 @@ Giờ đây khi dầu cạn, thành phố này đang dần hoang phế và xuố
 
 ## Trích dẫn
 
-1、
+1\.
 
 Hãng giày Allbirds vừa tuyên bố chuyển mình thành công ty AI, lập tức cổ phiếu tăng vọt gấp 5 lần chỉ trong một ngày. Nó làm tôi nhớ đến câu chuyện tương tự năm 2017 của một hãng trà đá, chỉ cần gắn mác "blockchain" là giá trị công ty tăng chóng mặt, dù sau đó phá sản trước khi kịp làm gì.
 
 -- [Yahoo](https://gemini.google.com/app/1833a525ff94d60a)
 
-2、
+2\.
 
 Figma có gần 2000 nhân viên, còn đội ngũ phát triển Claude Design của Anthropic có lẽ chẳng quá 10 người. Trước tốc độ và chi phí của AI, các phần mềm truyền thống bỗng trở nên thật mỏng manh.
 
 -- [Nhận định về Figma và Claude Design](https://finance.yahoo.com/quote/FIG/)
 
-3、
+3\.
 
 Tôi mơ về một tương lai không quá xa lạ, mà giống như một bản điền viên hiện đại. Ở đó, chúng ta quay lại lối sống truyền thống nhưng vẫn tận hưởng sự tiện lợi của công nghệ mới mà chẳng cần phải dán mắt vào màn hình suốt ngày.
 
 -- [jsomers.net](https://jsomers.net/blog/the-paper-computer)
 
-4、
+4\.
 
 Mỗi nền văn hóa đều tạo ra những người hùng phản chiếu nỗi lo sợ sâu thẳm nhất của mình. Thung lũng Silicon sợ nhất là tăng trưởng chững lại, nên họ tôn vinh những "siêu lập trình viên" có thể code thâu đêm để biến một ý tưởng sơ sài thành kỳ lân tỷ đô.
 

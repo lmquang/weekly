@@ -354,15 +354,15 @@ Bạn càng biết nhiều, bạn càng có khả năng dẫnắt AI tốt bấy
 
 Cách dùng AI đúng đắn là: chuyên gia dùng nó để đẩy nhanh những việc họ đã nắm rõ, còn người mới dùng nó để học hỏi xem mình nên làm gì.
 
-## Ngôn luận
+## Trích dẫn
 
-1.
+1\.
 
 AI sẽ không ngừng mở rộng cho đến khi phần lớn năng lượng từ mặt trời được dùng để tính toán.
 
 -- Elon Musk trong một buổi phỏng vấn mới nhất
 
-2.
+2\.
 
 Tôi tin rằng sao Hỏa có thể tự cung tự cấp trong vòng 30 năm tới. Cứ mỗi hai năm, các hành tinh lại thẳng hàng, tạo ra cửa sổ để khởi hành đến đó. Trong 30 năm, chúng ta sẽ có khoảng 10 đến 15 cơ hội như vậy.
 
@@ -370,13 +370,13 @@ Mỗi đợt khởi hành, khối lượng hàng hóa vận chuyển đến sao 
 
 -- Elon Musk
 
-3.
+3\.
 
 Ngành phần mềm đang xuất hiện một công việc mới gọi là "dọn dẹp Vibe Coding", chuyên xử lý các hệ lụy từ phong cách lập trình ngẫu hứng này. Thật là một sự mỉa mai lớn trong kỷ nguyên AI: con người được thuê để dọn rác cho máy móc.
 
 -- [Dịch vụ dọn dẹp Vibe Coding](https://donado.co/en/articles/2025-09-16-vibe-coding-cleanup-as-a-service/)
 
-4.
+4\.
 
 Bong bóng AI hoàn toàn có thể xảy ra, nhưng với những công ty như Meta, rủi ro lớn nhất chính là sự do dự.
 
@@ -384,7 +384,7 @@ Nếu chúng ta lãng phí hàng trăm tỷ USD cho AI thì thật không may, n
 
 -- Mark Zuckerberg
 
-5.
+5\.
 
 Máy tính ngày nay là kẻ thực thi: bạn bảo nó làm gì, nó làm nấy. Giai đoạn tiếp theo của máy tính là "Agent", giống như một người tí hon trong hộp bắt đầu dự đoán mong muốn của bạn. Nó không chỉ giúp đỡ mà còn dẫn dắt bạn xử lý lượng thông tin khổng lồ, như thể bạn có một người bạn đồng hành ngay trong máy tính.
 

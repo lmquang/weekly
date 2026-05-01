@@ -348,21 +348,21 @@ Khi hệ thống chạy chậm, phản ứng đầu tiên của mọi người t
 
 Đầu sự nghiệp, bạn dùng thời gian đổi lấy tiền bạc, việc gì cũng làm và điều đó không sao cả. Nhưng đến một giai đoạn nào đó, tình hình sẽ hoàn toàn khác. Bạn sẽ bắt đầu nhận ra thời gian mới là tài nguyên không thể tái tạo. Hãy tập trung vào những thứ quan trọng nhất đối với bạn và từ bỏ những thứ còn lại.
 
-## Ngôn luận
+## Trích dẫn
 
-1.
+1\.
 
 Chữ A trong AGI (Trí tuệ nhân tạo tổng quát) thực ra là viết tắt của Advertisement (Quảng cáo).
 
 -- [Một lập trình viên](https://ossa-ma.github.io/blog/openads) bình luận về việc OpenAI thông báo chèn quảng cáo vào các cuộc hội thoại AI
 
-2.
+2\.
 
 Phim của Netflix không theo đuổi hiệu ứng thị giác vì đa số khán giả xem trên điện thoại, máy tính bảng và laptop. Nội dung không được làm cho màn ảnh rộng mà được làm cho màn hình nhỏ.
 
 -- [Matt Damon](https://x.com/nexta_tv/status/2012595777831678142), nam diễn viên nổi tiếng người Mỹ
 
-3.
+3\.
 
 Tôi chưa từng thấy nhóm người nào nhiệt tình chia sẻ kiến thức như các lập trình viên. Các ngành nghề khác đều giữ khư khư kiến thức và bí mật nghề nghiệp, còn lập trình viên thì cung cấp miễn phí mã nguồn, sách vở, bài viết blog, slide thuyết trình, video hướng dẫn...
 
@@ -370,13 +370,13 @@ Trong lĩnh vực lập trình không có gì là thần thánh bất khả xâm
 
 -- [ "Tôi đã học mọi kiến thức lập trình như thế nào"](https://agentultra.com/blog/how-i-learned-everything-i-know/index.html)
 
-4.
+4\.
 
 Trong bản iOS 26 năm nay, một số thành phần UI đã tận dụng màn hình HDR để hiển thị vùng sáng mạnh, sáng hơn cả màu trắng thuần túy. Nếu bạn từng xem ảnh HDR trên iPhone (hoặc bất kỳ màn hình nào hỗ trợ HDR), rồi nhìn lại các UI hiển thị ở chế độ SDR, bạn sẽ thấy nó trông xám xịt và xỉn màu đến thế nào.
 
 -- [ "Sự lạm dụng chế độ sáng"](https://willhbr.net/2025/10/20/light-mode-infffffflation/), tác giả nhận thấy iOS mỗi năm một sáng hơn, dễ gây mỏi mắt khiến ông buộc phải dùng chế độ tối
 
-5.
+5\.
 
 Nếu bạn muốn chỉ trích cách vận hành của các tổ chức lớn, trước tiên hãy tìm hiểu tại sao họ lại vận hành như vậy. Nếu không, lời chỉ trích sẽ nghe có vẻ sắc sảo nhưng thực ra lại vô nghĩa.
 

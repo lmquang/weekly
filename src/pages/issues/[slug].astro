@@ -102,24 +102,34 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
 
         let node = heading.nextElementSibling;
         while (node && node.tagName !== 'H2') {
-          const quote = node.nextElementSibling;
-          const source = quote?.nextElementSibling;
           const isEmptyMarker = ['OL', 'UL'].includes(node.tagName) && node.textContent?.trim() === '';
-          const isQuoteParagraph = quote?.tagName === 'P';
-          const isSourceParagraph = source?.tagName === 'P' && /^[—-]/.test(source.textContent?.trim() ?? '');
+          const isParagraphMarker = node.tagName === 'P' && /^\d+[、.]$/.test(node.textContent?.trim() ?? '');
 
-          if (!isEmptyMarker || !isQuoteParagraph || !isSourceParagraph) {
+          if (!(isEmptyMarker || isParagraphMarker)) {
+            node = node.nextElementSibling;
+            continue;
+          }
+
+          const quoteParagraphs: Element[] = [];
+          let source = node.nextElementSibling;
+          while (source && source.tagName === 'P' && !/^[—-]/.test(source.textContent?.trim() ?? '')) {
+            quoteParagraphs.push(source);
+            source = source.nextElementSibling;
+          }
+
+          const isSourceParagraph = source?.tagName === 'P' && /^[—-]/.test(source.textContent?.trim() ?? '');
+          if (quoteParagraphs.length === 0 || !isSourceParagraph) {
             node = node.nextElementSibling;
             continue;
           }
 
           const card = document.createElement('blockquote');
           card.className = 'citation-card';
-          quote.classList.add('citation-text');
+          quoteParagraphs.forEach((quote) => quote.classList.add('citation-text'));
           source.classList.add('citation-source');
           source.innerHTML = source.innerHTML.replace(/^\s*(--|—)\s*/, '');
 
-          card.append(quote, source);
+          card.append(...quoteParagraphs, source);
           node.replaceWith(card);
           node = card.nextElementSibling;
         }

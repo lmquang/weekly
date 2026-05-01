@@ -280,31 +280,31 @@ Tôi vừa đọc được một câu nói rất hay: "Chỉ có nô lệ mới 
 
 ## Trích dẫn
 
-1.
+1\.
 
 Chúng ta đang xây dựng một nền văn minh dựa hoàn toàn vào khoa học công nghệ, nhưng lại khiến những thứ đó trở nên quá khó hiểu với số đông. Đây là một sự kết hợp nguy hiểm và sớm muộn gì nó cũng sẽ phát nổ.
 
 -- Carl Sagan
 
-2.
+2\.
 
 Paris từng rất tắc đường, nhưng khi thị trưởng quyết định xóa bỏ hàng loạt bãi đỗ xe, người dân bỗng dưng lười lái xe hẳn đi.
 
 -- CNN
 
-3.
+3\.
 
 Nghiên cứu cho thấy khi học online, những sinh viên có ngoại hình ưu tú thường nhận được điểm số thấp hơn so với khi học trực tiếp.
 
 -- Economics Letters
 
-4.
+4\.
 
 Thay đổi lớn nhất của đời tôi là chuyển từ một "cú đêm" sang một người yêu buổi sáng. Việc được tận mắt ngắm nhìn bình minh và hoàng mỗi ngày giúp tôi cảm thấy bình an và nhịp sống của mình hòa quyện hơn với thiên nhiên.
 
 -- Becoming a Day Person
 
-5.
+5\.
 
 AI cực giỏi trong việc biến những ý tưởng rõ ràng thành mã nguồn chạy được. Việc tốn thời gian nhất bây giờ là ngồi nghĩ xem mình thực sự muốn xây dựng cái gì.
 

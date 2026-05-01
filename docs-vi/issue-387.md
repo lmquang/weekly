@@ -267,31 +267,26 @@ Tôi đã rất sốc. Tôi từng làm việc cho ông suốt 4 năm, vậy mà
 
 ## Phát ngôn
 
-1.
 
 Điều khiến tôi ngạc nhiên là gần đây mọi người bắt đầu làm những việc đáng lẽ phải làm từ lâu: (1) Viết tài liệu ngắn gọn, trực diện trong tệp AGENTS.md. (2) Hiện thực hóa các quy trình công việc giá trị dưới dạng Skill hoặc máy chủ MCP. (3) Cải thiện đầu ra của các công cụ dòng lệnh để chúng mang lại nhiều thông tin hữu ích hơn cho AI.
 
 -- [《AI=true là một phản mô hình》](https://keleshev.com/ai-equals-true-is-an-anti-pattern)
 
-2.
 
 GitHub gần đây hay bị sập, tôi nghĩ lý do không phải vì họ đang chạy mã do AI tạo ra, mà vì người dùng đang đẩy lên quá nhiều mã do AI sinh ra với tần suất và số lượng vượt xa trước đây, khiến hệ thống quá tải.
 
 -- Độc giả trên Hacker News.
 
-3.
 
 GitHub Star từng là một chỉ số rất tốt, cho đến khi mọi người dần nhận ra rằng nó thực sự là một chỉ số... quá tốt (nên bị thao túng).
 
 -- Độc giả trên Hacker News.
 
-4.
 
 Với AI, một kỹ sư có thể hoàn thành bảy tính năng chỉ trong một chu kỳ phát triển, việc thăng tiến bỗng trở nên quá dễ dàng.
 
 -- [《Khi tốc độ sinh mã vượt xa khả năng thấu hiểu》](https://www.rockoder.com/beyondthecode/cognitive-debt-when-velocity-exceeds-comprehension/)
 
-5.
 
 Chỉ có một cách duy nhất để ăn hết một con voi: đó là ăn từng miếng một.
 

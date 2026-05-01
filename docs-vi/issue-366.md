@@ -318,27 +318,27 @@ Tuy nhiên nhiều người phản đối vì việc dẫn nước biển sẽ g
 
 ![](https://cdn.beekka.com/blogimg/asset/202508/bg2025083005.webp)
 
-## Ngôn luận
+## Trích dẫn
 
-1.
+1\.
 
 Với AI, mã nguồn không còn là thứ quý giá nữa.
 
 -- [Boris Cherny](https://etsd.tech/posts/coders-end/), Giám đốc sản phẩm Claude Code
 
-2.
+2\.
 
 Các bảo tàng hiện nay sử dụng quá nhiều màn hình điện tử, nhưng tôi đưa con đến bảo tàng không phải để xem màn hình, nếu vậy thì dùng máy tính bảng ở nhà cho rồi.
 
 -- Một người dùng mạng tại Mỹ
 
-3.
+3\.
 
 Sự nghiệp giống như một cuộc thi ăn bánh, phần thưởng cho người thắng cuộc là bạn phải tiếp tục ăn thêm nhiều bánh hơn nữa. Điều này tốt hay không tùy thuộc vào việc bạn có yêu thích công việc đó hay không.
 
 -- [Jason Lengstorf](https://jason.energy/more-pie/), kỹ sư frontend người Mỹ
 
-4.
+4\.
 
 Nhiều người, đặc biệt là các kỹ sư mới, lầm tưởng rằng việc sử dụng những công cụ và ngôn ngữ phức tạp sẽ tạo ra những sản phẩm mạnh mẽ và sáng tạo hơn. Sự thật thì ngược lại. Những thành phần hiệu quả nhất lại là những công nghệ trưởng thành, đơn giản, dễ dự đoán và có phần nhàm chán. Chúng cung cấp nền tảng cần thiết để chúng ta phát triển những dự án phức tạp sau này. Bạn không cần phải xây một cây cầu thú vị, thứ bạn cần xây là một cây cầu vững chãi để mọi người có thể tự tin bước đi trên đó.
 

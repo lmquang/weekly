@@ -15,6 +15,8 @@ CHINESE_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U0002000
 FRONTMATTER_PATTERN = re.compile(r"\A---\n(?P<body>.*?)\n---(?:\n|\Z)", re.DOTALL)
 INLINE_TAGS_PATTERN = re.compile(r"^tags:\s*\[(?P<tags>.*)]\s*$", re.MULTILINE)
 BLOCK_TAGS_PATTERN = re.compile(r"^tags:\s*\n(?P<tags>(?:\s+-\s*.+\n?)+)", re.MULTILINE)
+STANDALONE_ORDERED_MARKER_PATTERN = re.compile(r"^\d+\.$")
+STANDALONE_MARKER_PATTERN = re.compile(r"^(?P<number>\d+)(?:\\\.|\.|、)$")
 
 
 @dataclass(frozen=True)
@@ -38,6 +40,7 @@ class ImageCheckResult:
 	translation_images: tuple[str, ...]
 	chinese_matches: tuple[ChineseTextMatch, ...]
 	tag_errors: tuple[str, ...]
+	markdown_errors: tuple[str, ...]
 
 	@property
 	def is_ok(self) -> bool:
@@ -47,6 +50,7 @@ class ImageCheckResult:
 			and not self.extra_images
 			and not self.chinese_matches
 			and not self.tag_errors
+			and not self.markdown_errors
 		)
 
 	@property
@@ -160,6 +164,78 @@ def read_tag_errors(path: Path) -> tuple[str, ...]:
 	return validate_tags(path.read_text(encoding="utf-8"))
 
 
+def validate_markdown(markdown: str) -> tuple[str, ...]:
+	"""Validate Markdown patterns that render incorrectly after translation."""
+	errors: list[str] = []
+	in_quote_section = False
+
+	for line_number, line in enumerate(markdown.splitlines(), start=1):
+		stripped_line = line.strip()
+		if stripped_line.startswith("## "):
+			in_quote_section = stripped_line == "## Trích dẫn"
+
+		marker = STANDALONE_MARKER_PATTERN.fullmatch(stripped_line)
+		if in_quote_section and marker and not stripped_line.endswith("\\."):
+			errors.append(
+				f"line {line_number}: use quote marker `{marker.group('number')}\\.` "
+				f"inside `## Trích dẫn`"
+			)
+		elif not in_quote_section and marker:
+			errors.append(
+				f"line {line_number}: remove standalone marker `{stripped_line}` "
+				"outside `## Trích dẫn`"
+			)
+
+	return tuple(errors)
+
+
+def read_markdown_errors(path: Path) -> tuple[str, ...]:
+	"""Read a Markdown file and return Markdown validation errors."""
+	return validate_markdown(path.read_text(encoding="utf-8"))
+
+
+def normalize_translation_markdown(markdown: str) -> str:
+	"""Normalize translated Markdown markers to parser-friendly forms."""
+	lines: list[str] = []
+	in_quote_section = False
+
+	for line in markdown.splitlines():
+		stripped_line = line.strip()
+		if stripped_line.startswith("## "):
+			if stripped_line in {"## Ngôn luận", "## 言论"}:
+				line = "## Trích dẫn"
+				stripped_line = line
+			elif stripped_line == "## 文摘":
+				line = "## Trích đoạn"
+				stripped_line = line
+			in_quote_section = stripped_line == "## Trích dẫn"
+
+		marker = STANDALONE_MARKER_PATTERN.fullmatch(stripped_line)
+		if marker:
+			number = marker.group("number")
+			if in_quote_section:
+				line = f"{number}\\."
+			else:
+				continue
+		elif in_quote_section and stripped_line.startswith("—"):
+			line = f"-- {stripped_line.removeprefix('—').strip()}"
+
+		lines.append(line)
+
+	return "\n".join(lines) + ("\n" if markdown.endswith("\n") else "")
+
+
+def normalize_translation_file(path: Path) -> bool:
+	"""Normalize one translated Markdown file in place. Return whether it changed."""
+	markdown = path.read_text(encoding="utf-8")
+	normalized_markdown = normalize_translation_markdown(markdown)
+	if normalized_markdown == markdown:
+		return False
+
+	path.write_text(normalized_markdown, encoding="utf-8")
+	return True
+
+
 def normalize_issue(issue: str) -> str:
 	"""Normalize user input like `390` or `issue-390` to `issue-390`."""
 	issue = issue.removesuffix(".md")
@@ -199,6 +275,7 @@ def check_issue(root: Path, issue: str) -> ImageCheckResult:
 		translation_images=read_images(translation_path),
 		chinese_matches=read_chinese_text(translation_path),
 		tag_errors=read_tag_errors(translation_path),
+		markdown_errors=read_markdown_errors(translation_path),
 	)
 
 
@@ -234,6 +311,10 @@ def print_result(result: ImageCheckResult, verbose: bool) -> None:
 		print("  tag metadata errors:")
 		for error in result.tag_errors:
 			print(f"    - {error}")
+	if result.markdown_errors:
+		print("  markdown errors:")
+		for error in result.markdown_errors:
+			print(f"    - {error}")
 
 	if verbose:
 		print("  source images:")
@@ -265,6 +346,11 @@ def parse_args() -> argparse.Namespace:
 		action="store_true",
 		help="Print image URLs for each checked file.",
 	)
+	parser.add_argument(
+		"--fix",
+		action="store_true",
+		help="Normalize translated Markdown marker characters before checking.",
+	)
 	return parser.parse_args()
 
 
@@ -281,6 +367,10 @@ def main() -> int:
 	results: list[ImageCheckResult] = []
 	try:
 		for issue in issues:
+			if args.fix:
+				translation_path = root / "docs-vi" / f"{issue}.md"
+				if normalize_translation_file(translation_path):
+					print(f"[FIXED] {translation_path}")
 			result = check_issue(root, issue)
 			results.append(result)
 			print_result(result, args.verbose)

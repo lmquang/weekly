@@ -340,9 +340,9 @@ Cuối cùng, mặc dù công ty không còn cắt phế từ tiền tip của s
 
 Nếu thuật toán dự đoán bạn là "người dùng có khả năng trả tiền tip" và bạn có thể sẽ tip 10 USD, công ty sẽ chỉ trả cho shipper 2 USD phí giao hàng cơ bản rẻ mạt. Nếu bạn tip 0 USD, công ty sẽ trả cho shipper 8 USD phí cơ bản. Kết quả là tiền tip của khách hàng không hề thưởng cho shipper mà đang bù đắp cho công ty. Khách hàng đang trả lương cho shipper thay cho chúng tôi.
 
-## Ngôn luận
+## Trích dẫn
 
-1.
+1\.
 
 Ở bờ Đông nước Mỹ (New York và Washington), người ta hay hỏi: "Liệu Trung Quốc có sắp thất bại không?", còn ở bờ Tây (Los Angeles và San Francisco), người ta lại có xu hướng hỏi: "Vạn nhất Trung Quốc thành công thì sao?"
 
@@ -350,19 +350,19 @@ Nếu thuật toán dự đoán bạn là "người dùng có khả năng trả 
 
 -- [Dan Wang "Thư thường niên 2025"](https://danwang.co/2025-letter/)
 
-2.
+2\.
 
 Nếu Mỹ hoặc Trung Quốc bị tụt hậu quá xa trong một lĩnh vực nào đó, bên tụt hậu sẽ dồn lực đuổi theo. Đây sẽ là động lực thay đổi thế giới trong nhiều năm, thậm chí nhiều thập kỷ tới.
 
 -- [Dan Wang "Thư thường niên 2025"](https://danwang.co/2025-letter/)
 
-3.
+3\.
 
 Lập trình viên có hai thái độ đối với AI: một nhóm hướng tới kết quả, khao khát dùng AI để đạt được kết quả nhanh hơn; nhóm khác hướng tới quá trình, họ tìm thấy ý nghĩa từ chính công việc kỹ thuật và cảm thấy bất mãn khi bị tước đoạt trải nghiệm đó.
 
 -- [Ben Werdmuller](https://simonwillison.net/2026/Jan/2/ben-werdmuller/)
 
-4.
+4\.
 
 Cơn sốt xây dựng các trung tâm dữ liệu AI đã khiến giá bộ nhớ tăng vọt, từ đó gây ra một loạt phản ứng dây chuyền.
 
@@ -370,7 +370,7 @@ Các hãng điện thoại và máy tính không còn lựa chọn nào khác ng
 
 -- [Dự báo của công ty IDC](https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/)
 
-5.
+5\.
 
 eSIM một khi đã thay đổi là có thể bị hỏng, trong khi đó thẻ SIM vật lý có thể rút ra cắm vào tùy ý mà hầu như không gặp lỗi. Hệ quả của việc phổ biến eSIM là các vụ việc mất số điện thoại sẽ tăng lên đáng kể.
 

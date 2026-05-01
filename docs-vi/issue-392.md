@@ -274,31 +274,31 @@ Khi cát tiếp xúc với mồ hôi trên da hoặc nước biển, các phân 
 
 ## Trích dẫn
 
-1、
+1\.
 
 Nếu bạn nghĩ tốc độ viết code là vấn đề lớn nhất của mình, thì thực ra bạn đang gặp phải những vấn đề còn lớn hơn thế nhiều.
 
 -- Andrew Murphy
 
-2、
+2\.
 
 Có một kiểu hưng phấn đặc thù, đó là kiểu hưng phấn của những người mới bắt đầu chạm tay vào tiền mã hóa từ năm 2017.
 
 -- Andrew Murphy
 
-3、
+3\.
 
 Giới trẻ ngày nay có vẻ lạnh nhạt với những giá trị truyền thống như gia đình hay lòng yêu nước. Họ coi thị trường và tiền bạc mới là thước đo chuẩn mực cho mọi thứ.
 
 -- Trích "Hệ lụy tồi tệ của thị trường dự đoán"
 
-4、
+4\.
 
 Tương lai của đô thị với tôi là những con phố yên bình và làn đường cho xe đạp như ở Amsterdam, chứ không phải những xa lộ 16 làn xe ở Dubai.
 
 -- Một độc giả Hacker News
 
-5、
+5\.
 
 Các trường đại học ép nghiên cứu sinh phải ra bài báo khoa học. Đôi khi họ chẳng quan tâm bạn viết gì, bài báo chỉ là công cụ để chứng minh kinh phí nghiên cứu là hợp lý. Sinh viên suy cho cùng cũng chỉ là một dạng tư liệu sản xuất.
 

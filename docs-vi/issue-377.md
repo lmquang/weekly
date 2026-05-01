@@ -346,7 +346,6 @@ Giống như vị giáo sư ở trường đại học đã dành 7 năm để s
 
 ## Ý kiến
 
-1、
 
 Chỉ số IQ trung bình của cả hai công ty đều tăng lên.
 
@@ -354,25 +353,21 @@ Chỉ số IQ trung bình của cả hai công ty đều tăng lên.
 
 Alan Dye không được đánh giá cao tại Apple, trong khi thế mạnh của Meta không phải là thiết kế tương tác. Có lẽ ông ấy sẽ giúp nâng tầm thiết kế của Meta.
 
-2、
 
 Cảm giác viết blog vào năm 2025 giống như đang hét vào khoảng không vô định vậy.
 
 -- [Askmike.org](https://askmike.org/articles/blogging-in-2025-screaming-into-the-void/)
 
-3、
 
 Meta vừa bán ra một chiếc kính AR được quảng cáo là có rất nhiều tính năng. Nhưng thực chất chiếc kính này là một chiếc camera gắn lên mặt để Meta quan sát thế giới.
 
 -- [Victoria Song](https://www.aaronland.info/weblog/2025/11/20/cafeteria/), phóng viên truyền thông mạng.
 
-4、
 
 Lý do giá cổ phiếu của các công ty AI tăng vọt là vì họ đã vẽ ra một viễn cảnh cho các nhà đầu tư: Trong tương lai, AI sẽ đảm đương công việc của con người. Khi ông chủ sa thải nhân viên và dùng AI thay thế, ông ta sẽ tiết kiệm được một nửa tiền lương của bạn và đưa nửa còn lại cho công ty AI.
 
 -- [“Hướng dẫn phê phán AI”](https://pluralistic.net/2025/12/05/pop-that-bubble/)
 
-5、
 
 Vấn đề của các nền tảng sáng tạo (như TikTok) là chúng chi trả rất ít thù lao cho người sáng tạo, dẫn đến việc mọi người sáng tạo nổi tiếng cuối cùng đều phải chuyển sang bán hàng, tìm kiếm tài trợ và hợp tác thương hiệu.
 

@@ -262,31 +262,31 @@ Nhiều lập trình viên chọn làm Freelancer/Contractor vì muốn tự do 
 
 ## Trích dẫn
 
-1、
+1\.
 
 Tại Harvard, tỷ lệ sinh viên đạt điểm A đã vọt lên 60% so với mức 25% của 20 năm trước. Một minh chứng rõ ràng cho tình trạng lạm phát điểm số ngày nay.
 
 -- [The Wall Street Journal](https://www.wsj.com/us-news/education/harvard-grade-cap-a-proposal-gpa-7c921630?st=aF9vkr&mod=1440&user_id=66c4c9305d78644b3ac5df9c)
 
-2、
+2\.
 
 Để hệ thống được an toàn trước AI, bạn buộc phải chi nhiều tiền cho Token hơn cả kẻ tấn công. Ngành bảo mật giờ đây chẳng khác gì một cuộc chạy đua vũ trang bằng Token.
 
 -- [Simon Willison](https://simonwillison.net/2026/Apr/14/cybersecurity-proof-of-work/#atom-blogmarks)
 
-3、
+3\.
 
 Năm ngoái, tôi thường nghi ngờ AI khi thấy những pull request chất lượng thấp. Năm nay thì ngược lại, nếu thấy code đầy lỗi ngớ ngẩn, tôi lại tự hỏi sao người ta không dùng AI để viết code đi cho nhanh và chuẩn.
 
 -- [ClickHouse blog](https://clickhouse.com/blog/agentic-coding)
 
-4、
+4\.
 
 Trong thời đại mạng xã hội, chiến tranh cũng được đóng gói thành những nội dung giải trí để dễ dàng lan truyền hơn. Ai có nội dung thu hút hơn, người đó thắng trên mặt trận thông tin.
 
 -- [Time.com](https://time.com/article/2026/04/02/when-virality-is-the-message-the-new-age-of-ai-propaganda/)
 
-5、
+5\.
 
 Với các mô hình lớn, Markdown giờ đây giống như một file thực thi. Một file Markdown bị chỉnh sửa hoàn toàn có thể trở thành một cuộc tấn công tiêm mã (injection attack) nhắm trực tiếp vào hệ thống của bạn.
 
