@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, Delivery, Giao hàng, Gig Economy, Kinh tế tự do, Society, Xã hội, Technology, Công nghệ]
+---
+
 # Khi người giao hàng trở thành một phần của AI
 
 ## Ảnh bìa

@@ -1,3 +1,7 @@
+---
+tags: [Internet, Prediction Market, Thị trường dự báo, Business, Kinh doanh, AI, Technology, Công nghệ, Travel, Robotics]
+---
+
 # Dự báo là điểm nóng mới của Internet
 
 ## Ảnh bìa

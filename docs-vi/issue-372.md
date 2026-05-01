@@ -1,3 +1,7 @@
+---
+tags: [Design, Thiết kế, UI, UX, Software, Phần mềm, Programming, Lập trình, AI, Robotics]
+---
+
 # Thiết kế giao diện phần mềm như thế nào?
 
 ## Ảnh bìa

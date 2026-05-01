@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, Programming, Lập trình, Career, Sự nghiệp, Skills, Kỹ năng, Technology, Công nghệ]
+---
+
 # Bạn đang ở cấp độ nào trong lập trình AI?
 
 ## Ảnh bìa

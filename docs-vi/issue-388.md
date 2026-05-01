@@ -1,3 +1,7 @@
+---
+tags: [Software, Phềm mềm, Testing, Kiểm thử, QA, Quản lý chất lượng, Security, Bảo mật, Programming, Lập trình]
+---
+
 # Kiểm thử chính là hào nước mới
 
 ## Ảnh bìa

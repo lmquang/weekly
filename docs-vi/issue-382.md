@@ -1,3 +1,7 @@
+---
+tags: [Software, Phần mềm, Indie Developer, Nhà phát triển độc lập, Business, Kinh doanh, AI, Trends, Xu hướng, Programming]
+---
+
 # Buổi hoàng hôn của phần mềm độc lập
 
 ## Ảnh bìa

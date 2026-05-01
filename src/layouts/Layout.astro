@@ -29,10 +29,11 @@ const searchIssues = allIssues
 	.sort((a, b) => parseInt(getIssueNumber(b) || '0') - parseInt(getIssueNumber(a) || '0'))
 	.map((issue) => ({
 		number: getIssueNumber(issue),
-			title: getIssueTitle(issue),
-			summary: getIssueSummary(issue),
-			searchText: getIssueSearchText(issue),
-			url: `/issues/${issue.id}`,
+		title: getIssueTitle(issue),
+		summary: getIssueSummary(issue),
+		tags: issue.data.tags ?? [],
+		searchText: getIssueSearchText(issue),
+		url: `/issues/${issue.id}`,
 	}));
 ---
 
@@ -173,6 +174,21 @@ const searchIssues = allIssues
 				summary.textContent = issue.summary;
 
 				link.append(meta, title, summary);
+
+				if (issue.tags.length > 0) {
+					const tags = document.createElement('div');
+					tags.className = 'mt-3 flex flex-wrap gap-1.5';
+
+					issue.tags.slice(0, 4).forEach((tag) => {
+						const badge = document.createElement('span');
+						badge.className = 'rounded-full bg-black/5 px-2 py-0.5 text-[10px] font-semibold text-gray-500 dark:bg-white/10 dark:text-gray-400';
+						badge.textContent = tag;
+						tags.append(badge);
+					});
+
+					link.append(tags);
+				}
+
 				return link;
 			};
 
@@ -203,10 +219,13 @@ const searchIssues = allIssues
 
 				const number = normalizeSearchText(issue.number);
 				const title = normalizeSearchText(issue.title);
+				const tags = normalizeSearchText(issue.tags.join(' '));
 				const summary = normalizeSearchText(issue.summary);
 				const searchText = normalizeSearchText(issue.searchText);
 
 				if (number === query || `issue ${number}` === query) return 100;
+				if (tags.split(/\s+/).includes(query)) return 90;
+				if (tags.includes(query)) return 85;
 				if (title.includes(query)) return 80;
 				if (summary.includes(query)) return 50;
 				if (searchText.includes(query)) return 20;

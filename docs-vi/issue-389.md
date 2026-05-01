@@ -1,3 +1,7 @@
+---
+tags: [Recruitment, Tuyển dụng, Programming, Lập trình, AI, Trí tuệ nhân tạo, Career, Sự nghiệp, Technology, Công nghệ]
+---
+
 # Tuyển dụng lập trình viên trong tương lai như thế nào?
 
 ## Ảnh bìa

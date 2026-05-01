@@ -1,3 +1,7 @@
+---
+tags: [Interview, Phỏng vấn, Tech, Công nghệ, Entrepreneurship, Khởi nghiệp, AI, Video, Social Media, Mạng xã hội]
+---
+
 # Cuộc đối thoại giữa Tim và La Vĩnh Hạo
 
 ## Ảnh bìa

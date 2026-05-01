@@ -1,3 +1,7 @@
+---
+tags: [Lifestyle, Phong cách sống, Optimism, Lạc quan, Psychology, Tâm lý học, Personal Development, Phát triển bản thân, AI, Robotics]
+---
+
 # Phỏng vấn một người lạc quan
 
 ## Ảnh bìa

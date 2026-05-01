@@ -1,3 +1,7 @@
+---
+tags: [Health, Sức khỏe, Psychology, Tâm lý học, Productivity, Năng suất, Lifestyle, Phong cách sống, Thoughts, Suy ngẫm]
+---
+
 # Hội chứng mục não
 
 ## Ảnh bìa

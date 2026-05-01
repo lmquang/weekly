@@ -1,3 +1,7 @@
+---
+tags: [Software, Phần mềm, Stock Market, Thị trường chứng khoán, Economics, Kinh tế, Finance, Tài chính, AI, Technology]
+---
+
 # Tại sao cổ phiếu ngành phần mềm lại giảm giá?
 
 ## Ảnh bìa

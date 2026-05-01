@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, LLM, Mô hình ngôn ngữ lớn, Data, Dữ liệu, Microsoft, Programming, Lập trình, Technology]
+---
+
 # Thiếu dữ liệu, AI chỉ là một kẻ khờ
 
 ## Ảnh bìa

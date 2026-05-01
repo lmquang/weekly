@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, China, Trung Quốc, Large Model, Mô hình lớn, LLM, Technology, Công nghệ, Open Source]
+---
+
 # Những người đứng đầu mảng AI mô hình lớn tại Trung Quốc đang nghĩ gì?
 
 ## Ảnh bìa
@@ -213,23 +217,17 @@ Bài viết giới thiệu cách dùng Playwright để kiểm thử thị giác
 
 Redis là công cụ cache phổ biến nhất, nhưng tác giả chỉ ra những điểm yếu của nó và cách dùng database PostgreSQL để thay thế.
 
-4. [Những điều ít biết về thẻ `<a>`](https://blog.jim-nielsen.com/2025/href-value-possibilities/) (Tiếng Anh)
+4. [Cách dùng CSS để xử lý thanh cuộn ngang](https://aartaka.me/easy-fixes.html) (Tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011008.webp)
 
-Thẻ `<a>` dùng để tạo liên kết, bài viết giới thiệu các trường hợp liên kết đến những ký tự đặc biệt.
+Một bài hướng dẫn CSS cơ bản, giới thiệu 4 mẹo đơn giản để ngăn trang web xuất hiện thanh cuộn ngang không mong muốn.
 
-5. [Học về Custom Elements](https://railsdesigner.com/custom-elements/) (Tiếng Anh)
+5. [Giới thiệu nguyên lý của Message Queue](https://www.cloudamqp.com/blog/message-queues-exaplined-with-analogies.html) (Tiếng Anh)
 
-![](https://cdn.beekka.com/blogimg/asset/202512/bg2025120405.webp)
+![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011403.webp)
 
-Một bài hướng dẫn về HTML Custom Elements, viết rất đơn giản và dễ hiểu.
-
-6. [Vài suy nghĩ về Go, Rust và Zig](https://sinclairtarget.com/blog/2025/08/thoughts-on-go-vs.-rust-vs.-zig/) (Tiếng Anh)
-
-![](https://cdn.beekka.com/blogimg/asset/202512/bg2025120503.webp)
-
-Tác giả là một lập trình viên cao cấp, chia sẻ cảm nhận về ba ngôn ngữ Go, Rust và Zig. Điểm thú vị là cả ba đều không có lớp (class) và không hỗ trợ lập trình hướng đối tượng truyền thống.
+Bài viết nhập môn giới thiệu các khái niệm và vai trò của hàng đợi tin nhắn (message queue) thông qua các ví dụ thực tế.
 
 7. [Vấn đề bo góc trên macOS Tahoe](https://noheger.at/blog/2026/01/11/the-struggle-of-resizing-windows-on-macos-tahoe/) (Tiếng Anh)
 
@@ -264,6 +262,8 @@ Trình phát video trên web mã nguồn mở, tự động hiển thị ảnh t
 Trình quản lý tệp tin trên web mã nguồn mở.
 
 5. [Nigate](https://github.com/hoochanlon/Free-NTFS-for-Mac)
+
+![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011103.webp)
 
 Công cụ mã nguồn mở giúp máy Mac có thể đọc và ghi đĩa định dạng NTFS.
 

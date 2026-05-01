@@ -1,3 +1,7 @@
+---
+tags: [Leadership, Lãnh đạo, Career, Sự nghiệp, Personal Development, Phát triển bản thân, Excellence, Xuất sắc, Thoughts, Suy ngẫm]
+---
+
 # Bạn đang thuộc nhóm dẫn đầu
 
 ## Ảnh bìa

@@ -1,3 +1,7 @@
+---
+tags: [Programming, Lập trình, Frontend, Web Development, Phát triển Web, Code Highlight, Tools, Công cụ, AI, Open Source]
+---
+
 # Cách hiển thị code highlight chính xác
 
 ## Ảnh bìa

@@ -1,3 +1,7 @@
+---
+tags: [Elon Musk, Biography, Tiểu sử, Quotes, Trích dẫn, Tech, Công nghệ, Business, Kinh doanh, Robotics]
+---
+
 # Trích dẫn từ "Elon Musk"
 
 ## Ảnh bìa

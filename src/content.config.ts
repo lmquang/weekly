@@ -5,6 +5,7 @@ const issues = defineCollection({
 	loader: glob({ pattern: '**/issue-*.md', base: "./docs-vi" }),
 	schema: z.object({
 		title: z.string().optional(),
+		tags: z.array(z.string()).optional(),
 	}),
 });
 

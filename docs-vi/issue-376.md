@@ -1,3 +1,7 @@
+---
+tags: [Data Center, Trung tâm dữ liệu, Space, Không gian, Environment, Môi trường, Infrastructure, Hạ tầng, AI, Technology]
+---
+
 # Tranh cãi về trung tâm dữ liệu ngoài không gian
 
 ## Ảnh bìa

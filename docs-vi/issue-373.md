@@ -1,3 +1,7 @@
+---
+tags: [Data Model, Mô hình dữ liệu, Product Management, Quản lý sản phẩm, Database, Cơ sở dữ liệu, Programming, Lập trình, AI, Tech]
+---
+
 # Mô hình dữ liệu là cốt lõi của sản phẩm mới
 
 ## Ảnh bìa

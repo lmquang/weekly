@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, Business, Kinh doanh, Internet, Technology, Công nghệ, Search Engine, Công cụ tìm kiếm, Programming]
+---
+
 # Mô hình kiếm tiền từ lưu lượng đang sụp đổ
 
 ## Ảnh bìa

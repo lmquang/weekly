@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, Society, Xã hội, Economics, Kinh tế, Inequality, Bất bình đẳng, Technology, Công nghệ]
+---
+
 # Sự phân hóa giàu nghèo trong thời đại AI
 
 ## Ảnh bìa

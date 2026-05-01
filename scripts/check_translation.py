@@ -12,6 +12,9 @@ from pathlib import Path
 
 IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 CHINESE_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U00020000-\U0002ebef]")
+FRONTMATTER_PATTERN = re.compile(r"\A---\n(?P<body>.*?)\n---(?:\n|\Z)", re.DOTALL)
+INLINE_TAGS_PATTERN = re.compile(r"^tags:\s*\[(?P<tags>.*)]\s*$", re.MULTILINE)
+BLOCK_TAGS_PATTERN = re.compile(r"^tags:\s*\n(?P<tags>(?:\s+-\s*.+\n?)+)", re.MULTILINE)
 
 
 @dataclass(frozen=True)
@@ -34,11 +37,17 @@ class ImageCheckResult:
 	source_images: tuple[str, ...]
 	translation_images: tuple[str, ...]
 	chinese_matches: tuple[ChineseTextMatch, ...]
+	tag_errors: tuple[str, ...]
 
 	@property
 	def is_ok(self) -> bool:
-		"""Return whether translation image URLs match and contain no Chinese text."""
-		return not self.missing_images and not self.extra_images and not self.chinese_matches
+		"""Return whether translation passes all checks."""
+		return (
+			not self.missing_images
+			and not self.extra_images
+			and not self.chinese_matches
+			and not self.tag_errors
+		)
 
 	@property
 	def missing_images(self) -> tuple[str, ...]:
@@ -102,6 +111,55 @@ def read_chinese_text(path: Path) -> tuple[ChineseTextMatch, ...]:
 	return find_chinese_text(path.read_text(encoding="utf-8"))
 
 
+def extract_frontmatter_tags(markdown: str) -> tuple[str, ...]:
+	"""Extract tags from top-level YAML frontmatter without a YAML dependency."""
+	frontmatter = FRONTMATTER_PATTERN.match(markdown)
+	if not frontmatter:
+		return ()
+
+	body = frontmatter.group("body")
+	inline_match = INLINE_TAGS_PATTERN.search(body)
+	if inline_match:
+		return tuple(
+			tag.strip().strip('"\'')
+			for tag in inline_match.group("tags").split(",")
+			if tag.strip().strip('"\'')
+		)
+
+	block_match = BLOCK_TAGS_PATTERN.search(body)
+	if block_match:
+		return tuple(
+			line.split("-", 1)[1].strip().strip('"\'')
+			for line in block_match.group("tags").splitlines()
+			if line.strip().startswith("-") and line.split("-", 1)[1].strip().strip('"\'')
+		)
+
+	return ()
+
+
+def validate_tags(markdown: str) -> tuple[str, ...]:
+	"""Validate translated issue frontmatter tags for search metadata."""
+	errors: list[str] = []
+
+	if not FRONTMATTER_PATTERN.match(markdown):
+		errors.append("missing YAML frontmatter at top of file")
+		return tuple(errors)
+
+	tags = extract_frontmatter_tags(markdown)
+	if not tags:
+		errors.append("missing tags in YAML frontmatter")
+		return tuple(errors)
+	if len(tags) != 10:
+		errors.append(f"expected 10 tags, found {len(tags)}")
+
+	return tuple(errors)
+
+
+def read_tag_errors(path: Path) -> tuple[str, ...]:
+	"""Read a Markdown file and return tag metadata validation errors."""
+	return validate_tags(path.read_text(encoding="utf-8"))
+
+
 def normalize_issue(issue: str) -> str:
 	"""Normalize user input like `390` or `issue-390` to `issue-390`."""
 	issue = issue.removesuffix(".md")
@@ -140,6 +198,7 @@ def check_issue(root: Path, issue: str) -> ImageCheckResult:
 		source_images=read_images(source_path),
 		translation_images=read_images(translation_path),
 		chinese_matches=read_chinese_text(translation_path),
+		tag_errors=read_tag_errors(translation_path),
 	)
 
 
@@ -171,6 +230,10 @@ def print_result(result: ImageCheckResult, verbose: bool) -> None:
 				f"    - line {match.line_number}, column {match.column_number}: "
 				f"{match.character} in {match.line}"
 			)
+	if result.tag_errors:
+		print("  tag metadata errors:")
+		for error in result.tag_errors:
+			print(f"    - {error}")
 
 	if verbose:
 		print("  source images:")

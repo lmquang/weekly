@@ -1,3 +1,7 @@
+---
+tags: [Management, Quản lý, Software, Phần mềm, Productivity, Năng suất, Teamwork, Programming, Lập trình, Security]
+---
+
 # Đừng quản lý nhóm phần mềm theo cách này
 
 ## Ảnh bìa

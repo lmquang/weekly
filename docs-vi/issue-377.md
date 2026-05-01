@@ -1,3 +1,7 @@
+---
+tags: [Society, Xã hội, Economics, Kinh tế, Poverty, Nghèo đói, Career, Sự nghiệp, AI, Technology]
+---
+
 # Ngưỡng nghèo 140.000 USD
 
 ## Ảnh bìa

@@ -1,3 +1,7 @@
+---
+tags: [Elon Musk, EV, Xe điện, Tesla, China, Trung Quốc, Business, Kinh doanh, Technology, Công nghệ]
+---
+
 # Elon Musk có đang e dè các hãng xe Trung Quốc?
 
 ## Ảnh bìa

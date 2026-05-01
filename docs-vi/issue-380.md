@@ -1,3 +1,7 @@
+---
+tags: [Business, Kinh doanh, Profit, Lợi nhuận, Strategy, Chiến lược, Economics, Kinh tế, AI, Technology]
+---
+
 # Tại sao mọi người lại chọn "Lợi nhuận không đối xứng"
 
 ## Ảnh bìa

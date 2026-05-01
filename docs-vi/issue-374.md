@@ -1,3 +1,7 @@
+---
+tags: [Technology, Công nghệ, Networking, Mạng máy tính, WiFi, Hardware, Phần cứng, Wireless, Không dây, AI]
+---
+
 # Vấn đề của 6GHz
 
 ## Ảnh bìa

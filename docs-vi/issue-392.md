@@ -1,3 +1,7 @@
+---
+tags: [Security, Bảo mật, Axios, JavaScript, Programming, Lập trình, Open Source, Mã nguồn mở, Tech, Công nghệ]
+---
+
 # Đầu độc axios và những màn kịch kiểu Hollywood
 
 ## Ảnh bìa

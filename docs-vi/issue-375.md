@@ -1,3 +1,7 @@
+---
+tags: [Architecture, Kiến trúc, Problem Solving, Giải quyết vấn đề, Software Bug, Lỗi phần mềm, Game Development, VR, Education, Robotics]
+---
+
 # Một lỗi của cánh cửa
 
 ## Ảnh bìa

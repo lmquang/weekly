@@ -1,3 +1,7 @@
+---
+tags: [AI, Trí tuệ nhân tạo, Gemini, Google, Photography, Nhiếp ảnh, Tools, Công cụ, Hardware, Phần cứng]
+---
+
 # Một vài công dụng thú vị của Nano Banana
 
 ## Ảnh bìa

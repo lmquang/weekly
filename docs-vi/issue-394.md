@@ -1,3 +1,7 @@
+---
+tags: [API, Open Source, Mã nguồn mở, Technology, Công nghệ, Web Development, Phát triển Web, Programming, Lập trình, Internet]
+---
+
 # Làn sóng mở API lần thứ hai
 
 ## Ảnh bìa
@@ -242,7 +246,7 @@ Làm sao để không bị lộ thông tin nhạy cảm khi gửi Prompt cho AI?
 
 AI Gateway mã nguồn mở, cho phép kết nối với nhiều mô hình khác nhau và cung cấp một API thống nhất. ([@star7th](https://github.com/ruanyf/weekly/issues/9657) đóng góp)
 
-3、[Nezha](https://github.com/hanshuaikang/nezha) (哪吒)
+3、[Nezha](https://github.com/hanshuaikang/nezha) (Na Tra)
 
 ![](https://cdn.beekka.com/blogimg/asset/202604/bg2026042301.webp)
 
