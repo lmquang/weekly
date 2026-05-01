@@ -25,8 +25,8 @@ class ImageCheckResult:
 
 	@property
 	def is_ok(self) -> bool:
-		"""Return whether source and translation image counts match."""
-		return len(self.source_images) == len(self.translation_images)
+		"""Return whether source and translation image URLs match."""
+		return not self.missing_images and not self.extra_images
 
 	@property
 	def missing_images(self) -> tuple[str, ...]:
@@ -41,6 +41,20 @@ class ImageCheckResult:
 				missing.append(image)
 
 		return tuple(missing)
+
+	@property
+	def extra_images(self) -> tuple[str, ...]:
+		"""Return translation images absent from source, preserving duplicate counts."""
+		remaining_source_images = list(self.source_images)
+		extra: list[str] = []
+
+		for image in self.translation_images:
+			try:
+				remaining_source_images.remove(image)
+			except ValueError:
+				extra.append(image)
+
+		return tuple(extra)
 
 
 def extract_images(markdown: str) -> tuple[str, ...]:
@@ -109,6 +123,10 @@ def print_result(result: ImageCheckResult, verbose: bool) -> None:
 	if result.missing_images:
 		print("  missing images:")
 		for image in result.missing_images:
+			print(f"    - {image}")
+	if result.extra_images:
+		print("  extra images:")
+		for image in result.extra_images:
 			print(f"    - {image}")
 
 	if verbose:
