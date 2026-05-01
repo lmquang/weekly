@@ -74,10 +74,10 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
           Số {issueNumber}
         </span>
       </div>
-      <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-0 text-black dark:text-white">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-0 text-black dark:text-white">
         {displayTitle}
       </h1>
-      <p class="mt-6 text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+      <p class="mt-6 text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400">
         {description}
       </p>
     </header>
@@ -126,25 +126,35 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
       });
     </script>
 
-    <footer class="mt-24 pt-12 border-t border-black/5 dark:border-white/5">
-      <div class="flex flex-col sm:flex-row justify-between gap-8">
+    <footer class="mt-20 sm:mt-24 pt-8 sm:pt-12 border-t border-black/5 dark:border-white/5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         {prevIssue ? (
-          <a href={`/issues/${prevIssue.id}`} class="flex flex-col gap-2 group max-w-[280px]">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">Previous Issue</span>
-            <span class="text-lg font-medium text-gray-600 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
-              Số {getIssueNumber(prevIssue)} — {getIssueTitle(prevIssue)}
+          <a href={`/issues/${prevIssue.id}`} class="group rounded-2xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.03] p-5 sm:p-6 transition-all hover:-translate-y-0.5 hover:border-black/15 dark:hover:border-white/20 hover:bg-black/[0.04] dark:hover:bg-white/[0.05]">
+            <span class="mb-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">
+              <span aria-hidden="true">←</span>
+              Previous Issue
+            </span>
+            <span class="block text-base sm:text-lg font-medium leading-snug text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+              <span class="text-gray-500 dark:text-gray-500">Số {getIssueNumber(prevIssue)}</span>
+              <span class="mx-2 text-gray-400 dark:text-gray-600">/</span>
+              {getIssueTitle(prevIssue)}
             </span>
           </a>
-        ) : <div />}
+        ) : <div class="hidden sm:block" />}
 
         {nextIssue ? (
-          <a href={`/issues/${nextIssue.id}`} class="flex flex-col gap-2 items-end group text-right max-w-[280px]">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">Next Issue</span>
-            <span class="text-lg font-medium text-gray-600 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
-              Số {getIssueNumber(nextIssue)} — {getIssueTitle(nextIssue)}
+          <a href={`/issues/${nextIssue.id}`} class="group rounded-2xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.03] p-5 sm:p-6 transition-all hover:-translate-y-0.5 hover:border-black/15 dark:hover:border-white/20 hover:bg-black/[0.04] dark:hover:bg-white/[0.05] sm:text-right">
+            <span class="mb-4 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors sm:justify-end">
+              Next Issue
+              <span aria-hidden="true">→</span>
+            </span>
+            <span class="block text-base sm:text-lg font-medium leading-snug text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white transition-colors">
+              <span class="text-gray-500 dark:text-gray-500">Số {getIssueNumber(nextIssue)}</span>
+              <span class="mx-2 text-gray-400 dark:text-gray-600">/</span>
+              {getIssueTitle(nextIssue)}
             </span>
           </a>
-        ) : <div />}
+        ) : <div class="hidden sm:block" />}
       </div>
     </footer>
   </article>
@@ -189,7 +199,7 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
   }
 
   .prose-content blockquote.citation-card {
-    @apply my-8 rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-black/20 dark:border-l-white/30 bg-black/[0.02] dark:bg-white/[0.03] px-7 py-6 not-italic shadow-sm;
+    @apply my-8 rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-black/20 dark:border-l-white/30 bg-black/[0.02] dark:bg-white/[0.03] px-5 sm:px-7 py-6 not-italic shadow-sm;
   }
 
   .prose-content blockquote.citation-card p {
@@ -197,7 +207,7 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
   }
 
   .prose-content blockquote.citation-card .citation-text {
-    @apply text-xl leading-relaxed text-gray-700 dark:text-gray-300;
+    @apply text-lg sm:text-xl leading-relaxed text-gray-700 dark:text-gray-300;
   }
 
   .prose-content blockquote.citation-card .citation-source {
