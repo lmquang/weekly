@@ -1,9 +1,5 @@
 # Tại sao cổ phiếu ngành phần mềm lại giảm giá?
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
-
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8882) đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202602/bg2026020501.webp)
@@ -165,6 +161,8 @@ Little Snitch là một ứng dụng trên Mac dùng để theo dõi và quản 
 ## Công cụ
 
 1. [Calibre](https://calibre-ebook.com/new-in/eighteen)
+
+![](https://cdn.beekka.com/blogimg/asset/202601/bg2026013004.webp)
 
 Hệ thống quản lý ebook gạo cội vừa ra mắt phiên bản 9.0 với chế độ xem giá sách mới và tích hợp thêm các tính năng AI.
 
@@ -337,15 +335,5 @@ Nếu bạn bè của bạn cài đặt OpenClaw, đừng sử dụng máy tính
 Ở đất nước tôi, một chai nước máy 2 lít cộng thêm phẩm màu caramel và một chút aspartame mà giá lên tới 2,65 USD, thật sự đáng kinh ngạc. Chỉ cần dán cái nhãn "Coca-Cola" lên là giá trị tăng vọt như vậy, còn ghê gớm hơn cả Apple.
 
 -- Một độc giả trên Hacker News
-
-## Nhìn lại các năm trước
-
-[Khởi nghiệp internet gần như đã biến mất](https://www.ruanyifeng.com/blog/2025/02/weekly-issue-337.html) (#337)
-
-[Hành trình thăm Thung lũng Khủng long Lục Phong](https://www.ruanyifeng.com/blog/2024/01/weekly-issue-287.html) (#287)
-
-[Vị trí thực sự bị lộ như thế nào?](https://www.ruanyifeng.com/blog/2022/12/weekly-issue-237.html) (#237)
-
-[Liệu Metaverse có thành công?](https://www.ruanyifeng.com/blog/2021/12/weekly-issue-187.html) (#187)
 
 (Hết)

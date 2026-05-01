@@ -1,9 +1,5 @@
 # Buổi hoàng hôn của phần mềm độc lập
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
-
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8591), đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011611.webp)
@@ -270,6 +266,8 @@ Wikipedia lên sóng vào ngày 13/01/2001, năm nay tròn 25 năm. Đây là tr
 
 Ngoài ra còn có bài viết giới thiệu về [lịch sử của Internet Archive](https://hackernoon.com/the-long-now-of-the-web-inside-the-internet-archives-fight-against-forgetting).
 
+![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011605.webp)
+
 2. [HTTP:COLON](https://httpcolon.dev/)
 
 ![](https://cdn.beekka.com/blogimg/asset/202601/bg2026012004.webp)
@@ -379,15 +377,5 @@ Trong bản iOS 26 năm nay, một số thành phần UI đã tận dụng màn 
 Nếu bạn muốn chỉ trích cách vận hành của các tổ chức lớn, trước tiên hãy tìm hiểu tại sao họ lại vận hành như vậy. Nếu không, lời chỉ trích sẽ nghe có vẻ sắc sảo nhưng thực ra lại vô nghĩa.
 
 -- [ "Những hiểu lầm phổ biến về các công ty phần mềm lớn"](https://philipotoole.com/common-misunderstandings-about-large-software-companies/)
-
-## Nhìn lại các năm trước
-
-[Tương lai đã đến vào cuối năm](https://www.ruanyifeng.com/blog/2025/01/weekly-issue-335.html) (#335)
-
-[Tại sao PPT không bằng bản ghi nhớ](https://www.ruanyifeng.com/blog/2024/01/weekly-issue-285.html) (#285)
-
-[Tỷ lệ thất nghiệp của thanh niên và lựa chọn khởi nghiệp](https://www.ruanyifeng.com/blog/2022/12/weekly-issue-235.html) (#235)
-
-[Đấu giá Hiến pháp Mỹ, một trường hợp blockchain](https://www.ruanyifeng.com/blog/2021/11/weekly-issue-185.html) (#185)
 
 (Hết)

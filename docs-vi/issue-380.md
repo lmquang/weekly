@@ -1,9 +1,5 @@
 # Tại sao mọi người lại chọn "Lợi nhuận không đối xứng"
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
-
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8591), đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202512/bg2025121403.webp)
@@ -260,6 +256,8 @@ Plugin mã nguồn mở cho Chrome tự động bắt các request Fetch và XHR
 
 12. [PDFCraft](https://github.com/PDFCraftTool/pdfcraft)
 
+![](https://cdn.beekka.com/blogimg/asset/202601/bg2026010603.webp)
+
 Bộ công cụ PDF mã nguồn mở chạy hoàn toàn trên trình duyệt, hiện đã có hơn 80 công cụ.
 
 ## Liên quan đến AI
@@ -373,15 +371,5 @@ Các hãng điện thoại và máy tính không còn lựa chọn nào khác ng
 eSIM một khi đã thay đổi là có thể bị hỏng, trong khi đó thẻ SIM vật lý có thể rút ra cắm vào tùy ý mà hầu như không gặp lỗi. Hệ quả của việc phổ biến eSIM là các vụ việc mất số điện thoại sẽ tăng lên đáng kể.
 
 -- [ "Tôi hối hận vì đã dùng eSIM"](https://arstechnica.com/gadgets/2025/12/i-switched-to-esim-in-2025-and-i-am-full-of-regret/)
-
-## Nhìn lại các năm trước
-
-[Mọi thứ đều phải trả giá hai lần](https://www.ruanyifeng.com/blog/2025/01/weekly-issue-333.html) (#333)
-
-[Không có điểm đến, cứ đi về phía trước](https://www.ruanyifeng.com/blog/2023/12/weekly-issue-283.html) (#283)
-
-[Cuộc sống giống như một bể cá](https://www.ruanyifeng.com/blog/2022/12/weekly-issue-233.html) (#233)
-
-[Chế độ phúc lợi hưu trí của nhân viên Tencent](https://www.ruanyifeng.com/blog/2021/11/weekly-issue-183.html) (#183)
 
 (Hết)

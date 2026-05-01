@@ -1,9 +1,5 @@
 # Elon Musk có đang e dè các hãng xe Trung Quốc?
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu. (**[Thông báo] Tuần tới là kỳ nghỉ Tết Nguyên Đán, bản tin sẽ tạm nghỉ.**)
-
-Tạp chí này [nguồn mở](https://github.com/ruanyf/weekly), rất hoan nghênh các bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8882), nơi đăng tải thông tin tuyển dụng lập trình viên. Để hợp tác, vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202602/bg2026020701.webp)
@@ -333,15 +329,5 @@ Các công ty khởi nghiệp có thể chia thành hai loại: O(n) và O(n^2),
 Dấn thân vào lĩnh vực vật lý là sai lầm lớn nhất đời tôi, lẽ ra tôi nên chọn khoa học máy tính. Dù có thể tôi vẫn sẽ không có bạn gái, nhưng ít nhất thì tôi cũng sẽ kiếm được bộn tiền.
 
 -- [《Cấu trúc dải điện tử của Germani》](https://pages.cs.wisc.edu/~kovar/hall.html)
-
-## Nhìn lại các năm trước
-
-[Suy nghĩ lại về 6G](https://www.ruanyifeng.com/blog/2025/02/weekly-issue-338.html) (#338)
-
-[Bí quyết hàng đầu của viết lách kỹ thuật](https://www.ruanyifeng.com/blog/2024/01/weekly-issue-288.html) (#288)
-
-[Thời điểm tốt nhất để ngừng tìm kiếm](https://www.ruanyifeng.com/blog/2023/01/weekly-issue-238.html) (#238)
-
-[Âm nhạc là phản xã hội](https://www.ruanyifeng.com/blog/2021/12/weekly-issue-188.html) (#188)
 
 (Hết)

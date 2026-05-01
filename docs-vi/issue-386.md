@@ -1,9 +1,5 @@
 # Khi người giao hàng trở thành một phần của AI
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
-
-Tạp chí này [nguồn mở](https://github.com/ruanyf/weekly), rất hoan nghênh các bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8882), nơi đăng tải thông tin tuyển dụng lập trình viên. Để hợp tác, vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202602/bg2026020702.webp)
@@ -351,15 +347,5 @@ Các doanh nghiệp Mỹ làm rất tốt một việc: họ không lãng phí t
 Sáng tạo đòi hỏi bạn phải có lòng can đảm để từ bỏ sự chắc chắn.
 
 -- Erich Fromm
-
-## Nhìn lại các năm trước
-
-[Token là gì](https://www.ruanyifeng.com/blog/2025/02/weekly-issue-339.html) (#339)
-
-[Sự bao dung đến từ đâu](https://www.ruanyifeng.com/blog/2024/02/weekly-issue-289.html) (#289)
-
-[Hai kiểu người sẽ gia tăng trong tương lai](https://www.ruanyifeng.com/blog/2023/01/weekly-issue-239.html) (#239)
-
-[Ngành tiếp theo sẽ rơi vào vòng xoáy cạnh tranh khốc liệt](https://www.ruanyifeng.com/blog/2021/12/weekly-issue-189.html) (#189)
 
 (Hết)

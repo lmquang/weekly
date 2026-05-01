@@ -1,9 +1,5 @@
 # Những người đứng đầu mảng AI mô hình lớn tại Trung Quốc đang nghĩ gì?
 
-Đây là nơi ghi lại những nội dung công nghệ đáng chia sẻ hàng tuần, xuất bản vào mỗi thứ Sáu.
-
-Tạp chí này [mã nguồn mở](https://github.com/ruanyf/weekly), hoan nghênh bạn [đóng góp nội dung](https://github.com/ruanyf/weekly/issues). Ngoài ra còn có dịch vụ ["Ai đang tuyển dụng"](https://github.com/ruanyf/weekly/issues/8591), đăng tin tuyển dụng lập trình viên. Hợp tác vui lòng [liên hệ qua email](mailto:yifeng.ruan@gmail.com) (yifeng.ruan@gmail.com).
-
 ## Ảnh bìa
 
 ![](https://cdn.beekka.com/blogimg/asset/202601/bg2026011024.webp)
@@ -388,15 +384,5 @@ Nếu bạn không viết, bạn chỉ là một máy trạng thái hữu hạn.
 Con người rơi vào bế tắc vì ba nguyên nhân chính: (1) thiếu năng lực hành động, (2) hành động sai hướng, (3) chờ sung rụng (ảo tưởng vấn đề sẽ tự thuyên giảm mà từ chối hành động).
 
 -- [ "Khi bạn muốn thoát khỏi bế tắc"](https://www.experimental-history.com/p/so-you-wanna-de-bog-yourself)
-
-## Nhìn lại các năm trước
-
-[Bốn mẩu ghi chép cuối năm](https://www.ruanyifeng.com/blog/2025/01/weekly-issue-334.html) (#334)
-
-[YouTube có bao nhiêu video?](https://www.ruanyifeng.com/blog/2023/12/weekly-issue-284.html) (#284)
-
-[Chat AI mạnh đến mức nào?](https://www.ruanyifeng.com/blog/2022/12/weekly-issue-234.html) (#234)
-
-[Nhu cầu lưu trữ của chính phủ lớn đến mức nào?](https://www.ruanyifeng.com/blog/2021/11/weekly-issue-184.html) (#184)
 
 (Hết)

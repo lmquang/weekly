@@ -96,6 +96,34 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
         image.addEventListener('load', () => image.classList.add('is-loaded'), { once: true });
         image.addEventListener('error', () => image.classList.add('is-loaded'), { once: true });
       });
+
+      document.querySelectorAll<HTMLHeadingElement>('.prose-content h2').forEach((heading) => {
+        if (heading.textContent?.trim() !== 'Trích dẫn') return;
+
+        let node = heading.nextElementSibling;
+        while (node && node.tagName !== 'H2') {
+          const quote = node.nextElementSibling;
+          const source = quote?.nextElementSibling;
+          const isEmptyMarker = ['OL', 'UL'].includes(node.tagName) && node.textContent?.trim() === '';
+          const isQuoteParagraph = quote?.tagName === 'P';
+          const isSourceParagraph = source?.tagName === 'P' && /^[—-]/.test(source.textContent?.trim() ?? '');
+
+          if (!isEmptyMarker || !isQuoteParagraph || !isSourceParagraph) {
+            node = node.nextElementSibling;
+            continue;
+          }
+
+          const card = document.createElement('blockquote');
+          card.className = 'citation-card';
+          quote.classList.add('citation-text');
+          source.classList.add('citation-source');
+          source.innerHTML = source.innerHTML.replace(/^\s*(--|—)\s*/, '');
+
+          card.append(quote, source);
+          node.replaceWith(card);
+          node = card.nextElementSibling;
+        }
+      });
     </script>
 
     <footer class="mt-24 pt-12 border-t border-black/5 dark:border-white/5">
@@ -158,6 +186,22 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
   
   .prose-content blockquote {
     @apply my-12 py-2 px-8 border-l-2 border-black/20 dark:border-white/20 bg-black/[0.02] dark:bg-white/[0.02] italic text-gray-600 dark:text-gray-300;
+  }
+
+  .prose-content blockquote.citation-card {
+    @apply my-8 rounded-2xl border border-black/5 dark:border-white/10 border-l-4 border-l-black/20 dark:border-l-white/30 bg-black/[0.02] dark:bg-white/[0.03] px-7 py-6 not-italic shadow-sm;
+  }
+
+  .prose-content blockquote.citation-card p {
+    @apply mb-0;
+  }
+
+  .prose-content blockquote.citation-card .citation-text {
+    @apply text-xl leading-relaxed text-gray-700 dark:text-gray-300;
+  }
+
+  .prose-content blockquote.citation-card .citation-source {
+    @apply mt-5 text-left text-sm font-semibold text-gray-500 dark:text-gray-500;
   }
   
   .prose-content img {
