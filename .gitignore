@@ -26,6 +26,7 @@ pnpm-debug.log*
 .gemini/
 .opencode/
 .wrangler/
+.playwright-mcp/
 
 # python
 __pycache__

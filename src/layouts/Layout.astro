@@ -138,6 +138,28 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 			</div>
 		</div>
 
+		<div id="page-loading-overlay" class="pointer-events-none fixed inset-0 z-[120] hidden overflow-y-auto bg-white dark:bg-[#0c0c0c]" aria-hidden="true">
+			<div class="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 sm:py-16">
+				<div class="mb-10 h-3 w-24 animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+				<div class="mx-auto max-w-3xl">
+					<div class="mb-5 h-4 w-28 animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+					<div class="mb-4 h-10 w-5/6 animate-pulse rounded-2xl bg-black/10 dark:bg-white/10 sm:h-12"></div>
+					<div class="mb-10 h-10 w-2/3 animate-pulse rounded-2xl bg-black/10 dark:bg-white/10 sm:h-12"></div>
+					<div class="space-y-4">
+						<div class="h-5 w-full animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+						<div class="h-5 w-11/12 animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+						<div class="h-5 w-10/12 animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+						<div class="h-5 w-full animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+						<div class="h-5 w-8/12 animate-pulse rounded-full bg-black/10 dark:bg-white/10"></div>
+					</div>
+					<div class="mt-12 grid gap-4 sm:grid-cols-2">
+						<div class="h-32 animate-pulse rounded-3xl bg-black/10 dark:bg-white/10"></div>
+						<div class="h-32 animate-pulse rounded-3xl bg-black/10 dark:bg-white/10"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<footer class="max-w-5xl mx-auto w-full px-4 sm:px-6 py-12 mt-auto border-t border-black/5 dark:border-white/5 transition-colors duration-300">
 			<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-[11px] text-gray-500 uppercase tracking-widest font-semibold">
 				<div class="opacity-60 text-center sm:text-left leading-relaxed">
@@ -157,9 +179,37 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 			const searchPanel = document.getElementById('issue-search-panel');
 			const searchInput = document.getElementById('issue-search-input');
 			const searchResults = document.getElementById('issue-search-results');
+			const pageLoadingOverlay = document.getElementById('page-loading-overlay');
 			let searchIssues = [];
 			let searchIndexPromise;
 			let currentResults = [];
+
+			const showPageLoading = () => {
+				pageLoadingOverlay?.classList.remove('hidden');
+				pageLoadingOverlay?.classList.add('flex');
+			};
+
+			const navigateWithLoading = (url) => {
+				showPageLoading();
+				requestAnimationFrame(() => {
+					setTimeout(() => {
+						window.location.href = url;
+					}, 80);
+				});
+			};
+
+			const handleIssueNavigation = (event) => {
+				if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+				const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+				if (!link) return;
+
+				const url = new URL(link.href, window.location.href);
+				if (link.target || url.origin !== window.location.origin || !url.pathname.startsWith('/issues/') || url.href === window.location.href) return;
+
+				event.preventDefault();
+				navigateWithLoading(url.href);
+			};
 
 			const createResult = (issue, index) => {
 				const link = document.createElement('a');
@@ -202,10 +252,24 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 				searchResults.replaceChildren();
 
 				if (searchIssues.length === 0) {
-					const loadingState = document.createElement('p');
-					loadingState.className = 'px-4 py-10 text-center text-sm text-gray-500';
-					loadingState.textContent = 'Đang tải dữ liệu tìm kiếm...';
-					searchResults.append(loadingState);
+					const skeletons = Array.from({ length: 4 }, () => {
+						const item = document.createElement('div');
+						item.className = 'rounded-2xl px-4 py-3';
+
+						const meta = document.createElement('div');
+						meta.className = 'mb-3 h-3 w-20 animate-pulse rounded-full bg-black/10 dark:bg-white/10';
+
+						const title = document.createElement('div');
+						title.className = 'mb-3 h-5 w-4/5 animate-pulse rounded-full bg-black/10 dark:bg-white/10';
+
+						const summary = document.createElement('div');
+						summary.className = 'h-4 w-11/12 animate-pulse rounded-full bg-black/10 dark:bg-white/10';
+
+						item.append(meta, title, summary);
+						return item;
+					});
+
+					searchResults.append(...skeletons);
 					return;
 				}
 
@@ -276,6 +340,18 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 				return searchIndexPromise;
 			};
 
+			const warmSearchIndex = () => {
+				loadSearchIndex().catch(() => {
+					searchIndexPromise = undefined;
+				});
+			};
+
+			if ('requestIdleCallback' in window) {
+				requestIdleCallback(warmSearchIndex, { timeout: 5000 });
+			} else {
+				window.addEventListener('load', () => setTimeout(warmSearchIndex, 2500), { once: true });
+			}
+
 			const openSearch = async () => {
 				if (!searchOverlay || !searchInput) return;
 				searchOverlay.classList.remove('hidden');
@@ -308,7 +384,7 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 			searchInput?.addEventListener('input', filterResults);
 			searchInput?.addEventListener('keydown', (event) => {
 				if (event.key === 'Enter' && currentResults[0]) {
-					window.location.href = currentResults[0].url;
+					navigateWithLoading(currentResults[0].url);
 				}
 			});
 
@@ -327,6 +403,8 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 					closeSearch();
 				}
 			});
+
+			document.addEventListener('click', handleIssueNavigation, true);
 		</script>
 	</body>
 </html>
