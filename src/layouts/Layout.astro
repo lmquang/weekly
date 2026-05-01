@@ -298,17 +298,15 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 				const title = normalizeSearchText(issue.title);
 				const tags = normalizeSearchText(issue.tags.join(' '));
 				const summary = normalizeSearchText(issue.summary);
-				const searchText = normalizeSearchText(issue.searchText);
 
 				if (number === query || `issue ${number}` === query) return 100;
 				if (tags.split(/\s+/).includes(query)) return 90;
 				if (tags.includes(query)) return 85;
 				if (title.includes(query)) return 80;
 				if (summary.includes(query)) return 50;
-				if (searchText.includes(query)) return 20;
 
 				const queryWords = query.split(/\s+/).filter(Boolean);
-				if (queryWords.length > 1 && queryWords.every((word) => searchText.includes(word))) return 10;
+				if (queryWords.length > 1 && queryWords.every((word) => `${title} ${tags} ${summary}`.includes(word))) return 10;
 
 				return 0;
 			};
@@ -339,18 +337,6 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 
 				return searchIndexPromise;
 			};
-
-			const warmSearchIndex = () => {
-				loadSearchIndex().catch(() => {
-					searchIndexPromise = undefined;
-				});
-			};
-
-			if ('requestIdleCallback' in window) {
-				requestIdleCallback(warmSearchIndex, { timeout: 5000 });
-			} else {
-				window.addEventListener('load', () => setTimeout(warmSearchIndex, 2500), { once: true });
-			}
 
 			const openSearch = async () => {
 				if (!searchOverlay || !searchInput) return;

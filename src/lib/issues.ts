@@ -4,7 +4,6 @@ type IssueEntry = CollectionEntry<'issues'>;
 
 const boilerplateKeywords = ['Bản tin này ghi lại', 'Đây là nơi ghi lại', 'Tạp chí này', 'mã nguồn mở'];
 const maxSummaryLength = 220;
-const maxSearchTextLength = 2000;
 
 function cleanMarkdown(text: string) {
 	return text
@@ -86,12 +85,6 @@ export function getIssueSummary(issue: IssueEntry) {
 
 	const summary = buildSummary(paragraphs.filter(Boolean));
 	return summary || 'Khám phá những tin tức công nghệ mới nhất trong số này.';
-}
-
-export function getIssueSearchText(issue: IssueEntry) {
-	return cleanMarkdown(issue.body ?? '')
-		.replace(/https?:\/\/\S+/g, '')
-		.slice(0, maxSearchTextLength);
 }
 
 export function getIssueImage(issue: IssueEntry) {
