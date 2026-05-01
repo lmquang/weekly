@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { getCollection } from 'astro:content';
+import { getIssueNumber, getIssueSearchText, getIssueSummary, getIssueTitle } from '../lib/issues';
 
 interface Props {
 	title: string;
@@ -22,6 +24,16 @@ const pageTitle = `${title} | Weekly`;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 const imageUrl = image ? new URL(image, Astro.site).toString() : undefined;
 const googleAnalyticsId = 'G-17ESC9MW85';
+const allIssues = await getCollection('issues');
+const searchIssues = allIssues
+	.sort((a, b) => parseInt(getIssueNumber(b) || '0') - parseInt(getIssueNumber(a) || '0'))
+	.map((issue) => ({
+		number: getIssueNumber(issue),
+			title: getIssueTitle(issue),
+			summary: getIssueSummary(issue),
+			searchText: getIssueSearchText(issue),
+			url: `/issues/${issue.id}`,
+	}));
 ---
 
 <!doctype html>
@@ -85,10 +97,14 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 					<a href="/" class="text-2xl font-semibold tracking-tight text-black dark:text-white hover:opacity-80 transition-opacity">Weekly</a>
 					<p class="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mt-1">Technology & Future Trends</p>
 				</div>
-				<div class="flex items-center space-x-6 md:space-x-8 text-sm font-medium text-gray-500 dark:text-gray-400 pt-3 md:pt-0">
+				<div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium text-gray-500 dark:text-gray-400 pt-3 md:pt-0">
 					<div class="relative group hidden md:block">
 						<div class="absolute -bottom-1.5 left-0 w-full h-[2px] bg-black dark:bg-white rounded-full"></div>
 					</div>
+					<button id="issue-search-trigger" class="group flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.04] px-3 py-1.5 text-xs text-black dark:text-white hover:border-black/20 dark:hover:border-white/20 hover:bg-black/[0.04] dark:hover:bg-white/[0.08] transition-all cursor-pointer" aria-label="Search issues" type="button">
+						<span>Search</span>
+						<kbd class="hidden sm:inline-flex items-center rounded-md bg-black/5 dark:bg-white/10 px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">⌘K</kbd>
+					</button>
 					<button id="theme-toggle" class="text-black dark:text-white hover:opacity-70 cursor-pointer ml-2 transition-all" aria-label="Toggle theme">
 						<svg class="sun hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
 						<svg class="moon block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -109,6 +125,18 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 			<slot />
 		</main>
 
+		<div id="issue-search-overlay" class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/50 px-4 pt-20 backdrop-blur-sm sm:pt-28" role="dialog" aria-modal="true" aria-labelledby="issue-search-label">
+			<div id="issue-search-panel" class="w-full max-w-2xl overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white shadow-2xl dark:bg-[#111]">
+				<div class="flex items-center gap-3 border-b border-black/5 dark:border-white/10 px-4 py-4 sm:px-5">
+					<svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+					<label id="issue-search-label" for="issue-search-input" class="sr-only">Search issues</label>
+					<input id="issue-search-input" class="min-w-0 flex-1 bg-transparent text-base text-black outline-none placeholder:text-gray-400 dark:text-white sm:text-lg" type="search" placeholder="Tìm số Weekly..." autocomplete="off" />
+					<kbd class="hidden rounded-md bg-black/5 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:bg-white/10 dark:text-gray-400 sm:block">Esc</kbd>
+				</div>
+				<div id="issue-search-results" class="max-h-[60vh] overflow-y-auto p-2 sm:p-3"></div>
+			</div>
+		</div>
+
 		<footer class="max-w-5xl mx-auto w-full px-4 sm:px-6 py-12 mt-auto border-t border-black/5 dark:border-white/5 transition-colors duration-300">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-8 text-[11px] text-gray-500 uppercase tracking-widest font-semibold">
 				<div class="opacity-60 text-center md:text-left leading-relaxed">
@@ -118,5 +146,128 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 				</div>
 			</div>
 		</footer>
+
+		<script define:vars={{ searchIssues }}>
+			const searchTrigger = document.getElementById('issue-search-trigger');
+			const searchOverlay = document.getElementById('issue-search-overlay');
+			const searchPanel = document.getElementById('issue-search-panel');
+			const searchInput = document.getElementById('issue-search-input');
+			const searchResults = document.getElementById('issue-search-results');
+			let currentResults = searchIssues.slice(0, 8);
+
+			const createResult = (issue, index) => {
+				const link = document.createElement('a');
+				link.href = issue.url;
+				link.className = `block rounded-2xl px-4 py-3 transition-colors hover:bg-black/[0.04] dark:hover:bg-white/[0.06] ${index === 0 ? 'bg-black/[0.03] dark:bg-white/[0.05]' : ''}`;
+
+				const meta = document.createElement('p');
+				meta.className = 'mb-1 text-[10px] font-bold uppercase tracking-widest text-gray-500';
+				meta.textContent = `Issue #${issue.number}`;
+
+				const title = document.createElement('p');
+				title.className = 'text-base font-medium leading-snug text-black dark:text-white';
+				title.textContent = issue.title;
+
+				const summary = document.createElement('p');
+				summary.className = 'mt-1 line-clamp-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400';
+				summary.textContent = issue.summary;
+
+				link.append(meta, title, summary);
+				return link;
+			};
+
+			const renderResults = () => {
+				if (!searchResults) return;
+				searchResults.replaceChildren();
+
+				if (currentResults.length === 0) {
+					const emptyState = document.createElement('p');
+					emptyState.className = 'px-4 py-10 text-center text-sm text-gray-500';
+					emptyState.textContent = 'Không tìm thấy nội dung phù hợp';
+					searchResults.append(emptyState);
+					return;
+				}
+
+				searchResults.append(...currentResults.map(createResult));
+			};
+
+			const normalizeSearchText = (value) =>
+				value
+					.toLowerCase()
+					.normalize('NFD')
+					.replace(/[\u0300-\u036f]/g, '')
+					.replace(/đ/g, 'd');
+
+			const getSearchScore = (issue, query) => {
+				if (!query) return 1;
+
+				const number = normalizeSearchText(issue.number);
+				const title = normalizeSearchText(issue.title);
+				const summary = normalizeSearchText(issue.summary);
+				const searchText = normalizeSearchText(issue.searchText);
+
+				if (number === query || `issue ${number}` === query) return 100;
+				if (title.includes(query)) return 80;
+				if (summary.includes(query)) return 50;
+				if (searchText.includes(query)) return 20;
+
+				const queryWords = query.split(/\s+/).filter(Boolean);
+				if (queryWords.length > 1 && queryWords.every((word) => searchText.includes(word))) return 10;
+
+				return 0;
+			};
+
+			const filterResults = () => {
+				const query = normalizeSearchText(searchInput?.value.trim() ?? '');
+				currentResults = searchIssues
+					.map((issue) => ({ issue, score: getSearchScore(issue, query) }))
+					.filter((result) => result.score > 0)
+					.sort((a, b) => b.score - a.score || Number(b.issue.number) - Number(a.issue.number))
+					.slice(0, 8)
+					.map((result) => result.issue);
+				renderResults();
+			};
+
+			const openSearch = () => {
+				if (!searchOverlay || !searchInput) return;
+				searchOverlay.classList.remove('hidden');
+				searchOverlay.classList.add('flex');
+				document.body.style.overflow = 'hidden';
+				filterResults();
+				requestAnimationFrame(() => searchInput.focus());
+			};
+
+			const closeSearch = () => {
+				if (!searchOverlay || !searchInput) return;
+				searchOverlay.classList.add('hidden');
+				searchOverlay.classList.remove('flex');
+				document.body.style.overflow = '';
+				searchInput.value = '';
+			};
+
+			searchTrigger?.addEventListener('click', openSearch);
+			searchInput?.addEventListener('input', filterResults);
+			searchInput?.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter' && currentResults[0]) {
+					window.location.href = currentResults[0].url;
+				}
+			});
+
+			searchOverlay?.addEventListener('click', closeSearch);
+			searchPanel?.addEventListener('click', (event) => event.stopPropagation());
+
+			document.addEventListener('keydown', (event) => {
+				const isSearchShortcut = event.key.toLowerCase() === 'k' && (event.metaKey || event.ctrlKey);
+
+				if (isSearchShortcut) {
+					event.preventDefault();
+					openSearch();
+				}
+
+				if (event.key === 'Escape') {
+					closeSearch();
+				}
+			});
+		</script>
 	</body>
 </html>
