@@ -4,7 +4,7 @@ type IssueEntry = CollectionEntry<'issues'>;
 
 const boilerplateKeywords = ['Bản tin này ghi lại', 'Đây là nơi ghi lại', 'Tạp chí này', 'mã nguồn mở'];
 const maxSummaryLength = 220;
-const maxSearchTextLength = 8000;
+const maxSearchTextLength = 2000;
 
 function cleanMarkdown(text: string) {
 	return text
