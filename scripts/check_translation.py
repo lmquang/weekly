@@ -11,6 +11,17 @@ from pathlib import Path
 
 
 IMAGE_PATTERN = re.compile(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+CHINESE_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U00020000-\U0002ebef]")
+
+
+@dataclass(frozen=True)
+class ChineseTextMatch:
+	"""Chinese text occurrence in a translated issue."""
+
+	line_number: int
+	column_number: int
+	character: str
+	line: str
 
 
 @dataclass(frozen=True)
@@ -22,11 +33,12 @@ class ImageCheckResult:
 	translation_path: Path
 	source_images: tuple[str, ...]
 	translation_images: tuple[str, ...]
+	chinese_matches: tuple[ChineseTextMatch, ...]
 
 	@property
 	def is_ok(self) -> bool:
-		"""Return whether source and translation image URLs match."""
-		return not self.missing_images and not self.extra_images
+		"""Return whether translation image URLs match and contain no Chinese text."""
+		return not self.missing_images and not self.extra_images and not self.chinese_matches
 
 	@property
 	def missing_images(self) -> tuple[str, ...]:
@@ -67,6 +79,29 @@ def read_images(path: Path) -> tuple[str, ...]:
 	return extract_images(path.read_text(encoding="utf-8"))
 
 
+def find_chinese_text(markdown: str) -> tuple[ChineseTextMatch, ...]:
+	"""Find Han ideographs in a translated Markdown document."""
+	matches: list[ChineseTextMatch] = []
+
+	for line_number, line in enumerate(markdown.splitlines(), start=1):
+		for match in CHINESE_PATTERN.finditer(line):
+			matches.append(
+				ChineseTextMatch(
+					line_number=line_number,
+					column_number=match.start() + 1,
+					character=match.group(0),
+					line=line.strip(),
+				)
+			)
+
+	return tuple(matches)
+
+
+def read_chinese_text(path: Path) -> tuple[ChineseTextMatch, ...]:
+	"""Read a Markdown file and return Chinese text occurrences."""
+	return find_chinese_text(path.read_text(encoding="utf-8"))
+
+
 def normalize_issue(issue: str) -> str:
 	"""Normalize user input like `390` or `issue-390` to `issue-390`."""
 	issue = issue.removesuffix(".md")
@@ -104,6 +139,7 @@ def check_issue(root: Path, issue: str) -> ImageCheckResult:
 		translation_path=translation_path,
 		source_images=read_images(source_path),
 		translation_images=read_images(translation_path),
+		chinese_matches=read_chinese_text(translation_path),
 	)
 
 
@@ -128,6 +164,13 @@ def print_result(result: ImageCheckResult, verbose: bool) -> None:
 		print("  extra images:")
 		for image in result.extra_images:
 			print(f"    - {image}")
+	if result.chinese_matches:
+		print("  Chinese text found in translation:")
+		for match in result.chinese_matches:
+			print(
+				f"    - line {match.line_number}, column {match.column_number}: "
+				f"{match.character} in {match.line}"
+			)
 
 	if verbose:
 		print("  source images:")
@@ -184,10 +227,10 @@ def main() -> int:
 
 	failed = [result for result in results if not result.is_ok]
 	if failed:
-		print(f"\n{len(failed)} issue(s) failed image-count check.", file=sys.stderr)
+		print(f"\n{len(failed)} issue(s) failed translation check.", file=sys.stderr)
 		return 1
 
-	print(f"\nAll {len(results)} issue(s) passed image-count check.")
+	print(f"\nAll {len(results)} issue(s) passed translation check.")
 	return 0
 
 
