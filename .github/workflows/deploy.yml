@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - master
+    paths:
+      - docs-vi/**
+      - src/**
+      - public/**
+      - package.json
+      - package-lock.json
+      - astro.config.mjs
+      - tsconfig.json
+      - wrangler.toml
+      - .github/workflows/deploy.yml
   workflow_dispatch:
 
 concurrency:

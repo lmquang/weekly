@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 2 * * 6"
   workflow_dispatch:
+    inputs:
+      issues:
+        description: "Issue number(s) to localize, e.g. 395, 360-364, or 360,362,364. Empty means latest upstream issue."
+        required: false
+        type: string
 
 concurrency:
   group: localize-weekly
@@ -34,20 +39,25 @@ jobs:
       - name: Restore Gemini credentials and skill
         env:
           GEMINI_CREDENTIALS: ${{ secrets.GEMINI_CREDENTIALS }}
+          GEMINI_SETTINGS: ${{ secrets.GEMINI_SETTINGS }}
           GEMINI_SKILL_TRANSLATE: ${{ secrets.GEMINI_SKILL_TRANSLATE }}
         run: |
           test -n "$GEMINI_CREDENTIALS"
           test -n "$GEMINI_SKILL_TRANSLATE"
-          mkdir -p ~/.gemini .gemini/skills/translate
+          mkdir -p ~/.gemini
           printf '%s' "$GEMINI_CREDENTIALS" > ~/.gemini/oauth_creds.json
+          if [ -n "$GEMINI_SETTINGS" ]; then
+            printf '%s' "$GEMINI_SETTINGS" > ~/.gemini/settings.json
+          fi
           chmod 600 ~/.gemini/oauth_creds.json
-          printf '%s' "$GEMINI_SKILL_TRANSLATE" > .gemini/skills/translate/SKILL.md
 
       - name: Install Gemini CLI
         run: npm install -g @google/gemini-cli
 
       - name: Sync upstream issues
         id: issue
+        env:
+          ISSUE_INPUT: ${{ inputs.issues }}
         run: |
           git remote add upstream https://github.com/ruanyf/weekly.git
           git fetch upstream master --depth=1
@@ -55,41 +65,112 @@ jobs:
           mkdir -p docs
           git checkout upstream/master -- docs
 
-          issue="$(ls docs/issue-*.md \
-            | sed -n 's#^docs/issue-\([0-9][0-9]*\)\.md$#\1#p' \
-            | sort -n \
-            | while read -r number; do
-                if [ ! -f "docs-vi/issue-$number.md" ]; then
-                  echo "$number"
-                fi
-              done \
-            | tail -1)"
+          if [ -n "$ISSUE_INPUT" ]; then
+            issues="$(python3 - <<'PY'
+          import os
+          import re
+          import sys
 
-          if [ -z "$issue" ]; then
-            echo "No untranslated upstream issue found"
-            echo "issue=" >> "$GITHUB_OUTPUT"
+          raw = os.environ["ISSUE_INPUT"].strip()
+          numbers: list[int] = []
+
+          for part in re.split(r"[\s,]+", raw):
+              if not part:
+                  continue
+              match = re.fullmatch(r"(?:issue-)?(\d+)(?:-(?:issue-)?(\d+))?", part)
+              if not match:
+                  print(f"Invalid issue input: {part}", file=sys.stderr)
+                  raise SystemExit(1)
+              start = int(match.group(1))
+              end = int(match.group(2) or start)
+              if end < start:
+                  start, end = end, start
+              numbers.extend(range(start, end + 1))
+
+          print(" ".join(str(number) for number in sorted(set(numbers))))
+          PY
+            )"
+          else
+            latest="$(ls docs/issue-*.md \
+              | sed -n 's#^docs/issue-\([0-9][0-9]*\)\.md$#\1#p' \
+              | sort -n \
+              | tail -1)"
+            issues="$latest"
+          fi
+
+          if [ -z "$issues" ]; then
+            echo "No upstream issue found"
+            echo "issues=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          echo "issue=$issue" >> "$GITHUB_OUTPUT"
+          pending=""
+          for issue in $issues; do
+            if [ ! -f "docs/issue-$issue.md" ]; then
+              echo "Source issue docs/issue-$issue.md not found after upstream sync" >&2
+              exit 1
+            fi
+            if [ -f "docs-vi/issue-$issue.md" ]; then
+              echo "Issue $issue is already translated; skipping"
+              continue
+            fi
+            pending="$pending $issue"
+          done
+          pending="${pending# }"
+
+          if [ -z "$pending" ]; then
+            echo "No untranslated requested issue found"
+            echo "issues=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "issues=$pending" >> "$GITHUB_OUTPUT"
 
       - name: Translate with Gemini
-        if: steps.issue.outputs.issue != ''
+        if: steps.issue.outputs.issues != ''
+        env:
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+          GEMINI_SKILL_TRANSLATE: ${{ secrets.GEMINI_SKILL_TRANSLATE }}
+          ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
-          gemini --prompt "/translate docs/issue-${{ steps.issue.outputs.issue }}.md"
+          for issue in $ISSUES; do
+            ISSUE="$issue" python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          issue = os.environ["ISSUE"]
+          skill = os.environ["GEMINI_SKILL_TRANSLATE"]
+          prompt = f"""Use the following translation workflow exactly. Do not call activate_skill or slash commands.
+
+          {skill}
+
+          Task: translate docs/issue-{issue}.md into docs-vi/issue-{issue}.md.
+          Follow the workflow, write the output file, then run python3 scripts/check_translation.py --fix {issue} and fix any failures.
+          """
+          Path("/tmp/gemini-translate-prompt.md").write_text(prompt, encoding="utf-8")
+          PY
+            gemini --prompt "$(cat /tmp/gemini-translate-prompt.md)"
+          done
 
       - name: Validate translation
-        if: steps.issue.outputs.issue != ''
+        if: steps.issue.outputs.issues != ''
+        env:
+          ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
-          python3 scripts/check_translation.py --fix "${{ steps.issue.outputs.issue }}"
+          python3 scripts/check_translation.py --fix $ISSUES
           npm run build
 
       - name: Commit and push
-        if: steps.issue.outputs.issue != ''
+        if: steps.issue.outputs.issues != ''
+        env:
+          ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
           git config user.name "weekly-bot"
           git config user.email "weekly-bot@users.noreply.github.com"
-          git add docs/issue-*.md "docs-vi/issue-${{ steps.issue.outputs.issue }}.md"
+          git add docs/issue-*.md
+          for issue in $ISSUES; do
+            git add "docs-vi/issue-$issue.md"
+          done
           git diff --cached --quiet && exit 0
-          git commit -m "localize issue ${{ steps.issue.outputs.issue }}"
+          git commit -m "localize issues $ISSUES"
           git push
