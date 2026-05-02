@@ -149,7 +149,7 @@ jobs:
           """
           Path("/tmp/gemini-translate-prompt.md").write_text(prompt, encoding="utf-8")
           PY
-            gemini --prompt "$(cat /tmp/gemini-translate-prompt.md)"
+            gemini --prompt "$(cat /tmp/gemini-translate-prompt.md)" -y
           done
 
       - name: Validate translation
