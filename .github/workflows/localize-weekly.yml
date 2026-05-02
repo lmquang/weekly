@@ -52,7 +52,7 @@ jobs:
           chmod 600 ~/.gemini/oauth_creds.json
 
       - name: Install Gemini CLI
-        run: npm install -g @google/gemini-cli
+        run: npm install -g @google/gemini-cli@latest
 
       - name: Sync upstream issues
         id: issue
