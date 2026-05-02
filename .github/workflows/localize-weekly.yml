@@ -1,0 +1,95 @@
+name: Localize Weekly
+
+on:
+  schedule:
+    - cron: "0 2 * * 6"
+  workflow_dispatch:
+
+concurrency:
+  group: localize-weekly
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.LOCALIZE_PUSH_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restore Gemini credentials and skill
+        env:
+          GEMINI_CREDENTIALS: ${{ secrets.GEMINI_CREDENTIALS }}
+          GEMINI_SKILL_TRANSLATE: ${{ secrets.GEMINI_SKILL_TRANSLATE }}
+        run: |
+          test -n "$GEMINI_CREDENTIALS"
+          test -n "$GEMINI_SKILL_TRANSLATE"
+          mkdir -p ~/.gemini .gemini/skills/translate
+          printf '%s' "$GEMINI_CREDENTIALS" > ~/.gemini/oauth_creds.json
+          chmod 600 ~/.gemini/oauth_creds.json
+          printf '%s' "$GEMINI_SKILL_TRANSLATE" > .gemini/skills/translate/SKILL.md
+
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+
+      - name: Sync upstream issues
+        id: issue
+        run: |
+          git remote add upstream https://github.com/ruanyf/weekly.git
+          git fetch upstream master --depth=1
+
+          mkdir -p docs
+          git checkout upstream/master -- docs
+
+          issue="$(ls docs/issue-*.md \
+            | sed -n 's#^docs/issue-\([0-9][0-9]*\)\.md$#\1#p' \
+            | sort -n \
+            | while read -r number; do
+                if [ ! -f "docs-vi/issue-$number.md" ]; then
+                  echo "$number"
+                fi
+              done \
+            | tail -1)"
+
+          if [ -z "$issue" ]; then
+            echo "No untranslated upstream issue found"
+            echo "issue=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "issue=$issue" >> "$GITHUB_OUTPUT"
+
+      - name: Translate with Gemini
+        if: steps.issue.outputs.issue != ''
+        run: |
+          gemini --prompt "/translate docs/issue-${{ steps.issue.outputs.issue }}.md"
+
+      - name: Validate translation
+        if: steps.issue.outputs.issue != ''
+        run: |
+          python3 scripts/check_translation.py --fix "${{ steps.issue.outputs.issue }}"
+          npm run build
+
+      - name: Commit and push
+        if: steps.issue.outputs.issue != ''
+        run: |
+          git config user.name "weekly-bot"
+          git config user.email "weekly-bot@users.noreply.github.com"
+          git add docs/issue-*.md "docs-vi/issue-${{ steps.issue.outputs.issue }}.md"
+          git diff --cached --quiet && exit 0
+          git commit -m "localize issue ${{ steps.issue.outputs.issue }}"
+          git push
