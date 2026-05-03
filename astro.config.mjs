@@ -27,7 +27,7 @@ function rehypeLazyImages() {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://weekly.locus.run',
+  site: 'https://techmemo.cc',
   integrations: [mdx()],
   markdown: {
     rehypePlugins: [rehypeLazyImages],

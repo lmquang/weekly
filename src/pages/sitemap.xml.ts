@@ -10,7 +10,7 @@ const escapeXml = (value: string) =>
 		.replace(/'/g, '&apos;');
 
 export const GET: APIRoute = async ({ site }) => {
-	const baseUrl = site ?? new URL('https://weekly.locus.run');
+	const baseUrl = site ?? new URL('https://techmemo.cc');
 	const issues = await getCollection('issues');
 	const urls = [
 		new URL('/', baseUrl).toString(),
