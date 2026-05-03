@@ -44,8 +44,9 @@ jobs:
         run: |
           test -n "$GEMINI_CREDENTIALS"
           test -n "$GEMINI_SKILL_TRANSLATE"
-          mkdir -p ~/.gemini
+          mkdir -p ~/.gemini .gemini/skills/translate
           printf '%s' "$GEMINI_CREDENTIALS" > ~/.gemini/oauth_creds.json
+          printf '%s' "$GEMINI_SKILL_TRANSLATE" > .gemini/skills/translate/SKILL.md
           if [ -n "$GEMINI_SETTINGS" ]; then
             printf '%s' "$GEMINI_SETTINGS" > ~/.gemini/settings.json
           fi
@@ -130,34 +131,20 @@ jobs:
         if: steps.issue.outputs.issues != ''
         env:
           GEMINI_CLI_TRUST_WORKSPACE: "true"
-          GEMINI_SKILL_TRANSLATE: ${{ secrets.GEMINI_SKILL_TRANSLATE }}
           ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
           for issue in $ISSUES; do
-            ISSUE="$issue" python3 - <<'PY'
-          import os
-          from pathlib import Path
-
-          issue = os.environ["ISSUE"]
-          skill = os.environ["GEMINI_SKILL_TRANSLATE"]
-          prompt = f"""Use the following translation workflow exactly. Do not call activate_skill or slash commands.
-
-          {skill}
-
-          Task: translate docs/issue-{issue}.md into docs-vi/issue-{issue}.md.
-          Follow the workflow, write the output file, then run python3 scripts/check_translation.py --fix {issue} and fix any failures.
-          """
-          Path("/tmp/gemini-translate-prompt.md").write_text(prompt, encoding="utf-8")
-          PY
-            gemini --prompt "$(cat /tmp/gemini-translate-prompt.md)" -y
+            gemini --prompt "/translate docs/issue-$issue.md" -y
           done
 
       - name: Validate translation
         if: steps.issue.outputs.issues != ''
         env:
           ISSUES: ${{ steps.issue.outputs.issues }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python3 scripts/check_translation.py --fix $ISSUES
+          python3 scripts/update_issue_dates.py $ISSUES
           npm run build
 
       - name: Commit and push
