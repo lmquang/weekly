@@ -15,10 +15,26 @@ function cleanMarkdown(text: string) {
 }
 
 function getCompleteSentences(paragraphs: string[]) {
-	return paragraphs
-		.flatMap((paragraph) => paragraph.match(/[^.!?]+[.!?](?=\s|$)/g) ?? [])
-		.map((sentence) => sentence.trim())
-		.filter((sentence) => !/^["'”,，,.)]/.test(sentence));
+	const sentences: string[] = [];
+
+	for (const paragraph of paragraphs) {
+		let start = 0;
+		for (let index = 0; index < paragraph.length; index++) {
+			const character = paragraph[index];
+			if (!'.!?'.includes(character)) continue;
+
+			const previous = paragraph[index - 1] ?? '';
+			const next = paragraph[index + 1] ?? '';
+			if (character === '.' && /[\p{L}\p{N}]/u.test(previous) && /[\p{L}\p{N}]/u.test(next)) continue;
+			if (next && !/\s/.test(next)) continue;
+
+			const sentence = paragraph.slice(start, index + 1).trim();
+			if (sentence && !/^["'”,，,.)]/.test(sentence)) sentences.push(sentence);
+			start = index + 1;
+		}
+	}
+
+	return sentences;
 }
 
 function buildSummary(paragraphs: string[]) {
