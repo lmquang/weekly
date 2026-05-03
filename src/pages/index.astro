@@ -33,21 +33,21 @@ const processedIssues = sortedIssues.map((issue) => {
 	
 	<section class="relative">
 		<!-- Constant vertical line background -->
-		<div class="absolute left-[140px] sm:left-[113px] md:left-[177px] top-4 bottom-10 w-px bg-black/10 dark:bg-white/10 pointer-events-none"></div>
+		<div class="absolute left-[113px] md:left-[177px] top-4 bottom-10 w-px bg-black/10 dark:bg-white/10 pointer-events-none"></div>
 		
 		<div class="flex flex-col" id="issue-timeline">
 			{processedIssues.map((issue, index) => {
 				const issueNumber = getIssueNumber(issue);
 				return (
-					<div class={`relative flex items-start gap-10 sm:gap-8 md:gap-16 pb-14 sm:pb-16 md:pb-20 last:pb-10 group timeline-item ${index >= 10 ? 'hidden' : ''}`} data-index={index}>
+					<div class={`relative flex items-start gap-8 md:gap-16 pb-14 sm:pb-16 md:pb-20 last:pb-10 group timeline-item ${index >= 10 ? 'hidden' : ''}`} data-index={index}>
 						{/* Left side: Issue Info */}
-						<div class="w-30 sm:w-24 md:w-40 flex flex-col items-end text-right flex-shrink-0 pt-[7px]">
+						<div class="w-24 md:w-40 flex flex-col items-end text-right flex-shrink-0 pt-[7px]">
 							<h3 class="text-sm sm:text-base md:text-lg font-medium text-black dark:text-white group-hover:text-link transition-colors leading-none">Issue #{issueNumber}</h3>
 							<p class="text-[11px] md:text-xs text-gray-500 mt-2 uppercase tracking-wider">{issue.dateLabel ?? 'Weekly News'}</p>
 						</div>
 
 						{/* Center: Timeline Node */}
-						<div class="absolute left-[130px] sm:left-[104px] md:left-[168px] top-0 bottom-0 flex flex-col items-center">
+						<div class="absolute left-[104px] md:left-[168px] top-0 bottom-0 flex flex-col items-center">
 							<div class="w-5 h-5 rounded-full border-2 border-black dark:border-white bg-white dark:bg-black z-10 mt-[7px] ring-[6px] ring-white dark:ring-black group-hover:scale-110 transition-transform duration-300"></div>
 						</div>
 
