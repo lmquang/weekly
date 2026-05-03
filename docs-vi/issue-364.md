@@ -1,4 +1,5 @@
 ---
+date: 2025-09-05
 tags: ["ai", "trí tuệ nhân tạo", "lập trình", "programming", "startup", "internet", "bảo mật", "khởi nghiệp", "mã nguồn mở", "công nghệ"]
 ---
 

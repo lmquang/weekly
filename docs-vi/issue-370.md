@@ -1,4 +1,5 @@
 ---
+date: 2025-10-24
 tags: [Programming, Lập trình, Frontend, Web Development, Phát triển Web, Code Highlight, Tools, Công cụ, AI, Open Source]
 ---
 
@@ -339,4 +340,3 @@ Tôi không nói các dự án nguồn mở không nên nhận tài trợ, nhưn
 4. Kỹ sư không chỉ cần kỹ năng chuyên môn mà còn cần kỹ năng mềm, tức là kỹ năng giao tiếp giữa người với người. Nếu bạn không hiểu sự phức tạp của xã hội loài người, bạn sẽ không hiểu cách vận hành của công ty hay đội nhóm, từ đó ảnh hưởng đến hiệu quả công việc và khả năng mở rộng tầm ảnh hưởng của bản thân. -- [Kỹ năng mềm bị đánh giá thấp](https://utopianengineeringsociety.substack.com/p/new-series-underrated-soft-skills)
 
 (Hết)
-

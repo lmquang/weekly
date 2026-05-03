@@ -1,4 +1,5 @@
 ---
+date: 2026-03-06
 tags: [Leadership, Lãnh đạo, Career, Sự nghiệp, Personal Development, Phát triển bản thân, Excellence, Xuất sắc, Thoughts, Suy ngẫm]
 ---
 

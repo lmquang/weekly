@@ -1,4 +1,5 @@
 ---
+date: 2025-10-10
 tags: [Management, Quản lý, Software, Phần mềm, Productivity, Năng suất, Teamwork, Programming, Lập trình, Security]
 ---
 

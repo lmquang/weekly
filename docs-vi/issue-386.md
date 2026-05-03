@@ -1,4 +1,5 @@
 ---
+date: 2026-02-27
 tags: [AI, Trí tuệ nhân tạo, Delivery, Giao hàng, Gig Economy, Kinh tế tự do, Society, Xã hội, Technology, Công nghệ]
 ---
 

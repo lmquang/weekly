@@ -1,4 +1,5 @@
 ---
+date: 2025-11-28
 tags: [Architecture, Kiến trúc, Problem Solving, Giải quyết vấn đề, Software Bug, Lỗi phần mềm, Game Development, VR, Education, Robotics]
 ---
 

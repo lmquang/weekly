@@ -1,4 +1,5 @@
 ---
+date: 2025-10-31
 tags: [Lifestyle, Phong cách sống, Optimism, Lạc quan, Psychology, Tâm lý học, Personal Development, Phát triển bản thân, AI, Robotics]
 ---
 

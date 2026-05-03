@@ -1,4 +1,5 @@
 ---
+date: 2026-03-20
 tags: [Recruitment, Tuyển dụng, Programming, Lập trình, AI, Trí tuệ nhân tạo, Career, Sự nghiệp, Technology, Công nghệ]
 ---
 

@@ -1,4 +1,5 @@
 ---
+date: 2026-03-27
 tags: [AI, Trí tuệ nhân tạo, LLM, Mô hình ngôn ngữ lớn, Data, Dữ liệu, Microsoft, Programming, Lập trình, Technology]
 ---
 

@@ -1,4 +1,5 @@
 ---
+date: 2026-03-13
 tags: [Software, Phềm mềm, Testing, Kiểm thử, QA, Quản lý chất lượng, Security, Bảo mật, Programming, Lập trình]
 ---
 

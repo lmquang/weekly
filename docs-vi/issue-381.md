@@ -1,4 +1,5 @@
 ---
+date: 2026-01-16
 tags: [AI, Trí tuệ nhân tạo, China, Trung Quốc, Large Model, Mô hình lớn, LLM, Technology, Công nghệ, Open Source]
 ---
 

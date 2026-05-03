@@ -1,4 +1,5 @@
 ---
+date: 2026-01-23
 tags: [Software, Phần mềm, Indie Developer, Nhà phát triển độc lập, Business, Kinh doanh, AI, Trends, Xu hướng, Programming]
 ---
 

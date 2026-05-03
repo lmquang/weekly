@@ -1,4 +1,5 @@
 ---
+date: 2025-09-19
 tags: [AI, Trí tuệ nhân tạo, Advertising, Quảng cáo, San Francisco, Technology, Công nghệ, Open Source, Mã nguồn mở, Robotics]
 ---
 

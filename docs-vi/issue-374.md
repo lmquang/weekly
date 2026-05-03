@@ -1,4 +1,5 @@
 ---
+date: 2025-11-21
 tags: [Technology, Công nghệ, Networking, Mạng máy tính, WiFi, Hardware, Phần cứng, Wireless, Không dây, AI]
 ---
 

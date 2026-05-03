@@ -1,4 +1,5 @@
 ---
+date: 2025-12-12
 tags: [Society, Xã hội, Economics, Kinh tế, Poverty, Nghèo đói, Career, Sự nghiệp, AI, Technology]
 ---
 

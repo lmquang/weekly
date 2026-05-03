@@ -7,6 +7,7 @@ import argparse
 import re
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 
@@ -15,6 +16,7 @@ CHINESE_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\U0002000
 FRONTMATTER_PATTERN = re.compile(r"\A---\n(?P<body>.*?)\n---(?:\n|\Z)", re.DOTALL)
 INLINE_TAGS_PATTERN = re.compile(r"^tags:\s*\[(?P<tags>.*)]\s*$", re.MULTILINE)
 BLOCK_TAGS_PATTERN = re.compile(r"^tags:\s*\n(?P<tags>(?:\s+-\s*.+\n?)+)", re.MULTILINE)
+DATE_PATTERN = re.compile(r"^date:\s*\S+\s*$", re.MULTILINE)
 STANDALONE_ORDERED_MARKER_PATTERN = re.compile(r"^\d+\.$")
 STANDALONE_MARKER_PATTERN = re.compile(r"^(?P<number>\d+)(?:\\\.|\.|、)$")
 
@@ -145,9 +147,13 @@ def validate_tags(markdown: str) -> tuple[str, ...]:
 	"""Validate translated issue frontmatter tags for search metadata."""
 	errors: list[str] = []
 
-	if not FRONTMATTER_PATTERN.match(markdown):
+	frontmatter = FRONTMATTER_PATTERN.match(markdown)
+	if not frontmatter:
 		errors.append("missing YAML frontmatter at top of file")
 		return tuple(errors)
+
+	if not DATE_PATTERN.search(frontmatter.group("body")):
+		errors.append("missing date in YAML frontmatter")
 
 	tags = extract_frontmatter_tags(markdown)
 	if not tags:
@@ -194,6 +200,24 @@ def read_markdown_errors(path: Path) -> tuple[str, ...]:
 	return validate_markdown(path.read_text(encoding="utf-8"))
 
 
+def add_frontmatter_date(markdown: str, current_date: str) -> str:
+	"""Add date metadata to translated Markdown frontmatter if missing."""
+	frontmatter = FRONTMATTER_PATTERN.match(markdown)
+	if not frontmatter:
+		return f"---\ndate: {current_date}\n---\n\n{markdown}"
+
+	body = frontmatter.group("body")
+	if DATE_PATTERN.search(body):
+		return markdown
+
+	return (
+		f"{markdown[:frontmatter.start('body')]}"
+		f"date: {current_date}\n"
+		f"{body}"
+		f"{markdown[frontmatter.end('body'):]}"
+	)
+
+
 def normalize_translation_markdown(markdown: str) -> str:
 	"""Normalize translated Markdown markers to parser-friendly forms."""
 	lines: list[str] = []
@@ -225,10 +249,12 @@ def normalize_translation_markdown(markdown: str) -> str:
 	return "\n".join(lines) + ("\n" if markdown.endswith("\n") else "")
 
 
-def normalize_translation_file(path: Path) -> bool:
+def normalize_translation_file(path: Path, current_date: str) -> bool:
 	"""Normalize one translated Markdown file in place. Return whether it changed."""
 	markdown = path.read_text(encoding="utf-8")
-	normalized_markdown = normalize_translation_markdown(markdown)
+	normalized_markdown = add_frontmatter_date(
+		normalize_translation_markdown(markdown), current_date
+	)
 	if normalized_markdown == markdown:
 		return False
 
@@ -359,6 +385,7 @@ def main() -> int:
 	args = parse_args()
 	root = args.root.resolve()
 	issues = [normalize_issue(issue) for issue in args.issues] or discover_issues(root)
+	current_date = date.today().isoformat()
 
 	if not issues:
 		print("No translated issues found.", file=sys.stderr)
@@ -369,7 +396,7 @@ def main() -> int:
 		for issue in issues:
 			if args.fix:
 				translation_path = root / "docs-vi" / f"{issue}.md"
-				if normalize_translation_file(translation_path):
+				if normalize_translation_file(translation_path, current_date):
 					print(f"[FIXED] {translation_path}")
 			result = check_issue(root, issue)
 			results.append(result)

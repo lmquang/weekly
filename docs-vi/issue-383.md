@@ -1,4 +1,5 @@
 ---
+date: 2026-01-30
 tags: [AI, Trí tuệ nhân tạo, Programming, Lập trình, Career, Sự nghiệp, Skills, Kỹ năng, Technology, Công nghệ]
 ---
 

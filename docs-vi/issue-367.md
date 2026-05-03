@@ -1,4 +1,5 @@
 ---
+date: 2025-09-26
 tags: [AI, Trí tuệ nhân tạo, Gemini, Google, Photography, Nhiếp ảnh, Tools, Công cụ, Hardware, Phần cứng]
 ---
 

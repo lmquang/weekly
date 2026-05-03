@@ -1,4 +1,5 @@
 ---
+date: 2025-11-14
 tags: [Data Model, Mô hình dữ liệu, Product Management, Quản lý sản phẩm, Database, Cơ sở dữ liệu, Programming, Lập trình, AI, Tech]
 ---
 

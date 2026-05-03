@@ -1,4 +1,5 @@
 ---
+date: 2025-11-07
 tags: [Design, Thiết kế, UI, UX, Software, Phần mềm, Programming, Lập trình, AI, Robotics]
 ---
 

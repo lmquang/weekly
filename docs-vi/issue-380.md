@@ -1,4 +1,5 @@
 ---
+date: 2026-01-09
 tags: [Business, Kinh doanh, Profit, Lợi nhuận, Strategy, Chiến lược, Economics, Kinh tế, AI, Technology]
 ---
 

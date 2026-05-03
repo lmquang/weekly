@@ -1,4 +1,5 @@
 ---
+date: 2025-09-12
 tags: ["ai", "trí tuệ nhân tạo", "internet", "tìm kiếm", "search engine", "google", "cloudflare", "lưu lượng", "quảng cáo", "lập trình"]
 ---
 

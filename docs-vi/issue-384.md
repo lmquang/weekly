@@ -1,4 +1,5 @@
 ---
+date: 2026-02-06
 tags: [Software, Phần mềm, Stock Market, Thị trường chứng khoán, Economics, Kinh tế, Finance, Tài chính, AI, Technology]
 ---
 

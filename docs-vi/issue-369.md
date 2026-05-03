@@ -1,4 +1,5 @@
 ---
+date: 2025-10-17
 tags: [Interview, Phỏng vấn, Tech, Công nghệ, Entrepreneurship, Khởi nghiệp, AI, Video, Social Media, Mạng xã hội]
 ---
 
