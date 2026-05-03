@@ -18,6 +18,8 @@ const displayTitle = getIssueTitle(issue);
 const description = getIssueSummary(issue);
 const image = getIssueImage(issue);
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const issueDate = issue.data.date instanceof Date ? issue.data.date : issue.data.date ? new Date(issue.data.date) : undefined;
+const issueDateIso = issueDate?.toISOString().slice(0, 10);
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -26,9 +28,10 @@ const jsonLd = {
   url: canonicalUrl,
   mainEntityOfPage: canonicalUrl,
   inLanguage: 'vi-VN',
+  ...(issueDateIso ? { datePublished: issueDateIso, dateModified: issueDateIso } : {}),
   isPartOf: {
     '@type': 'Blog',
-    name: 'Weekly',
+    name: 'Tech Memo',
     url: new URL('/', Astro.site).toString(),
   },
   author: {
@@ -43,7 +46,7 @@ const jsonLd = {
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Weekly',
+    name: 'Tech Memo',
     url: new URL('/', Astro.site).toString(),
   },
   ...(image ? { image: new URL(image, Astro.site).toString() } : {}),
