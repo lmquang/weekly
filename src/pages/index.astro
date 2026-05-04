@@ -79,16 +79,66 @@ const processedIssues = sortedIssues.map((issue) => {
 	</div>
 
 	<script>
+		const timelineStateKey = 'weekly:index-timeline-state';
 		let currentIndex = 10;
 		const batchSize = 10;
+		const issueTimeline = document.getElementById('issue-timeline');
 		const loadMoreBtn = document.getElementById('load-more');
 		const btnText = loadMoreBtn?.querySelector('.btn-text');
 		const loader = loadMoreBtn?.querySelector('.loader');
 		const items = document.querySelectorAll('.timeline-item');
 
-		if (items.length <= currentIndex) {
-			if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-		}
+		const updateLoadMoreVisibility = () => {
+			if (loadMoreBtn && currentIndex >= items.length) loadMoreBtn.style.display = 'none';
+		};
+
+		const revealItems = (nextItems, animate) => {
+			nextItems.forEach(item => {
+				item.classList.remove('hidden');
+
+				if (!animate) return;
+
+				item.style.opacity = '0';
+				item.style.transform = 'translateY(20px)';
+				requestAnimationFrame(() => {
+					item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+					item.style.opacity = '1';
+					item.style.transform = 'translateY(0)';
+				});
+			});
+		};
+
+		const saveTimelineState = () => {
+			sessionStorage.setItem(timelineStateKey, JSON.stringify({
+				pathname: window.location.pathname,
+				scrollY: window.scrollY,
+				visibleCount: Math.min(currentIndex, items.length),
+			}));
+		};
+
+		const restoreTimelineState = () => {
+			const rawState = sessionStorage.getItem(timelineStateKey);
+			if (!rawState) return;
+
+			try {
+				const state = JSON.parse(rawState);
+				if (state.pathname !== window.location.pathname) return;
+
+				const visibleCount = Math.min(Number(state.visibleCount) || currentIndex, items.length);
+				if (visibleCount > currentIndex) {
+					revealItems(Array.from(items).slice(currentIndex, visibleCount), false);
+					currentIndex = visibleCount;
+				}
+
+				updateLoadMoreVisibility();
+				requestAnimationFrame(() => window.scrollTo(0, Number(state.scrollY) || 0));
+			} catch {
+				sessionStorage.removeItem(timelineStateKey);
+			}
+		};
+
+		restoreTimelineState();
+		updateLoadMoreVisibility();
 
 		loadMoreBtn?.addEventListener('click', () => {
 			// Show loading state
@@ -98,17 +148,7 @@ const processedIssues = sortedIssues.map((issue) => {
 
 			setTimeout(() => {
 				const nextBatch = Array.from(items).slice(currentIndex, currentIndex + batchSize);
-				nextBatch.forEach(item => {
-					item.classList.remove('hidden');
-					// Trigger animation
-					item.style.opacity = '0';
-					item.style.transform = 'translateY(20px)';
-					requestAnimationFrame(() => {
-						item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-						item.style.opacity = '1';
-						item.style.transform = 'translateY(0)';
-					});
-				});
+				revealItems(nextBatch, true);
 
 				currentIndex += batchSize;
 
@@ -122,5 +162,15 @@ const processedIssues = sortedIssues.map((issue) => {
 				}
 			}, 800);
 		});
+
+		issueTimeline?.addEventListener('click', (event) => {
+			const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+			if (!link) return;
+
+			const url = new URL(link.href, window.location.href);
+			if (url.origin === window.location.origin && url.pathname.startsWith('/issues/')) {
+				saveTimelineState();
+			}
+		}, true);
 	</script>
 </Layout>

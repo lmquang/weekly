@@ -199,6 +199,11 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 				});
 			};
 
+			const hidePageLoading = () => {
+				pageLoadingOverlay?.classList.add('hidden');
+				pageLoadingOverlay?.classList.remove('flex');
+			};
+
 			const handleIssueNavigation = (event) => {
 				if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
@@ -392,6 +397,7 @@ const googleAnalyticsId = 'G-17ESC9MW85';
 			});
 
 			document.addEventListener('click', handleIssueNavigation, true);
+			window.addEventListener('pageshow', hidePageLoading);
 		</script>
 	</body>
 </html>
