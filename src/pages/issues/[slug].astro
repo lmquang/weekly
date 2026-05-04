@@ -63,11 +63,27 @@ const sortedIssues = allIssues.sort((a, b) => {
 const currentIndex = sortedIssues.findIndex(i => i.id === issue.id);
 const prevIssue = currentIndex > 0 ? sortedIssues[currentIndex - 1] : null;
 const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentIndex + 1] : null;
+const currentTags = issue.data.tags ?? [];
+const relatedIssues = sortedIssues
+  .filter((candidate) => candidate.id !== issue.id)
+  .map((candidate) => ({
+    issue: candidate,
+    score: (candidate.data.tags ?? []).filter((tag) => currentTags.includes(tag)).length,
+  }))
+  .filter((candidate) => candidate.score > 0)
+  .sort((a, b) => b.score - a.score || Number(getIssueNumber(b.issue)) - Number(getIssueNumber(a.issue)))
+  .slice(0, 3)
+  .map((candidate) => candidate.issue);
 ---
 
 <Layout title={`Issue #${issueNumber} - ${displayTitle}`} description={description} canonical={canonicalUrl} image={image} type="article" jsonLd={jsonLd}>
+  <div id="reading-progress" class="fixed left-0 top-0 z-[130] h-1 w-0 bg-black transition-[width] duration-150 dark:bg-white" aria-hidden="true"></div>
   <article class="max-w-3xl mx-auto text-black dark:text-white">
     <header class="mb-10 border-b border-black/5 dark:border-white/5 pb-8">
+      <a id="back-to-list-link" href="/" class="mb-8 inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/[0.02] px-4 py-2 text-[11px] font-bold uppercase tracking-widest text-gray-500 transition-all hover:border-black/20 hover:bg-black/[0.04] hover:text-black dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-white/20 dark:hover:bg-white/[0.06] dark:hover:text-white">
+        <span aria-hidden="true">←</span>
+        <span>Back to timeline</span>
+      </a>
       <div class="flex items-center gap-3 mb-6">
         <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
           Issue
@@ -90,6 +106,25 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
     </div>
 
     <script>
+      const proseContent = document.querySelector<HTMLElement>('.prose-content');
+      const readingProgress = document.getElementById('reading-progress');
+      const backToListLink = document.getElementById('back-to-list-link');
+
+      const updateReadingProgress = () => {
+        if (!proseContent || !readingProgress) return;
+
+        const start = proseContent.offsetTop;
+        const end = start + proseContent.scrollHeight - window.innerHeight;
+        const progress = end <= start ? 1 : Math.min(Math.max((window.scrollY - start) / (end - start), 0), 1);
+        readingProgress.style.width = `${progress * 100}%`;
+      };
+
+      if (backToListLink && document.referrer) {
+        const referrer = new URL(document.referrer);
+        const isIssueList = referrer.origin === window.location.origin && ['/', '/issues/'].includes(referrer.pathname);
+        if (isIssueList) backToListLink.setAttribute('href', referrer.pathname);
+      }
+
       document.querySelectorAll<HTMLImageElement>('.prose-content img.lazy-image').forEach((image) => {
         if (image.complete) {
           image.classList.add('is-loaded');
@@ -137,9 +172,31 @@ const nextIssue = currentIndex < sortedIssues.length - 1 ? sortedIssues[currentI
           node = card.nextElementSibling;
         }
       });
+
+      updateReadingProgress();
+      window.addEventListener('scroll', updateReadingProgress, { passive: true });
+      window.addEventListener('resize', updateReadingProgress);
     </script>
 
     <footer class="mt-20 sm:mt-24 pt-8 sm:pt-12 border-t border-black/5 dark:border-white/5">
+      {relatedIssues.length > 0 && (
+        <section class="mb-10 sm:mb-12">
+          <p class="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Related issues</p>
+          <div class="grid gap-4 sm:grid-cols-3">
+            {relatedIssues.map((relatedIssue) => (
+              <a href={`/issues/${relatedIssue.id}`} class="group rounded-2xl border border-black/5 bg-black/[0.02] p-4 transition-all hover:-translate-y-0.5 hover:border-black/15 hover:bg-black/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-white/20 dark:hover:bg-white/[0.05]">
+                <span class="mb-3 block text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">
+                  Issue #{getIssueNumber(relatedIssue)}
+                </span>
+                <span class="line-clamp-3 text-sm font-medium leading-snug text-gray-700 transition-colors group-hover:text-black dark:text-gray-300 dark:group-hover:text-white">
+                  {getIssueTitle(relatedIssue)}
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         {prevIssue ? (
           <a href={`/issues/${prevIssue.id}`} class="group rounded-2xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.03] p-5 sm:p-6 transition-all hover:-translate-y-0.5 hover:border-black/15 dark:hover:border-white/20 hover:bg-black/[0.04] dark:hover:bg-white/[0.05]">
