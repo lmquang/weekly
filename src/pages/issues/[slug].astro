@@ -143,6 +143,51 @@ const relatedIssues = sortedIssues
         if (isIssueList) backToListLink.setAttribute('href', referrer.pathname);
       }
 
+      const getHeadingSlug = (value: string) => value
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/[^\p{L}\p{N}]+/gu, '-')
+        .replace(/^-+|-+$/g, '') || 'section';
+
+      const usedHeadingIds = new Set<string>();
+      document.querySelectorAll<HTMLHeadingElement>('.prose-content h2, .prose-content h3').forEach((heading) => {
+        const text = heading.textContent?.trim();
+        if (!text) return;
+
+        const baseId = getHeadingSlug(text);
+        let id = baseId;
+        let suffix = 2;
+        while (usedHeadingIds.has(id)) {
+          id = `${baseId}-${suffix}`;
+          suffix += 1;
+        }
+
+        heading.id = id;
+        usedHeadingIds.add(id);
+
+        const copyLink = document.createElement('a');
+        copyLink.href = `#${id}`;
+        copyLink.className = 'heading-copy-link';
+        copyLink.setAttribute('aria-label', `Copy link to ${text}`);
+        copyLink.textContent = '#';
+        copyLink.addEventListener('click', async (event) => {
+          const url = `${window.location.origin}${window.location.pathname}#${id}`;
+
+          if (!navigator.clipboard) return;
+
+          event.preventDefault();
+          await navigator.clipboard.writeText(url);
+          copyLink.textContent = 'Copied';
+          setTimeout(() => {
+            copyLink.textContent = '#';
+          }, 1200);
+        });
+
+        heading.append(copyLink);
+      });
+
       document.querySelectorAll<HTMLImageElement>('.prose-content img.lazy-image').forEach((image) => {
         if (image.complete) {
           image.classList.add('is-loaded');
@@ -204,7 +249,7 @@ const relatedIssues = sortedIssues
             {relatedIssues.map((relatedIssue) => (
               <a href={`/issues/${relatedIssue.id}`} class="group rounded-2xl border border-black/5 bg-black/[0.02] p-4 transition-all hover:-translate-y-0.5 hover:border-black/15 hover:bg-black/[0.04] dark:border-white/10 dark:bg-white/[0.03] dark:hover:border-white/20 dark:hover:bg-white/[0.05]">
                 <span class="mb-3 block text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-black dark:group-hover:text-white transition-colors">
-                  Issue #{getIssueNumber(relatedIssue)}
+                  #{getIssueNumber(relatedIssue)}
                 </span>
                 <span class="line-clamp-3 text-sm font-medium leading-snug text-gray-700 transition-colors group-hover:text-black dark:text-gray-300 dark:group-hover:text-white">
                   {getIssueTitle(relatedIssue)}
@@ -339,6 +384,21 @@ const relatedIssues = sortedIssues
 
   .prose-content a {
     @apply text-black dark:text-white underline decoration-black/20 dark:decoration-white/20 underline-offset-4 hover:decoration-black dark:hover:decoration-white transition-all;
+  }
+
+  .prose-content h2,
+  .prose-content h3 {
+    scroll-margin-top: 7rem;
+  }
+
+  .prose-content .heading-copy-link {
+    @apply ml-3 align-middle text-sm font-semibold text-gray-400 no-underline opacity-100 transition-colors hover:text-black dark:text-gray-600 dark:hover:text-white sm:opacity-0;
+  }
+
+  .prose-content h2:hover .heading-copy-link,
+  .prose-content h3:hover .heading-copy-link,
+  .prose-content .heading-copy-link:focus {
+    @apply opacity-100;
   }
 
   @media (max-width: 640px) {
