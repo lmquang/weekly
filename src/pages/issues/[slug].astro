@@ -11,12 +11,26 @@ export async function getStaticPaths() {
   }));
 }
 
+const getReadingTime = (body: string) => {
+  const text = body
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/[#>*_`~\-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const wordCount = text.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(wordCount / 220));
+};
+
 const { issue } = Astro.props;
 const { Content } = await render(issue);
 const issueNumber = getIssueNumber(issue);
 const displayTitle = getIssueTitle(issue);
 const description = getIssueSummary(issue);
 const image = getIssueImage(issue);
+const readingTime = getReadingTime(issue.body ?? '');
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const issueDate = issue.data.date instanceof Date ? issue.data.date : issue.data.date ? new Date(issue.data.date) : undefined;
 const issueDateIso = issueDate?.toISOString().slice(0, 10);
@@ -91,6 +105,10 @@ const relatedIssues = sortedIssues
         <span class="text-gray-400 dark:text-gray-600">•</span>
         <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">
           #{issueNumber}
+        </span>
+        <span class="text-gray-400 dark:text-gray-600">•</span>
+        <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">
+          Đọc {readingTime} phút
         </span>
       </div>
       <h1 class="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight leading-tight mb-0 text-black dark:text-white">
