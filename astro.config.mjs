@@ -28,6 +28,11 @@ function rehypeLazyImages() {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://techmemo.cc',
+  server: {
+    host: true,
+    port: parseInt(process.env.PORT || '4321'),
+    allowedHosts: true,
+  },
   integrations: [mdx()],
   markdown: {
     rehypePlugins: [rehypeLazyImages],
