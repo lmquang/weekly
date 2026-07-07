@@ -36,24 +36,36 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Restore Gemini credentials and skill
+      - name: Check opencode router credentials
         env:
-          GEMINI_CREDENTIALS: ${{ secrets.GEMINI_CREDENTIALS }}
-          GEMINI_SETTINGS: ${{ secrets.GEMINI_SETTINGS }}
-          GEMINI_SKILL_TRANSLATE: ${{ secrets.GEMINI_SKILL_TRANSLATE }}
+          NINEROUTER_API_KEY: ${{ secrets.NINEROUTER_API_KEY }}
         run: |
-          test -n "$GEMINI_CREDENTIALS"
-          test -n "$GEMINI_SKILL_TRANSLATE"
-          mkdir -p ~/.gemini .gemini/skills/translate
-          printf '%s' "$GEMINI_CREDENTIALS" > ~/.gemini/oauth_creds.json
-          printf '%s' "$GEMINI_SKILL_TRANSLATE" > .gemini/skills/translate/SKILL.md
-          if [ -n "$GEMINI_SETTINGS" ]; then
-            printf '%s' "$GEMINI_SETTINGS" > ~/.gemini/settings.json
-          fi
-          chmod 600 ~/.gemini/oauth_creds.json
+          test -n "$NINEROUTER_API_KEY"
+          mkdir -p ~/.config/opencode
+          cat > ~/.config/opencode/opencode.json <<'JSON'
+          {
+            "$schema": "https://opencode.ai/config.json",
+            "provider": {
+              "ninerouter": {
+                "type": "api",
+                "npm": "@ai-sdk/openai-compatible",
+                "name": "9router",
+                "options": {
+                  "baseURL": "https://router.askcandle.com/v1",
+                  "apiKey": "{env:NINEROUTER_API_KEY}"
+                },
+                "models": {
+                  "translate": {
+                    "name": "Combo translate"
+                  }
+                }
+              }
+            }
+          }
+          JSON
 
-      - name: Install Gemini CLI
-        run: npm install -g @google/gemini-cli@latest
+      - name: Install opencode CLI
+        run: npm i -g opencode-ai@latest
 
       - name: Sync upstream issues
         id: issue
@@ -127,14 +139,14 @@ jobs:
 
           echo "issues=$pending" >> "$GITHUB_OUTPUT"
 
-      - name: Translate with Gemini
+      - name: Translate with opencode
         if: steps.issue.outputs.issues != ''
         env:
-          GEMINI_CLI_TRUST_WORKSPACE: "true"
+          NINEROUTER_API_KEY: ${{ secrets.NINEROUTER_API_KEY }}
           ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
           for issue in $ISSUES; do
-            gemini --prompt "/translate docs/issue-$issue.md" -y
+            opencode run --model ninerouter/translate "use skill translate to translate docs/issue-$issue.md"
           done
 
       - name: Validate translation
