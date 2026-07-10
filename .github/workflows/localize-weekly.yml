@@ -146,7 +146,14 @@ jobs:
           ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
           for issue in $ISSUES; do
-            opencode run --model ninerouter/translate "use skill translate to translate docs/issue-$issue.md"
+            opencode run --model ninerouter/translate "Use the translate skill. Translate docs/issue-$issue.md into Vietnamese and CREATE the complete output file at docs-vi/issue-$issue.md. Preserve Markdown and all source images. Run python3 scripts/check_translation.py --fix $issue. Do not finish until docs-vi/issue-$issue.md exists and the validation command passes."
+            if [ ! -f "docs-vi/issue-$issue.md" ]; then
+              opencode run --continue "Your translation is incomplete: docs-vi/issue-$issue.md does not exist. Resume the pending write task now. Create the complete file with apply_patch, then run python3 scripts/check_translation.py --fix $issue. Do not respond or finish until both succeed."
+            fi
+            test -f "docs-vi/issue-$issue.md" || {
+              echo "Translation agent did not create docs-vi/issue-$issue.md" >&2
+              exit 1
+            }
           done
 
       - name: Validate translation
