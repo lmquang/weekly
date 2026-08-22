@@ -51,7 +51,7 @@ jobs:
                 "npm": "@ai-sdk/openai-compatible",
                 "name": "9router",
                 "options": {
-                  "baseURL": "https://router.askcandle.com/v1",
+                  "baseURL": "https://router.chartify.xyz/v1",
                   "apiKey": "{env:NINEROUTER_API_KEY}"
                 },
                 "models": {
