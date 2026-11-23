@@ -9,7 +9,7 @@ tags: ["ai", "trí tuệ nhân tạo", "lập trình", "phần cứng", "mã ngu
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111901.webp)
 
-Học viện Đạo giáo Thượng Hải vừa xây xong, do Viện Nghiên cứu Thiết kế Kiến trúc của Đại học Thanh Hoa thiết kế. ([Nguồn](https://www.gooood.cn/shanghai-daoist-academy-and-hepo-temple-by-thad.htm))
+Học viện Đạo giáo Thượng Hải vừa hoàn thiện, do Viện Nghiên cứu Thiết kế Kiến trúc Đại học Thanh Hoa thiết kế. ([Nguồn](https://www.gooood.cn/shanghai-daoist-academy-and-hepo-temple-by-thad.htm))
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111902.webp)
 
@@ -17,133 +17,133 @@ Học viện Đạo giáo Thượng Hải vừa xây xong, do Viện Nghiên c�
 
 ## Năm mất tập trung nhất
 
-[Alejandro AO](https://alejandro-ao.com/) là một nhà phát triển người Pháp chuyên giới thiệu công nghệ và hướng dẫn người dùng tại Hugging Face, cộng đồng mô hình lớn nhất thế giới.
+[Alejandro AO](https://alejandro-ao.com/) là nhà phát triển người Pháp phụ trách mảng developer advocate và hướng dẫn cộng đồng tại Hugging Face — nền tảng mô hình AI lớn nhất thế giới.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111913.webp)
 
-Anh làm nhiều video giải thích AI cho người mới và đăng tất cả lên [kênh YouTube](https://www.youtube.com/@alejandro_ao) của mình.
+Anh làm nhiều video giải thích AI cho người mới bắt đầu trên [kênh YouTube](https://www.youtube.com/@alejandro_ao) của mình.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111914.webp)
 
-Video chủ yếu hướng dẫn thực hành, nhưng cũng giải thích một số nguyên lý theo cách dễ hiểu. Tôi rất khuyến khích các bạn xem. Nhiều điều tôi biết về AI đến từ đây.
+Các video chủ yếu đi vào hướng dẫn thực hành, đồng thời giải thích nguyên lý nền tảng theo cách rất dễ tiếp cận. Mình rất khuyến khích bạn xem thử — nhiều kiến thức AI của mình cũng xuất phát từ đây.
 
-Tuần này, anh đăng [bài nhìn lại một năm](https://alejandro-ao.com/blog/one-year-at-hugging-face/) làm việc tại Hugging Face.
+Tuần này, anh đăng [bài tổng kết một năm](https://alejandro-ao.com/blog/one-year-at-hugging-face/) làm việc tại Hugging Face.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111915.webp)
 
-Đoạn dưới đây khiến tôi thấy mình trong đó.
+Đoạn chia sẻ dưới đây khiến mình thấy rất đồng cảm.
 
-Anh nói 2026 là năm anh mất tập trung nhất. “Năm nay gần như không thể tập trung vào một việc. **Chưa bao giờ làm nhiều dự án cùng lúc lại dễ đến thế**. Phần lớn thời gian, tôi có từ bốn đến mười Agent chạy song song để đẩy ba bốn dự án khác nhau đi tới.”
+Anh gọi 2026 là năm mất tập trung nhất của mình: “Năm nay gần như không thể tập trung vào một việc duy nhất. **Chưa bao giờ chạy nhiều dự án song song lại dễ đến thế**. Phần lớn thời gian, mình có từ bốn đến mười Agent chạy song song để đẩy ba bốn dự án khác nhau tiến về phía trước.”
 
-Bạn có thấy vậy không?
+Bạn có thấy cảnh này quen không?
 
-AI cho phép ta làm vài việc cùng lúc, và cũng khiến ta ngày càng khó tập trung vào một việc.
+AI giúp ta làm nhiều việc cùng lúc, nhưng cũng khiến ta ngày càng khó dồn trọn sự tập trung vào một thứ.
 
-> “Mỗi ngày tôi dùng hàng triệu token, cố làm tốt các dự án khác nhau. Dù vậy, vẫn có vài dự án tôi phải gác lại.”
+> “Mỗi ngày mình đốt hàng triệu token, cố gắng làm tốt nhiều dự án cùng lúc. Ấy vậy mà vẫn có những dự án phải bỏ dở.”
 
-Anh thấy cách làm này có gì đó không ổn. Muốn một dự án thật sự xuất sắc, ta phải bỏ nhiều thời gian và công sức để mài giũa. Khi chia sự chú ý cho quá nhiều thứ, nhìn qua thì có vẻ làm ra không ít, nhưng thời gian phải san đều nên dự án nào cũng chỉ làm tới một mức rồi dừng, chẳng đi sâu được.
+Anh nhận ra cách làm này có vấn đề. Muốn tạo ra thứ thực sự xuất sắc, bạn cần bỏ thời gian và công sức để mài giũa. Khi dàn trải sự chú ý cho quá nhiều thứ, bề ngoài có vẻ làm được nhiều, nhưng vì thời gian bị chia nhỏ nên dự án nào cũng chỉ dừng ở mức lưng chừng, khó đi tới chiều sâu.
 
-> “Ta rất dễ quên rằng ngay cả khi AI viết code, làm ra một sản phẩm đáng tin cậy vẫn chẳng dễ chút nào. Thế nên tôi thường khởi động vài dự án ‘nhỏ’ tưởng như đã nằm trong tầm tay, rồi lại trì hoãn những dự án có ý nghĩa hơn mà tôi thực sự muốn làm. Cuối cùng, mấy dự án nhỏ ấy ngốn nhiều thời gian hơn tôi tưởng.”
+> “Ta rất dễ quên rằng ngay cả khi AI viết code, làm ra một sản phẩm đáng tin cậy vẫn chẳng hề dễ. Vì vậy mình thường khởi động vài dự án ‘nhỏ’ tưởng như nắm chắc trong tay, rồi lại trì hoãn những dự án có ý nghĩa hơn mà mình thực sự muốn làm. Cuối cùng, chính mấy dự án nhỏ ấy lại ngốn nhiều thời gian hơn dự tính.”
 
-AI tạo ra một ảo giác: chỉ cần bỏ chút thời gian nghĩ một prompt là có ngay kết quả. Thế là ý tưởng nào vừa lóe lên, bạn cũng muốn nhờ AI làm thử. Sự chú ý cứ thế rời khỏi những việc vừa quan trọng vừa cấp bách.
+AI tạo ra một cảm giác đánh lừa: chỉ cần nghĩ ra một prompt là có ngay kết quả. Thế là ý tưởng nào vừa lóe lên, bạn cũng muốn nhờ AI làm thử — và sự chú ý cứ thế trôi khỏi những việc vừa quan trọng vừa cấp bách.
 
-Tệ hơn nữa, dự án nhỏ tưởng chừng tốn tối đa một giờ cứ phình ra, ngốn nhiều thời gian hơn dự tính.
+Tệ hơn, một dự án nhỏ tưởng chỉ tốn tối đa một tiếng lại cứ phình to ra, ngốn sạch thời gian của bạn.
 
-Có một điều không nên quên: **AI có thể làm việc dễ hơn, nhưng không làm ngày dài hơn**. Mỗi ngày vẫn chỉ có 24 giờ. Càng làm nhiều việc song song, bạn càng có ít thời gian cho từng việc, kể cả việc đáng dành nhiều thời gian nhất.
+Có một sự thật không thể quên: **AI có thể làm việc dễ hơn, nhưng không làm ngày dài hơn**. Mỗi ngày vẫn chỉ có 24 tiếng. Càng chạy nhiều việc song song, thời gian dành cho từng việc — kể cả việc xứng đáng nhất — càng bị thu hẹp.
 
-**Mục tiêu không phải là làm thật nhiều việc, mà là làm cho xong việc quan trọng nhất.**
+**Mục tiêu không phải là làm thật nhiều việc, mà là hoàn thành việc quan trọng nhất.**
 
-AI càng giỏi, việc gì trông cũng càng dễ bắt tay vào, và ta càng phải biết cưỡng lại cám dỗ đó. Hãy xếp thứ tự ưu tiên, bỏ bớt những việc ít quan trọng để thu hẹp phạm vi công việc. Dành phần lớn thời gian và sức lực cho điều quan trọng nhất.
+AI càng mạnh, việc gì cũng trông có vẻ dễ bắt tay vào, và ta càng cần tỉnh táo trước cám dỗ đó. Hãy sắp xếp thứ tự ưu tiên, gạt bớt việc ít quan trọng để thu hẹp phạm vi, rồi dồn phần lớn thời gian và sức lực cho điều cốt lõi nhất.
 
-Cuối bài, Alejandro AO mong năm 2027 mình sẽ bớt phân tâm và tập trung hơn vào một hai dự án cốt lõi.
+Cuối bài, Alejandro AO hy vọng sang năm 2027 sẽ bớt xao nhãng và tập trung hơn vào một hoặc hai dự án trọng tâm.
 
-Tôi cũng mong như vậy. Thay vì làm phép cộng (dùng AI để làm thêm việc), có lẽ nên làm phép trừ (bớt dự án), rồi dùng AI để đưa những dự án quan trọng nhất đi xa hơn, mở rộng hơn và đào sâu hơn.
+Mình cũng mong vậy. Thay vì làm phép cộng — dùng AI để ôm thêm việc — có lẽ nên làm phép trừ: cắt bớt dự án, rồi dùng AI để đưa những dự án quan trọng nhất đi xa hơn, rộng hơn và sâu hơn.
 
 ## Chất hiện thực trong GTA6
 
-GTA5 là game AAA bán chạy nhất lịch sử, với hơn 200 triệu bản. Phần tiếp theo, GTA6, ra mắt tuần này.
+GTA5 là tựa game AAA bán chạy nhất lịch sử với hơn 200 triệu bản. Phần tiếp theo, GTA6, vừa ra mắt tuần này.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111903.webp)
 
-Nhìn chung, game đang nhận được rất nhiều lời khen. Nhiều người chơi sửng sốt vì nó chân thực đến vậy. Game dựng nên một đô thị Mỹ hư cấu đầy tội phạm, lấy nguyên mẫu từ Miami.
+Game nhận được vô vàn lời khen, nhiều người chơi choáng ngợp vì độ chân thực. Bối cảnh là một đô thị Mỹ hư cấu đầy rẫy tội phạm, lấy cảm hứng từ Miami.
 
-Không chỉ đường phố trông như thật. Những chuyện xảy ra trên đó cũng giống đời đến lạ.
+Không chỉ đường phố nhìn như thật, mà các tình huống diễn ra trong game cũng đời đến khó tin.
 
-[Một người chơi](https://www.bloomberg.com/news/features/2026-11-18/gta-6-review-rockstar-games-latest-is-a-masterpiece) kể lại tình huống mình gặp.
+[Một người chơi](https://www.bloomberg.com/news/features/2026-11-18/gta-6-review-rockstar-games-latest-is-a-masterpiece) kể lại trải nghiệm của mình:
 
-Anh đang lái xe dạo phố thì thấy phía trước có tai nạn: một chiếc xe tải đâm vào đuôi xe con.
+Anh đang lái xe dạo phố thì gặp một vụ va chạm ngay phía trước: xe tải đâm vào đuôi xe con.
 
-Anh vội xuống xem. Tài xế xe tải đã bỏ chạy, còn tài xế xe con mắc kẹt bên trong. Động cơ đã bốc cháy, tình thế rất nguy cấp. Anh kéo tài xế ra khỏi xe. Người kia cảm ơn, vẫn còn hoảng hốt vì suýt mất mạng.
+Anh vội xuống kiểm tra. Tài xế xe tải bỏ chạy, còn tài xế xe con kẹt trong xe khi động cơ đang bốc cháy — tình thế ngàn cân treo sợi tóc. Anh kéo tài xế ra ngoài an toàn. Người kia cảm ơn rối rít, vẫn còn bàng hoàng vì suýt mất mạng.
 
-Rồi cả hai phát hiện chiếc xe tải gây tai nạn thuộc Sahara, một tập đoàn lớn gợi liên tưởng đến Amazon. Tài xế xe con lập tức reo lên: cơ hội đây rồi! Anh ta có thể kiện Sahara và đòi bồi thường hàng triệu đô la.
+Ngay sau đó, cả hai nhận ra chiếc xe tải gây tai nạn thuộc về Sahara — một tập đoàn khổng lồ gợi nhớ tới Amazon. Tài xế xe con lập tức sáng mắt: cơ hội đổi đời đây rồi! Anh ta có thể kiện Sahara để đòi bồi thường hàng triệu đô la.
 
-Nhưng anh ta cần bằng chứng rõ ràng là mình bị thương. Thế là anh ta hít một hơi, quay lại xe, để lửa bén vào quần rồi bước ra với vết bỏng.
+Nhưng muốn kiện thì phải có thương tích rõ ràng. Thế là anh ta hít sâu một hơi, quay lại xe, để lửa bén vào quần rồi bước ra với vết bỏng trên người.
 
-Anh ta gọi cho luật sư. Khi xe cứu thương tới gần, anh ta quay sang nhờ người chơi làm chứng, đổi lại sẽ chia cho anh một phần tiền bồi thường.
+Anh ta gọi cho luật sư. Khi xe cứu thương tiến lại gần, anh ta quay sang nhờ người chơi làm chứng và hứa chia lại một phần tiền bồi thường.
 
-Người chơi thoáng nghĩ đến chuyện ép anh ta trả thêm, nhưng cuối cùng vẫn đồng ý giúp. Tài xế chuyển cho anh vài nghìn đô la bằng tiền trong game.
+Người chơi thoáng nghĩ đến chuyện ép giá thêm, nhưng cuối cùng vẫn đồng ý giúp — và nhận về vài nghìn đô la tiền trong game.
 
-Đó là kiểu tình huống mà game dựng lên.
+Đó là kiểu chi tiết sống động mà game tạo ra.
 
 ## Tin vắn
 
-[Hai người đàn ông](https://www.wcnc.com/article/news/weird/cmpd-stops-men-driving-couch-charlotte-north-carolina/275-b873fdf0-0866-488b-a944-501101572502) ở bang Bắc Carolina, Mỹ, nảy ra một ý tưởng: buộc hai chiếc scooter điện lại với nhau, rồi gắn ghế sofa nhà mình lên trên để làm một chiếc xe sofa.
+[Hai người đàn ông](https://www.wcnc.com/article/news/weird/cmpd-stops-men-driving-couch-charlotte-north-carolina/275-b873fdf0-0866-488b-a944-501101572502) ở bang Bắc Carolina, Mỹ, đã nghĩ ra một ý tưởng táo bạo: buộc hai chiếc scooter điện lại với nhau rồi đặt chiếc ghế sofa phòng khách lên trên để chế thành “xe sofa”.
 
 ![](https://cdn.beekka.com/blogimg/asset/202610/bg2026100813.webp)
 
-Họ ngồi trên sofa, dùng tay lái của scooter để chạy dạo phố. Không có gì lạ khi cảnh sát nhanh chóng chặn họ lại.
+Cả hai ngồi chễm chệ trên sofa, dùng tay lái scooter để chạy ra phố — và dĩ nhiên nhanh chóng bị cảnh sát tuýt còi.
 
-Tin lên báo và gây xôn xao. Khi trả lời phỏng vấn, cảnh sát giải thích vì sao xe sofa không thể chạy ngoài đường. Thứ nhất, bản thân nó không an toàn. Thứ hai, tài xế khác nhìn thấy sẽ mất tập trung, dễ lái xe nguy hiểm.
+Câu chuyện nhanh chóng gây sốt trên truyền thông. Khi trả lời báo chí, cảnh sát chỉ ra hai lý do khiến xe sofa không thể lưu thông: một là bản thân kết cấu thiếu an toàn; hai là hình ảnh quá lạ mắt dễ khiến tài xế xung quanh mất tập trung, gây nguy hiểm giao thông.
 
-Các nhà khoa học tìm thấy [hóa thạch khủng long Diplodocus](https://www.livescience.com/animals/dinosaurs/fossils-of-iconic-long-necked-dinosaur-diplodocus-found-in-europe-for-first-time-and-it-may-have-traveled-there-via-land-bridge) ở Tây Ban Nha. Trước đây, người ta vẫn nghĩ loài này chỉ sống ở Bắc Mỹ.
+Các nhà khoa học vừa phát hiện [hóa thạch khủng long Diplodocus](https://www.livescience.com/animals/dinosaurs/fossils-of-iconic-long-necked-dinosaur-diplodocus-found-in-europe-for-first-time-and-it-may-have-traveled-there-via-land-bridge) tại Tây Ban Nha — lần đầu tiên loài khủng long cổ dài trứ danh này được tìm thấy ở châu Âu, trong khi trước đây người ta vẫn nghĩ chúng chỉ phân bố ở Bắc Mỹ.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026091904.webp)
 
-Phát hiện này cho thấy ít nhất vào thời con khủng long đó còn sống, khoảng 150 triệu năm trước, Tây Âu và Bắc Mỹ có thể vẫn nối nhau bằng một dải đất. Đại Tây Dương hình thành sau đó.
+Phát hiện này cho thấy ít nhất vào thời điểm loài khủng long này sinh sống, khoảng 150 triệu năm trước, Tây Âu và Bắc Mỹ có thể vẫn nối liền nhau qua một dải đất trước khi Đại Tây Dương tách ra.
 
-Vì sao tinh tinh không phát triển trí tuệ như con người? Một [nghiên cứu](https://www.psychologytoday.com/us/blog/the-new-brain/202610/the-human-brain-owes-its-existence-to-a-prehistoric-pandemic) mới đưa ra một giả thuyết.
+Vì sao tinh tinh không phát triển trí tuệ như con người? Một [nghiên cứu](https://www.psychologytoday.com/us/blog/the-new-brain/202610/the-human-brain-owes-its-existence-to-a-prehistoric-pandemic) mới đưa ra một giả thuyết thú vị.
 
 ![](https://cdn.beekka.com/blogimg/asset/202610/bg2026102914.webp)
 
-Theo giả thuyết này, một loại virus xuất hiện cách đây 7 triệu năm có thể đã ảnh hưởng đến sự phát triển não bộ của dòng tiến hóa dẫn tới tinh tinh, hạn chế khả năng phát triển trí tuệ, trong khi dòng tiến hóa dẫn tới con người có khả năng miễn dịch.
+Giả thuyết cho rằng một loại virus xuất hiện cách đây khoảng 7 triệu năm có thể đã tác động đến sự phát triển não bộ trên nhánh tiến hóa dẫn tới tinh tinh, kìm hãm khả năng phát triển trí tuệ, trong khi nhánh dẫn tới loài người lại có khả năng miễn dịch.
 
-Nghe mà thấy hú vía. Nếu virus ấy cũng lây sang tổ tiên loài người, liệu có còn xã hội loài người như ta biết không?
+Nghe mà rùng mình: nếu loại virus đó cũng tấn công tổ tiên loài người, liệu xã hội loài người ngày nay có còn tồn tại?
 
 ## Bài viết
 
-[Phân tích sâu về sự kiện liên quan đến Jensen Huang](https://stratechery.com/2026/obituaries/) (tiếng Anh)
+[Phân tích chuyên sâu về sự kiện xoay quanh Jensen Huang](https://stratechery.com/2026/obituaries/) (tiếng Anh)
 
-Một bài phân tích dài của một cây bút Mỹ về sự kiện liên quan đến Jensen Huang. Bài viết đào sâu vấn đề, rất đáng đọc.
+Bài phân tích dài kỳ của một cây bút người Mỹ mổ xẻ sự kiện liên quan đến Jensen Huang — nội dung sâu sắc, rất đáng đọc.
 
-[Ba mô hình cho hệ thống nhiều Agent](https://kadhar.dev/blog/multi-agent-systems-from-scratch) (tiếng Anh)
+[Ba kiến trúc cho hệ thống đa Agent](https://kadhar.dev/blog/multi-agent-systems-from-scratch) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111016.webp)
 
-Theo bài viết, nếu dùng nhiều Agent cùng lúc, bạn có ba cách tổ chức: (1) pipeline, xong bước này thì chuyển kết quả sang bước sau; (2) điều phối, có một bộ điều phối phân công việc; (3) bảng chung, mỗi Agent tự đọc thông tin trên bảng rồi quyết định làm gì.
+Bài viết chia việc tổ chức hệ thống nhiều Agent thành ba mô hình chính: (1) pipeline — làm xong bước này thì chuyển kết quả sang bước tiếp theo; (2) điều phối tập trung — có một Agent điều phối phân chia nhiệm vụ; (3) bảng chung (blackboard) — các Agent tự đọc thông tin trên bảng chung để quyết định hành động.
 
 [Kiểm tra ký tự trắng khó đến đâu?](https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111906.webp)
 
-Unicode có nhiều cách biểu diễn ký tự trắng. Bài viết chỉ cách lọc hết chúng trong Python, Java và JavaScript.
+Unicode định nghĩa rất nhiều loại ký tự khoảng trắng khác nhau. Bài viết hướng dẫn cách nhận diện và lọc triệt để chúng trong Python, Java và JavaScript.
 
 [Mô hình đóng đang chiếm ưu thế](https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111014.webp)
 
-Từ khi các công ty AI Mỹ giảm giá những mô hình cấp thấp, mô hình đóng cho hiệu năng tốt hơn ở gần như mọi mức giá.
+Kể từ khi các hãng AI tại Mỹ hạ giá nhóm mô hình nhỏ/cấp thấp, các mô hình đóng đang dẫn đầu về hiệu năng trên chi phí ở gần như mọi phân khúc giá.
 
 [Cá nhân đặt làm chip như thế nào?](https://essenceia.github.io/projects/expresso/) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111907.webp)
 
-Bài viết giới thiệu [wafer.space](https://wafer.space/), một trang ở Mỹ nhận đơn của cá nhân và đưa thiết kế chip đi sản xuất (tape-out). Mỗi đơn tối thiểu 1.000 chip, với giá thấp nhất là 2 USD mỗi chip.
+Bài viết giới thiệu [wafer.space](https://wafer.space/) — dịch vụ tại Mỹ cho phép cá nhân gửi thiết kế chip để đưa đi sản xuất (tape-out), với số lượng tối thiểu 1.000 chip mỗi đơn và mức giá thấp nhất từ 2 USD/chip.
 
-[Xác minh vị trí của chip AI](https://spectrum.ieee.org/find-my-ai-chip) (tiếng Anh)
+[Theo dõi vị trí của chip AI](https://spectrum.ieee.org/find-my-ai-chip) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111908.webp)
 
-Để ngăn Trung Quốc tiếp cận chip tiên tiến, Mỹ dự định ra luật buộc nhà sản xuất tích hợp tính năng định vị, cho biết chip đang hoạt động ở đâu. Nhưng tính năng này cần hệ điều hành phối hợp.
+Nhằm ngăn chặn việc chip tiên tiến chảy sang Trung Quốc, Mỹ cân nhắc ban hành quy định buộc nhà sản xuất nhúng cơ chế định vị để biết chip đang chạy ở đâu — tuy nhiên giải pháp này đòi hỏi sự phối hợp ở tầng hệ điều hành.
 
 ## Công cụ
 
@@ -151,77 +151,77 @@ Bài viết giới thiệu [wafer.space](https://wafer.space/), một trang ở 
 
 ![](https://cdn.beekka.com/blogimg/asset/202407/bg2024072803.webp)
 
-Công cụ thay thế grep, trả kết quả tìm kiếm theo ngữ nghĩa.
+Công cụ tìm kiếm thay thế `grep`, trả về kết quả dựa trên ngữ nghĩa.
 
 [Netdata](https://github.com/netdata/netdata)
 
 ![](https://cdn.beekka.com/blogimg/asset/202509/bg2025092707.webp)
 
-Dashboard mã nguồn mở để theo dõi trạng thái của mọi máy chủ và dịch vụ ở một chỗ.
+Bảng điều khiển mã nguồn mở giúp giám sát trạng thái toàn bộ máy chủ và dịch vụ tập trung tại một nơi.
 
 [FlowVision](https://github.com/netdcy/FlowVision)
 
 ![](https://cdn.beekka.com/blogimg/asset/202408/bg2024082008.webp)
 
-Trình duyệt ảnh cho macOS, hiển thị ảnh theo các cột so le.
+Trình xem ảnh cho macOS hiển thị ảnh theo bố cục các cột so le.
 
 [13ft](https://github.com/wasi-master/13ft)
 
 ![](https://cdn.beekka.com/blogimg/asset/202408/bg2024082009.webp)
 
-Ứng dụng web mã nguồn mở có thể lấy nội dung sau tường phí. Bạn cần tự host.
+Ứng dụng web mã nguồn mở hỗ trợ truy cập nội dung sau paywall khi tự host.
 
 [netboot.xyz](https://netboot.xyz/)
 
 ![](https://cdn.beekka.com/blogimg/asset/202408/bg2024082010.webp)
 
-Công cụ gom các tùy chọn cài Windows, Linux và BSD vào một đĩa khởi động.
+Công cụ tích hợp nhiều tùy chọn cài đặt Windows, Linux và BSD vào cùng một môi trường khởi động.
 
 [Srcbook](https://github.com/srcbookdev/srcbook)
 
 ![](https://cdn.beekka.com/blogimg/asset/202408/bg2024082013.webp)
 
-Notebook tương tác trên web, giống Jupyter Notebook nhưng dành cho TypeScript và JavaScript.
+Notebook tương tác trên nền web dành cho TypeScript và JavaScript, tương tự Jupyter Notebook.
 
 [Photoshot](https://github.com/Abraham721/photoshot)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111301.webp)
 
-Trình chỉnh sửa ảnh mã nguồn mở chạy trong trình duyệt. ([@Abraham721](https://github.com/ruanyf/weekly/issues/13332) gửi bài)
+Trình chỉnh sửa ảnh mã nguồn mở chạy trực tiếp trên trình duyệt. (Đóng góp bởi [@Abraham721](https://github.com/ruanyf/weekly/issues/13332))
 
 [XJY Editor](https://github.com/lizhaowu-79/xjyeditor)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111501.webp)
 
-Ứng dụng web tĩnh cho phép chỉnh sửa trực quan các tệp XML / KML / JSON / YAML dưới dạng bảng. ([@lizhaowu-79](https://github.com/ruanyf/weekly/issues/13394) gửi bài)
+Ứng dụng web tĩnh giúp chỉnh sửa trực quan các tệp XML, KML, JSON và YAML dưới dạng bảng. (Đóng góp bởi [@lizhaowu-79](https://github.com/ruanyf/weekly/issues/13394))
 
 [GCS](https://github.com/aeroxy/google-cloud-shell-cli)
 
-Client dòng lệnh không chính thức cho Google Cloud, cho phép đăng nhập vào máy chủ và thao tác ngay từ terminal. ([@aeroxy](https://github.com/ruanyf/weekly/issues/13399) gửi bài)
+![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111502.webp)
+
+CLI không chính thức cho Google Cloud, cho phép đăng nhập máy chủ và thao tác trực tiếp ngay từ terminal. (Đóng góp bởi [@aeroxy](https://github.com/ruanyf/weekly/issues/13399))
 
 [Waytrace](https://github.com/lxyeternal/PathTracker)
 
-![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111502.webp)
-
-Ứng dụng mã nguồn mở cho iOS, tự chạy nền để ghi lại hành trình cả ngày mà bạn không cần thao tác. ([@lxyeternal](https://github.com/ruanyf/weekly/issues/13400) gửi bài)
+Ứng dụng mã nguồn mở trên iOS chạy nền tự động để ghi lại hành trình cả ngày mà không cần thao tác thủ công. (Đóng góp bởi [@lxyeternal](https://github.com/ruanyf/weekly/issues/13400))
 
 [Tomoru](https://github.com/ACAne0320/Tomoru)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111702.webp)
 
-Ứng dụng desktop đa nền tảng ghi nhận âm thanh từ máy tính hoặc từ một ứng dụng bạn chọn, nhận dạng theo thời gian thực và hiện phụ đề song ngữ nổi trên màn hình. ([@ACAne0320](https://github.com/ruanyf/weekly/issues/13457) gửi bài)
+Ứng dụng desktop đa nền tảng thu âm thanh từ hệ thống hoặc ứng dụng chỉ định, nhận diện giọng nói theo thời gian thực và hiển thị phụ đề song ngữ dạng nổi. (Đóng góp bởi [@ACAne0320](https://github.com/ruanyf/weekly/issues/13457))
 
 [crFiles](https://github.com/libcr/crFiles/releases)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111703.webp)
 
-Trình quản lý tệp đa nền tảng cho máy tính. Điểm nổi bật là tích hợp giao thức Android Quick Share, giúp trao đổi tệp với thiết bị Android thuận tiện hơn. ([@wuruxu](https://github.com/ruanyf/weekly/issues/13464) gửi bài)
+Trình quản lý tệp đa nền tảng cho máy tính, nổi bật với khả năng tích hợp Android Quick Share để chuyển tệp với thiết bị Android tiện lợi hơn. (Đóng góp bởi [@wuruxu](https://github.com/ruanyf/weekly/issues/13464))
 
 [Arke](https://github.com/Koimsurai/Arke)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111801.webp)
 
-Công cụ mã nguồn mở thay thế File Explorer trên Windows. Nó đọc, sắp xếp, tạo ảnh thu nhỏ và tìm kiếm ngoài luồng giao diện. Nhờ vậy, mở thư mục khổng lồ hay mất kết nối với thư mục chia sẻ qua mạng cũng không làm cửa sổ bị đơ. ([@Koimsurai](https://github.com/ruanyf/weekly/issues/13498) gửi bài)
+Giải pháp mã nguồn mở thay thế File Explorer trên Windows, xử lý đọc file, sắp xếp, tạo thumbnail và tìm kiếm tách biệt khỏi luồng UI — giúp mở thư mục khổng lồ hay mất kết nối ổ mạng cũng không bị đơ cửa sổ. (Đóng góp bởi [@Koimsurai](https://github.com/ruanyf/weekly/issues/13498))
 
 ## Tài nguyên
 
@@ -229,55 +229,55 @@ Công cụ mã nguồn mở thay thế File Explorer trên Windows. Nó đọc, 
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111701.webp)
 
-Một độc giả làm trang tra cứu 17.382 mục từng xuất hiện trong tuần báo. ([@mwhzwh](https://github.com/ruanyf/weekly/issues/13443) gửi bài)
+Website tra cứu do độc giả xây dựng, tổng hợp 17.382 mục từng xuất hiện trong tuần báo. (Đóng góp bởi [@mwhzwh](https://github.com/ruanyf/weekly/issues/13443))
 
 [tinybrain](https://github.com/cai114514114514/tinybrain)
 
-Xây từ đầu một mô hình nhỏ chủ yếu dùng tiếng Trung: làm sạch dữ liệu, viết tokenizer, dựng mô hình, tiền huấn luyện, SFT, chưng cất và học tăng cường. Mỗi bước đều có code PyTorch. ([@cai114514114514](https://github.com/ruanyf/weekly/issues/13398) gửi bài)
+Hướng dẫn xây dựng từ đầu một mô hình ngôn ngữ nhỏ tập trung vào tiếng Trung: làm sạch dữ liệu, viết tokenizer, dựng kiến trúc, pre-training, SFT, distillation và RL — tất cả đều có mã nguồn PyTorch cho từng bước. (Đóng góp bởi [@cai114514114514](https://github.com/ruanyf/weekly/issues/13398))
 
 [Lean Init IDE](https://github.com/3y3y3y-huaiji/lean-init-ide)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111402.webp)
 
-Môi trường luyện Lean 4 ngay trong trình duyệt, kèm [khóa nhập môn](https://criticalthinking.de5.net/zh/learn/what-is-lean) bằng tiếng Trung và tiếng Anh. Nội dung đi từ logic cơ bản đến quy nạp, số nguyên tố và kiểm chứng thuật toán sắp xếp chèn. ([@3y3y3y-huaiji](https://github.com/ruanyf/weekly/issues/13372) gửi bài)
+Môi trường thực hành Lean 4 ngay trên trình duyệt, đi kèm [khóa nhập môn](https://criticalthinking.de5.net/zh/learn/what-is-lean) song ngữ Trung – Anh, từ logic cơ bản đến quy nạp, số nguyên tố và chứng minh tính đúng đắn của thuật toán sắp xếp chèn. (Đóng góp bởi [@3y3y3y-huaiji](https://github.com/ruanyf/weekly/issues/13372))
 
 [Kỹ thuật xây dựng trình duyệt web](https://browser.engineering/) (Web Browser Engineering)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111905.webp)
 
-Sách điện tử tiếng Anh, có thể đọc và tải miễn phí. Sách giải thích trình duyệt hoạt động ra sao bằng cách xây một trình duyệt đơn giản với vài nghìn dòng Python.
+Sách điện tử tiếng Anh miễn phí, giải thích cách trình duyệt vận hành thông qua việc tự xây dựng một trình duyệt thu gọn bằng vài nghìn dòng Python.
 
 [Nhập môn toán nền tảng cho AI tạo sinh](https://arxiv.org/abs/2605.29713) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111401.webp)
 
-Giáo trình nhập môn toán cho AI, có thể tải miễn phí.
+Tài liệu nhập môn toán học phục vụ AI tạo sinh, tải miễn phí.
 
 ## Hình ảnh
 
 [Những lỗ khoan trên sao Hỏa](https://science.nasa.gov/photojournal/a-collage-showing-49-drill-holes-made-by-nasas-curiosity-mars-rover/)
 
-Xe tự hành Curiosity của Mỹ vẫn khoan lấy mẫu trên sao Hỏa để phân tích thành phần đá ở đó.
+Xe tự hành Curiosity của NASA vẫn tiếp tục khoan lấy mẫu trên sao Hỏa để phân tích thành phần đá.
 
-Các lỗ khoan rộng khoảng 1,6 cm. Dưới đây là ảnh ghép của 49 lỗ như vậy.
+Mỗi lỗ khoan có đường kính khoảng 1,6 cm; ảnh dưới là bức ghép từ 49 lỗ khoan như vậy.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111904.webp)
 
-[Xúc xắc gần như không lặp kết quả](https://www.cbc.ca/lite/story/9.7328614)
+[Bộ xúc xắc gần như không bao giờ lặp kết quả](https://www.cbc.ca/lite/story/9.7328614)
 
-Gieo xúc xắc thường, chuyện ra lại số cũ chẳng có gì lạ.
+Với xúc xắc thông thường, việc tung ra lại con số cũ là chuyện rất bình thường.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090402.webp)
 
-Làm sao để mỗi lần gieo lại ra một kết quả khác? Một nhà toán học Mỹ đã nghĩ ra một bộ xúc xắc mới.
+Vậy làm sao để mỗi lần tung đều ra kết quả khác? Một nhà toán học người Mỹ đã thiết kế một bộ xúc xắc đặc biệt.
 
-Bộ này có năm viên, mỗi viên 24 mặt, tổng cộng 120 số khác nhau.
+Bộ này gồm năm viên, mỗi viên 24 mặt, tổng cộng 120 giá trị khác nhau.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090403.webp)
 
-Xác suất để một viên lặp lại số vừa gieo là 1/24. Vậy nên khả năng cả năm viên đều lặp lại kết quả ngay trước đó là cực thấp.
+Xác suất để một viên lặp lại mặt vừa tung là 1/24, nên khả năng cả năm viên cùng lặp lại kết quả lần trước gần như bằng không.
 
-Với bộ xúc xắc này, kết quả mỗi lần gieo gần như luôn khác lần trước.
+Nhờ vậy, mỗi lần tung bộ xúc xắc này gần như luôn cho ra một tổ hợp mới.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090404.webp)
 
@@ -287,13 +287,13 @@ Với bộ xúc xắc này, kết quả mỗi lần gieo gần như luôn khác 
 
 Năm 2023, một học giả quân sự người Anh xuất bản cuốn *Tương lai của chiến tranh*.
 
-Luận điểm của cuốn sách là chiến tranh sẽ ngày càng khó đánh, và cái giá của chiến thắng ngày càng cao.
+Luận điểm chính của cuốn sách là chiến tranh sẽ ngày càng khó giành phần thắng, và cái giá phải trả cho chiến thắng ngày càng đắt.
 
-Tác giả cho rằng chiến tranh ngày nay khác trước vì ba yếu tố: **phạm vi bao phủ của cảm biến, tầm bắn của vũ khí và độ chính xác của đạn dược**. Cả ba đều đang tiến bộ. Phát hiện từ xa khiến việc tạo bất ngờ khó hơn, còn khả năng tác động từ xa khiến giao tranh trực diện ít xảy ra hơn.
+Tác giả chỉ ra ba yếu tố đang định hình lại chiến tranh hiện đại: **phạm vi phủ sóng của cảm biến, tầm bắn của vũ khí và độ chính xác của đạn dược**. Cả ba đều phát triển mạnh: khả năng trinh sát từ xa khiến yếu tố bất ngờ khó đạt được hơn, còn năng lực tấn công tầm xa làm giảm các cuộc chạm trán trực diện.
 
-Vùng nguy hiểm vì thế không còn dừng ở tiền tuyến mà ngày càng lấn sâu vào những nơi trước kia được xem là hậu phương. Cuốn sách bàn về những đánh đổi mà thay đổi này đặt ra: giữa bảo toàn lực lượng và khả năng phối hợp, cũng như giữa việc tìm nơi che chắn và giữ đường tiếp tế, rút lui.
+Khi vùng nguy hiểm lan rộng từ tiền tuyến vào sâu bên trong khu vực vốn được coi là hậu phương, quân đội phải đối mặt với nhiều bài toán đánh đổi: giữa bảo toàn lực lượng và khả năng hiệp đồng, hay giữa việc ẩn nấp an toàn và duy trì đường tiếp tế, cơ động.
 
-Tóm lại, chiến tranh ngày càng khó kết thúc bằng một đòn bất ngờ. Nó dễ kéo dài thành cuộc chiến tiêu hao, cho tới khi một bên cạn nguồn lực. Ngay cả bên thắng cũng phải trả giá rất lớn.
+Tóm lại, các cuộc xung đột khó kết thúc nhanh gọn bằng một đòn bất ngờ mà dễ sa vào chiến tranh tiêu hao kéo dài, bào mòn nguồn lực của cả hai phía — ngay cả bên thắng cũng chịu tổn thất nặng nề.
 
 ## Trích dẫn
 
