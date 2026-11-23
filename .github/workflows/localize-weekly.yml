@@ -55,8 +55,8 @@ jobs:
                   "apiKey": "{env:NINEROUTER_API_KEY}"
                 },
                 "models": {
-                  "translate": {
-                    "name": "Combo translate"
+                  "writing": {
+                    "name": "Combo writing"
                   }
                 }
               }
@@ -146,11 +146,11 @@ jobs:
           ISSUES: ${{ steps.issue.outputs.issues }}
         run: |
           for issue in $ISSUES; do
-            if ! opencode --print-logs --log-level DEBUG run --model ninerouter/translate "Use the translate skill. Translate docs/issue-$issue.md into Vietnamese and CREATE the complete output file at docs-vi/issue-$issue.md. Preserve Markdown and all source images. Run python3 scripts/check_translation.py --fix $issue. Do not finish until docs-vi/issue-$issue.md exists and the validation command passes."; then
+            if ! opencode --print-logs --log-level DEBUG run --model ninerouter/writing "Use the translate skill. Translate docs/issue-$issue.md into Vietnamese and CREATE the complete output file at docs-vi/issue-$issue.md. Preserve Markdown and all source images. Run python3 scripts/check_translation.py --fix $issue. Do not finish until docs-vi/issue-$issue.md exists and the validation command passes."; then
               echo "Initial translation run failed for issue $issue; checking for output before retrying" >&2
             fi
             if [ ! -f "docs-vi/issue-$issue.md" ]; then
-              if ! opencode --print-logs --log-level DEBUG run --continue "Your translation is incomplete: docs-vi/issue-$issue.md does not exist. Resume the pending write task now. Create the complete file with apply_patch, then run python3 scripts/check_translation.py --fix $issue. Do not respond or finish until both succeed."; then
+              if ! opencode --print-logs --log-level DEBUG run --model ninerouter/writing --continue "Your translation is incomplete: docs-vi/issue-$issue.md does not exist. Resume the pending write task now. Create the complete file with apply_patch, then run python3 scripts/check_translation.py --fix $issue. Do not respond or finish until both succeed."; then
                 echo "Translation retry failed for issue $issue" >&2
               fi
             fi
