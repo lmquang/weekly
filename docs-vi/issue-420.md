@@ -1,6 +1,6 @@
 ---
-date: 2026-11-20
-tags: ["ai", "trí tuệ nhân tạo", "lập trình", "phần cứng", "mã nguồn mở", "mô hình ngôn ngữ", "chip", "trò chơi điện tử", "năng suất", "trình duyệt"]
+date: 2026-11-25
+tags: ["ai", "trí tuệ nhân tạo", "lập trình", "phần cứng", "mã nguồn mở", "open-source", "llm", "chip", "gaming", "năng suất"]
 ---
 
 # Năm mất tập trung nhất
@@ -17,7 +17,7 @@ Học viện Đạo giáo Thượng Hải vừa hoàn thiện, do Viện Nghiên
 
 ## Năm mất tập trung nhất
 
-[Alejandro AO](https://alejandro-ao.com/) là nhà phát triển người Pháp phụ trách mảng developer advocate và hướng dẫn cộng đồng tại Hugging Face — nền tảng mô hình AI lớn nhất thế giới.
+[Alejandro AO](https://alejandro-ao.com/) là nhà phát triển người Pháp phụ trách mảng developer advocate và hướng dẫn cộng đồng tại Hugging Face, nền tảng mô hình AI lớn nhất thế giới.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111913.webp)
 
@@ -25,13 +25,13 @@ Anh làm nhiều video giải thích AI cho người mới bắt đầu trên [k
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111914.webp)
 
-Các video chủ yếu đi vào hướng dẫn thực hành, đồng thời giải thích nguyên lý nền tảng theo cách rất dễ tiếp cận. Mình rất khuyến khích bạn xem thử — nhiều kiến thức AI của mình cũng xuất phát từ đây.
+Các video chủ yếu đi vào hướng dẫn thực hành, đồng thời giải thích nguyên lý nền tảng theo cách dễ tiếp cận. Bạn nên xem thử, vì nhiều kiến thức AI của mình cũng xuất phát từ đây.
 
 Tuần này, anh đăng [bài tổng kết một năm](https://alejandro-ao.com/blog/one-year-at-hugging-face/) làm việc tại Hugging Face.
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111915.webp)
 
-Đoạn chia sẻ dưới đây khiến mình thấy rất đồng cảm.
+Đoạn chia sẻ dưới đây khiến mình đồng cảm.
 
 Anh gọi 2026 là năm mất tập trung nhất của mình: “Năm nay gần như không thể tập trung vào một việc duy nhất. **Chưa bao giờ chạy nhiều dự án song song lại dễ đến thế**. Phần lớn thời gian, mình có từ bốn đến mười Agent chạy song song để đẩy ba bốn dự án khác nhau tiến về phía trước.”
 
@@ -39,17 +39,17 @@ Bạn có thấy cảnh này quen không?
 
 AI giúp ta làm nhiều việc cùng lúc, nhưng cũng khiến ta ngày càng khó dồn trọn sự tập trung vào một thứ.
 
-> “Mỗi ngày mình đốt hàng triệu token, cố gắng làm tốt nhiều dự án cùng lúc. Ấy vậy mà vẫn có những dự án phải bỏ dở.”
+> “Mỗi ngày mình đốt hàng triệu token, cố gắng làm tốt nhiều dự án cùng lúc. Thế nhưng vẫn có những dự án phải bỏ dở.”
 
-Anh nhận ra cách làm này có vấn đề. Muốn tạo ra thứ thực sự xuất sắc, bạn cần bỏ thời gian và công sức để mài giũa. Khi dàn trải sự chú ý cho quá nhiều thứ, bề ngoài có vẻ làm được nhiều, nhưng vì thời gian bị chia nhỏ nên dự án nào cũng chỉ dừng ở mức lưng chừng, khó đi tới chiều sâu.
+Anh nhận ra cách làm này có vấn đề. Muốn tạo ra thứ thực sự xuất sắc, bạn cần bỏ thời gian và công sức để mài giũa. Khi dàn trải sự chú ý cho quá nhiều thứ, bề ngoài có vẻ làm được nhiều, nhưng vì chia nhỏ thời gian nên dự án nào cũng chỉ dừng ở mức lưng chừng, khó đi tới chiều sâu.
 
-> “Ta rất dễ quên rằng ngay cả khi AI viết code, làm ra một sản phẩm đáng tin cậy vẫn chẳng hề dễ. Vì vậy mình thường khởi động vài dự án ‘nhỏ’ tưởng như nắm chắc trong tay, rồi lại trì hoãn những dự án có ý nghĩa hơn mà mình thực sự muốn làm. Cuối cùng, chính mấy dự án nhỏ ấy lại ngốn nhiều thời gian hơn dự tính.”
+> “Ta dễ quên rằng ngay cả khi AI viết code, làm ra một sản phẩm đáng tin cậy vẫn chẳng hề dễ. Vì vậy mình thường khởi động vài dự án ‘nhỏ’ tưởng như nắm chắc trong tay, rồi lại trì hoãn những dự án có ý nghĩa hơn mà mình thực sự muốn làm. Cuối cùng, chính mấy dự án nhỏ ấy lại ngốn nhiều thời gian hơn dự tính.”
 
-AI tạo ra một cảm giác đánh lừa: chỉ cần nghĩ ra một prompt là có ngay kết quả. Thế là ý tưởng nào vừa lóe lên, bạn cũng muốn nhờ AI làm thử — và sự chú ý cứ thế trôi khỏi những việc vừa quan trọng vừa cấp bách.
+AI tạo ra một cảm giác đánh lừa: chỉ cần nghĩ ra một prompt là có ngay kết quả. Thế là ý tưởng nào vừa lóe lên, bạn cũng muốn nhờ AI làm thử, và sự chú ý cứ thế trôi khỏi những việc vừa quan trọng vừa cấp bách.
 
 Tệ hơn, một dự án nhỏ tưởng chỉ tốn tối đa một tiếng lại cứ phình to ra, ngốn sạch thời gian của bạn.
 
-Có một sự thật không thể quên: **AI có thể làm việc dễ hơn, nhưng không làm ngày dài hơn**. Mỗi ngày vẫn chỉ có 24 tiếng. Càng chạy nhiều việc song song, thời gian dành cho từng việc — kể cả việc xứng đáng nhất — càng bị thu hẹp.
+Có một sự thật không thể quên: **AI có thể làm việc dễ hơn, nhưng không làm ngày dài hơn**. Mỗi ngày vẫn chỉ có 24 tiếng. Càng chạy nhiều việc song song, thời gian dành cho từng việc (kể cả việc xứng đáng nhất) càng thu hẹp lại.
 
 **Mục tiêu không phải là làm thật nhiều việc, mà là hoàn thành việc quan trọng nhất.**
 
@@ -57,7 +57,7 @@ AI càng mạnh, việc gì cũng trông có vẻ dễ bắt tay vào, và ta c�
 
 Cuối bài, Alejandro AO hy vọng sang năm 2027 sẽ bớt xao nhãng và tập trung hơn vào một hoặc hai dự án trọng tâm.
 
-Mình cũng mong vậy. Thay vì làm phép cộng — dùng AI để ôm thêm việc — có lẽ nên làm phép trừ: cắt bớt dự án, rồi dùng AI để đưa những dự án quan trọng nhất đi xa hơn, rộng hơn và sâu hơn.
+Mình cũng mong vậy. Thay vì làm phép cộng, dùng AI để ôm thêm việc, có lẽ nên làm phép trừ: cắt bớt dự án, rồi dùng AI để đưa những dự án quan trọng nhất đi xa hơn, rộng hơn và sâu hơn.
 
 ## Chất hiện thực trong GTA6
 
@@ -65,61 +65,61 @@ GTA5 là tựa game AAA bán chạy nhất lịch sử với hơn 200 triệu b�
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111903.webp)
 
-Game nhận được vô vàn lời khen, nhiều người chơi choáng ngợp vì độ chân thực. Bối cảnh là một đô thị Mỹ hư cấu đầy rẫy tội phạm, lấy cảm hứng từ Miami.
+Game nhận nhiều lời khen, nổi bật là độ chân thực. Bối cảnh là một đô thị Mỹ hư cấu nhiều tội phạm, lấy cảm hứng từ Miami.
 
-Không chỉ đường phố nhìn như thật, mà các tình huống diễn ra trong game cũng đời đến khó tin.
+Không chỉ đường phố nhìn như thật, mà các tình huống diễn ra trong game cũng sát thực tế.
 
 [Một người chơi](https://www.bloomberg.com/news/features/2026-11-18/gta-6-review-rockstar-games-latest-is-a-masterpiece) kể lại trải nghiệm của mình:
 
 Anh đang lái xe dạo phố thì gặp một vụ va chạm ngay phía trước: xe tải đâm vào đuôi xe con.
 
-Anh vội xuống kiểm tra. Tài xế xe tải bỏ chạy, còn tài xế xe con kẹt trong xe khi động cơ đang bốc cháy — tình thế ngàn cân treo sợi tóc. Anh kéo tài xế ra ngoài an toàn. Người kia cảm ơn rối rít, vẫn còn bàng hoàng vì suýt mất mạng.
+Anh xuống kiểm tra. Tài xế xe tải bỏ chạy, còn tài xế xe con kẹt trong xe khi động cơ đang bốc cháy. Anh kéo tài xế ra ngoài an toàn. Người kia cảm ơn rối rít vì vừa thoát nạn.
 
-Ngay sau đó, cả hai nhận ra chiếc xe tải gây tai nạn thuộc về Sahara — một tập đoàn khổng lồ gợi nhớ tới Amazon. Tài xế xe con lập tức sáng mắt: cơ hội đổi đời đây rồi! Anh ta có thể kiện Sahara để đòi bồi thường hàng triệu đô la.
+Ngay sau đó, cả hai nhận ra chiếc xe tải gây tai nạn thuộc về Sahara, một tập đoàn lớn gợi nhớ tới Amazon. Tài xế xe con lập tức nhận ra đây là cơ hội đổi đời. Anh ta có thể kiện Sahara để đòi bồi thường hàng triệu đô la.
 
 Nhưng muốn kiện thì phải có thương tích rõ ràng. Thế là anh ta hít sâu một hơi, quay lại xe, để lửa bén vào quần rồi bước ra với vết bỏng trên người.
 
 Anh ta gọi cho luật sư. Khi xe cứu thương tiến lại gần, anh ta quay sang nhờ người chơi làm chứng và hứa chia lại một phần tiền bồi thường.
 
-Người chơi thoáng nghĩ đến chuyện ép giá thêm, nhưng cuối cùng vẫn đồng ý giúp — và nhận về vài nghìn đô la tiền trong game.
+Người chơi thoáng nghĩ đến chuyện ép giá thêm, nhưng cuối cùng vẫn đồng ý giúp, và nhận về vài nghìn đô la tiền trong game.
 
 Đó là kiểu chi tiết sống động mà game tạo ra.
 
 ## Tin vắn
 
-[Hai người đàn ông](https://www.wcnc.com/article/news/weird/cmpd-stops-men-driving-couch-charlotte-north-carolina/275-b873fdf0-0866-488b-a944-501101572502) ở bang Bắc Carolina, Mỹ, đã nghĩ ra một ý tưởng táo bạo: buộc hai chiếc scooter điện lại với nhau rồi đặt chiếc ghế sofa phòng khách lên trên để chế thành “xe sofa”.
+[Hai người đàn ông](https://www.wcnc.com/article/news/weird/cmpd-stops-men-driving-couch-charlotte-north-carolina/275-b873fdf0-0866-488b-a944-501101572502) ở bang Bắc Carolina, Mỹ, nghĩ ra một ý tưởng lạ: buộc hai chiếc scooter điện lại với nhau rồi đặt chiếc ghế sofa phòng khách lên trên để chế thành “xe sofa”.
 
 ![](https://cdn.beekka.com/blogimg/asset/202610/bg2026100813.webp)
 
-Cả hai ngồi chễm chệ trên sofa, dùng tay lái scooter để chạy ra phố — và dĩ nhiên nhanh chóng bị cảnh sát tuýt còi.
+Cả hai ngồi trên sofa, dùng tay lái scooter để chạy ra phố, và dĩ nhiên cảnh sát nhanh chóng chặn lại.
 
-Câu chuyện nhanh chóng gây sốt trên truyền thông. Khi trả lời báo chí, cảnh sát chỉ ra hai lý do khiến xe sofa không thể lưu thông: một là bản thân kết cấu thiếu an toàn; hai là hình ảnh quá lạ mắt dễ khiến tài xế xung quanh mất tập trung, gây nguy hiểm giao thông.
+Câu chuyện nhanh chóng thu hút sự chú ý trên truyền thông. Khi trả lời báo chí, cảnh sát chỉ ra hai lý do khiến xe sofa không thể lưu thông: một là bản thân kết cấu thiếu an toàn; hai là hình ảnh quá lạ mắt dễ khiến tài xế xung quanh mất tập trung, gây nguy hiểm giao thông.
 
-Các nhà khoa học vừa phát hiện [hóa thạch khủng long Diplodocus](https://www.livescience.com/animals/dinosaurs/fossils-of-iconic-long-necked-dinosaur-diplodocus-found-in-europe-for-first-time-and-it-may-have-traveled-there-via-land-bridge) tại Tây Ban Nha — lần đầu tiên loài khủng long cổ dài trứ danh này được tìm thấy ở châu Âu, trong khi trước đây người ta vẫn nghĩ chúng chỉ phân bố ở Bắc Mỹ.
+Các nhà khoa học vừa phát hiện [hóa thạch khủng long Diplodocus](https://www.livescience.com/animals/dinosaurs/fossils-of-iconic-long-necked-dinosaur-diplodocus-found-in-europe-for-first-time-and-it-may-have-traveled-there-via-land-bridge) tại Tây Ban Nha. Đây là lần đầu tiên giới nghiên cứu tìm thấy loài khủng long cổ dài này ở châu Âu, trong khi trước đây người ta vẫn nghĩ chúng chỉ phân bố ở Bắc Mỹ.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026091904.webp)
 
 Phát hiện này cho thấy ít nhất vào thời điểm loài khủng long này sinh sống, khoảng 150 triệu năm trước, Tây Âu và Bắc Mỹ có thể vẫn nối liền nhau qua một dải đất trước khi Đại Tây Dương tách ra.
 
-Vì sao tinh tinh không phát triển trí tuệ như con người? Một [nghiên cứu](https://www.psychologytoday.com/us/blog/the-new-brain/202610/the-human-brain-owes-its-existence-to-a-prehistoric-pandemic) mới đưa ra một giả thuyết thú vị.
+Vì sao tinh tinh không phát triển trí tuệ như con người? Một [nghiên cứu](https://www.psychologytoday.com/us/blog/the-new-brain/202610/the-human-brain-owes-its-existence-to-a-prehistoric-pandemic) mới đưa ra một giả thuyết đáng chú ý.
 
 ![](https://cdn.beekka.com/blogimg/asset/202610/bg2026102914.webp)
 
 Giả thuyết cho rằng một loại virus xuất hiện cách đây khoảng 7 triệu năm có thể đã tác động đến sự phát triển não bộ trên nhánh tiến hóa dẫn tới tinh tinh, kìm hãm khả năng phát triển trí tuệ, trong khi nhánh dẫn tới loài người lại có khả năng miễn dịch.
 
-Nghe mà rùng mình: nếu loại virus đó cũng tấn công tổ tiên loài người, liệu xã hội loài người ngày nay có còn tồn tại?
+Nếu loại virus đó cũng tấn công tổ tiên loài người, liệu xã hội ngày nay có còn tồn tại?
 
 ## Bài viết
 
 [Phân tích chuyên sâu về sự kiện xoay quanh Jensen Huang](https://stratechery.com/2026/obituaries/) (tiếng Anh)
 
-Bài phân tích dài kỳ của một cây bút người Mỹ mổ xẻ sự kiện liên quan đến Jensen Huang — nội dung sâu sắc, rất đáng đọc.
+Bài phân tích dài kỳ của một cây bút người Mỹ mổ xẻ sự kiện liên quan đến Jensen Huang, nội dung có chiều sâu và đáng đọc.
 
 [Ba kiến trúc cho hệ thống đa Agent](https://kadhar.dev/blog/multi-agent-systems-from-scratch) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111016.webp)
 
-Bài viết chia việc tổ chức hệ thống nhiều Agent thành ba mô hình chính: (1) pipeline — làm xong bước này thì chuyển kết quả sang bước tiếp theo; (2) điều phối tập trung — có một Agent điều phối phân chia nhiệm vụ; (3) bảng chung (blackboard) — các Agent tự đọc thông tin trên bảng chung để quyết định hành động.
+Bài viết chia việc tổ chức hệ thống nhiều Agent thành ba mô hình chính: (1) pipeline, làm xong bước này thì chuyển kết quả sang bước tiếp theo; (2) điều phối tập trung, có một Agent điều phối phân chia nhiệm vụ; (3) bảng chung (blackboard), nơi các Agent tự đọc thông tin trên bảng chung để quyết định hành động.
 
 [Kiểm tra ký tự trắng khó đến đâu?](https://serce.me/posts/2026-10-30-how-hard-is-it-to-check-for-whitespace) (tiếng Anh)
 
@@ -137,13 +137,13 @@ Kể từ khi các hãng AI tại Mỹ hạ giá nhóm mô hình nhỏ/cấp th�
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111907.webp)
 
-Bài viết giới thiệu [wafer.space](https://wafer.space/) — dịch vụ tại Mỹ cho phép cá nhân gửi thiết kế chip để đưa đi sản xuất (tape-out), với số lượng tối thiểu 1.000 chip mỗi đơn và mức giá thấp nhất từ 2 USD/chip.
+Bài viết giới thiệu [wafer.space](https://wafer.space/), dịch vụ tại Mỹ cho phép cá nhân gửi thiết kế chip để đưa đi sản xuất (tape-out), với số lượng tối thiểu 1.000 chip mỗi đơn và mức giá thấp nhất từ 2 USD/chip.
 
 [Theo dõi vị trí của chip AI](https://spectrum.ieee.org/find-my-ai-chip) (tiếng Anh)
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111908.webp)
 
-Nhằm ngăn chặn việc chip tiên tiến chảy sang Trung Quốc, Mỹ cân nhắc ban hành quy định buộc nhà sản xuất nhúng cơ chế định vị để biết chip đang chạy ở đâu — tuy nhiên giải pháp này đòi hỏi sự phối hợp ở tầng hệ điều hành.
+Nhằm ngăn chặn việc chip tiên tiến chảy sang Trung Quốc, Mỹ cân nhắc ban hành quy định buộc nhà sản xuất nhúng cơ chế định vị để biết chip đang chạy ở đâu. Tuy nhiên giải pháp này đòi hỏi sự phối hợp ở tầng hệ điều hành.
 
 ## Công cụ
 
@@ -221,7 +221,7 @@ Trình quản lý tệp đa nền tảng cho máy tính, nổi bật với khả
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026111801.webp)
 
-Giải pháp mã nguồn mở thay thế File Explorer trên Windows, xử lý đọc file, sắp xếp, tạo thumbnail và tìm kiếm tách biệt khỏi luồng UI — giúp mở thư mục khổng lồ hay mất kết nối ổ mạng cũng không bị đơ cửa sổ. (Đóng góp bởi [@Koimsurai](https://github.com/ruanyf/weekly/issues/13498))
+Giải pháp mã nguồn mở thay thế File Explorer trên Windows, xử lý đọc file, sắp xếp, tạo thumbnail và tìm kiếm tách biệt khỏi luồng UI. Nhờ đó, khi mở thư mục lớn hoặc mất kết nối ổ mạng, cửa sổ vẫn không bị treo. (Đóng góp bởi [@Koimsurai](https://github.com/ruanyf/weekly/issues/13498))
 
 ## Tài nguyên
 
@@ -233,7 +233,7 @@ Website tra cứu do độc giả xây dựng, tổng hợp 17.382 mục từng 
 
 [tinybrain](https://github.com/cai114514114514/tinybrain)
 
-Hướng dẫn xây dựng từ đầu một mô hình ngôn ngữ nhỏ tập trung vào tiếng Trung: làm sạch dữ liệu, viết tokenizer, dựng kiến trúc, pre-training, SFT, distillation và RL — tất cả đều có mã nguồn PyTorch cho từng bước. (Đóng góp bởi [@cai114514114514](https://github.com/ruanyf/weekly/issues/13398))
+Hướng dẫn xây dựng từ đầu một mô hình ngôn ngữ nhỏ tập trung vào tiếng Trung: làm sạch dữ liệu, viết tokenizer, dựng kiến trúc, pre-training, SFT, distillation và RL, tất cả đều có mã nguồn PyTorch cho từng bước. (Đóng góp bởi [@cai114514114514](https://github.com/ruanyf/weekly/issues/13398))
 
 [Lean Init IDE](https://github.com/3y3y3y-huaiji/lean-init-ide)
 
@@ -265,7 +265,7 @@ Mỗi lỗ khoan có đường kính khoảng 1,6 cm; ảnh dưới là bức gh
 
 [Bộ xúc xắc gần như không bao giờ lặp kết quả](https://www.cbc.ca/lite/story/9.7328614)
 
-Với xúc xắc thông thường, việc tung ra lại con số cũ là chuyện rất bình thường.
+Với xúc xắc thông thường, việc tung ra lại con số cũ là chuyện bình thường.
 
 ![](https://cdn.beekka.com/blogimg/asset/202609/bg2026090402.webp)
 
@@ -293,7 +293,7 @@ Tác giả chỉ ra ba yếu tố đang định hình lại chiến tranh hiện
 
 Khi vùng nguy hiểm lan rộng từ tiền tuyến vào sâu bên trong khu vực vốn được coi là hậu phương, quân đội phải đối mặt với nhiều bài toán đánh đổi: giữa bảo toàn lực lượng và khả năng hiệp đồng, hay giữa việc ẩn nấp an toàn và duy trì đường tiếp tế, cơ động.
 
-Tóm lại, các cuộc xung đột khó kết thúc nhanh gọn bằng một đòn bất ngờ mà dễ sa vào chiến tranh tiêu hao kéo dài, bào mòn nguồn lực của cả hai phía — ngay cả bên thắng cũng chịu tổn thất nặng nề.
+Tóm lại, các cuộc xung đột khó kết thúc nhanh gọn bằng một đòn bất ngờ mà dễ sa vào chiến tranh tiêu hao kéo dài, bào mòn nguồn lực của cả hai phía. Ngay cả bên thắng cũng chịu tổn thất nặng nề.
 
 ## Trích dẫn
 
@@ -325,6 +325,6 @@ Rồi cũng công việc ấy lại mang tên DevOps, còn bây giờ là Platfo
 
 5\.
 
-Nói chuyện với người khác không dễ. Khi có thể ở một mình với máy, ta rất dễ chọn không nói chuyện với ai. Nhưng đừng quên, chính cộng đồng và những mối quan hệ giữa người với người mới tạo ra giá trị lâu dài cho dự án.
+Nói chuyện với người khác không dễ. Khi có thể ở một mình với máy, ta dễ chọn không nói chuyện với ai. Nhưng đừng quên, chính cộng đồng và những mối quan hệ giữa người với người mới tạo ra giá trị lâu dài cho dự án.
 
 -- [*Dùng Pi để xây dựng Pi*](https://lucumr.pocoo.org/2026/5/24/pi-oss/)
